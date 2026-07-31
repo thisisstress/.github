@@ -1,0 +1,101 @@
+{
+  "organization": "thisisstress",
+  "title": "THIS IS STRESS",
+  "subtitle": "Health Data × Reproducible ML",
+  "tagline_ko": "스트레스 지수 예측을 더 정확하고, 더 설명 가능하게.",
+  "baseline": "V1 Weighted Quantile ExtraTrees",
+  "public_mae": "0.1282776667",
+  "model": "ExtraTrees × 1,200",
+  "aggregation": "51% Quantile",
+  "team": [
+    "김지현",
+    "박빛샘",
+    "안상균"
+  ],
+  "repository_map": [
+    {
+      "name": "stress_project_JH",
+      "role": "Individual research node",
+      "visibility": "private",
+      "public_url": null
+    },
+    {
+      "name": "stress_project_BS",
+      "role": "Individual research node",
+      "visibility": "private",
+      "public_url": null
+    },
+    {
+      "name": "stress_project_SK",
+      "role": "Individual research node",
+      "visibility": "private",
+      "public_url": null
+    },
+    {
+      "name": "stress_project_UNIFIED",
+      "role": "Shared baseline hub",
+      "visibility": "private",
+      "public_url": null
+    }
+  ],
+  "experiment_status": {
+    "snapshot_date": "2026-07-31",
+    "items": [
+      {
+        "title": "V1 BASELINE",
+        "status": "LOCKED",
+        "detail": "Weighted Quantile ExtraTrees",
+        "evidence": "Public MAE 0.1282776667",
+        "accent": [
+          209,
+          161,
+          45
+        ]
+      },
+      {
+        "title": "STABILITY",
+        "status": "VERIFIED",
+        "detail": "N06 split-seed stability",
+        "evidence": "a597c3d · repeatable across splits",
+        "accent": [
+          66,
+          145,
+          108
+        ]
+      },
+      {
+        "title": "MODEL SCREEN",
+        "status": "ACTIVE",
+        "detail": "TabPFN · quantile · conservative blend",
+        "evidence": "b41a8cc · fef3360",
+        "accent": [
+          92,
+          160,
+          126
+        ]
+      },
+      {
+        "title": "UNIFIED PROMOTION",
+        "status": "GATED",
+        "detail": "Promote only repeatable improvement",
+        "evidence": "shared baseline remains protected",
+        "accent": [
+          46,
+          108,
+          83
+        ]
+      },
+      {
+        "title": "PUBLIC RELEASE",
+        "status": "LOCKED",
+        "detail": "Methods and safe evidence only",
+        "evidence": "raw data · submissions remain private",
+        "accent": [
+          122,
+          151,
+          136
+        ]
+      }
+    ]
+  }
+}
