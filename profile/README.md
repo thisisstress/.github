@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="#top"><img src="./assets/nav-overview.svg" width="112" alt="Overview" /></a>
+  <a href="https://github.com/thisisstress"><img src="./assets/nav-overview.svg" width="112" alt="Overview" /></a>
   <a href="#research"><img src="./assets/nav-research.svg" width="112" alt="Research" /></a>
   <a href="#baseline"><img src="./assets/nav-baseline.svg" width="112" alt="Baseline V1" /></a><br />
   <a href="#workflow"><img src="./assets/nav-workflow.svg" width="112" alt="Workflow" /></a>
@@ -138,11 +138,11 @@
 <img src="./assets/section-spacer.svg" width="100%" alt="" />
 
 <p align="center">
-  <a href="#top">
+  <a href="https://github.com/thisisstress">
     <img src="./assets/brand-footer.gif" width="100%" alt="thisisstress animated brand footer" />
   </a>
 </p>
 
 <p align="center">
-  <sub>Click the footer to return to the top.</sub>
+  <sub>Click the footer to return to the organization overview.</sub>
 </p>
