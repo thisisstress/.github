@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="#research" aria-label="연구 소개로 이동">
-    <img src="./assets/hero.gif" width="100%" alt="thisisstress animated research profile banner" />
+    <img src="./assets/hero-current.svg" width="100%" alt="thisisstress smooth current-result research profile banner" />
   </a>
 </p>
 
