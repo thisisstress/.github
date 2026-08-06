@@ -23,7 +23,7 @@
 </p>
 
 <a href="#baseline" aria-label="현재 확인된 모델 결과로 이동">
-  <img src="./assets/metrics.gif" width="100%" alt="animated current model metrics" />
+  <img src="./assets/metrics-current.svg" width="100%" alt="animated current ExtraTrees and Pair-Neighbor metrics" />
 </a>
 
 <!-- CURRENT-RESULT:START -->
