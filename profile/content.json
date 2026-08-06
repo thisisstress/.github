@@ -5,13 +5,25 @@
   "tagline_ko": "스트레스 지수 예측을 더 정확하고, 더 재현 가능하게.",
   "profile_status": {
     "state": "research_in_progress",
-    "as_of": "2026-08-06",
-    "display_note_ko": "현재 공개 프로필은 재현 가능한 V1 기준 모델을 표시하며, 최종 모델은 연구 종료 후 갱신합니다."
+    "as_of": "2026-08-07",
+    "display_note_ko": "현재 공개 프로필은 2026-08-06 통합 모델의 확인된 성과를 표시하며, 최종 공개 자료 확정 후 다시 갱신합니다."
   },
-  "baseline": "V1 Weighted Quantile ExtraTrees",
-  "public_mae": "0.1282776667",
-  "model": "ExtraTrees × 1,200",
-  "aggregation": "51% Quantile",
+  "baseline": "ExtraTrees + Pair-Neighbor",
+  "baseline_label": "CURRENT RESULT",
+  "public_mae": "0.1266866667",
+  "private_mae": "0.1473",
+  "model": "ExtraTrees + Pair-Neighbor",
+  "metric_model": "ET + PAIR",
+  "metric_model_caption": "76:24 hybrid blend",
+  "tree_estimators": 1200,
+  "tree_estimators_display": "1,200",
+  "tree_quantile": 0.54,
+  "tree_quantile_display": "54%",
+  "pair_quantile": 0.48,
+  "pair_quantile_display": "48%",
+  "blend": "76:24",
+  "hero_status": "ET + PAIR  /  PUBLIC RESULT",
+  "aggregation": "Tree 54% · Pair 48%",
   "final_release": {
     "status": "pending",
     "model": null,
@@ -47,19 +59,19 @@
     },
     {
       "name": "stress_project_UNIFIED",
-      "role": "Shared baseline hub",
+      "role": "Shared research hub",
       "visibility": "private",
       "public_url": null
     }
   ],
   "experiment_status": {
-    "snapshot_date": "2026-07-31",
+    "snapshot_date": "2026-08-07",
     "items": [
       {
-        "title": "V1 BASELINE",
-        "status": "LOCKED",
-        "detail": "Weighted Quantile ExtraTrees",
-        "evidence": "Public MAE 0.1282776667",
+        "title": "CURRENT RESULT",
+        "status": "VERIFIED",
+        "detail": "ExtraTrees + Pair-Neighbor",
+        "evidence": "Public MAE 0.1266866667",
         "accent": [
           209,
           161,
@@ -67,10 +79,10 @@
         ]
       },
       {
-        "title": "STABILITY",
+        "title": "TREE BRANCH",
         "status": "VERIFIED",
-        "detail": "N06 split-seed stability",
-        "evidence": "a597c3d · repeatable across splits",
+        "detail": "1,200 ExtraTrees · Tree Q54",
+        "evidence": "gender removed · fold-local preprocessing",
         "accent": [
           66,
           145,
@@ -78,10 +90,10 @@
         ]
       },
       {
-        "title": "MODEL SCREEN",
-        "status": "ACTIVE",
-        "detail": "TabPFN · quantile · conservative blend",
-        "evidence": "b41a8cc · fef3360",
+        "title": "PAIR BRANCH",
+        "status": "VERIFIED",
+        "detail": "8 features · 28 pairs · Pair Q48",
+        "evidence": "rank-based local neighbor signal",
         "accent": [
           92,
           160,
@@ -89,10 +101,10 @@
         ]
       },
       {
-        "title": "UNIFIED PROMOTION",
-        "status": "GATED",
-        "detail": "Promote only repeatable improvement",
-        "evidence": "shared baseline remains protected",
+        "title": "HYBRID BLEND",
+        "status": "VERIFIED",
+        "detail": "ExtraTrees 76% · Pair 24%",
+        "evidence": "near-duplicate override at distance < 0.2",
         "accent": [
           46,
           108,
@@ -100,10 +112,10 @@
         ]
       },
       {
-        "title": "PUBLIC RELEASE",
-        "status": "LOCKED",
-        "detail": "Methods and safe evidence only",
-        "evidence": "raw data · submissions remain private",
+        "title": "FINAL PUBLICATION",
+        "status": "PENDING",
+        "detail": "Final report and presentation alignment",
+        "evidence": "current result published · one more update planned",
         "accent": [
           122,
           151,
