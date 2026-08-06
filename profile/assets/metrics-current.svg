@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="230" viewBox="0 0 1200 230" role="img" aria-labelledby="title desc">
+  <title id="title">Current ExtraTrees and Pair-Neighbor result</title>
+  <desc id="desc">Animated cards showing ET plus Pair, 1,200 ExtraTrees, 54 percent tree quantile, Pair quantile 48 percent, blend 76 to 24, and Public MAE 0.1266866667.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8fbf9"/>
+      <stop offset="0.58" stop-color="#f1f7f3"/>
+      <stop offset="1" stop-color="#e7f1eb"/>
+    </linearGradient>
+    <linearGradient id="darkCard" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0e3a2f"/>
+      <stop offset="1" stop-color="#185542"/>
+    </linearGradient>
+    <linearGradient id="goldLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#d7a92d"/>
+      <stop offset="0.58" stop-color="#4f8d70"/>
+      <stop offset="1" stop-color="#87b79f"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-30%" width="140%" height="170%">
+      <feDropShadow dx="0" dy="7" stdDeviation="8" flood-color="#0b2e25" flood-opacity=".14"/>
+    </filter>
+    <filter id="goldGlow" x="-40%" y="-50%" width="180%" height="200%">
+      <feDropShadow dx="0" dy="0" stdDeviation="5" flood-color="#e0ad32" flood-opacity=".45"/>
+    </filter>
+    <style>
+      .label { font: 800 15px Inter, "Noto Sans KR", Arial, sans-serif; letter-spacing: .5px; }
+      .status { font: 750 12px Inter, "Noto Sans KR", Arial, sans-serif; }
+      .value { font: 850 30px Inter, "Noto Sans KR", Arial, sans-serif; }
+      .mae { font: 850 23px Inter, "Noto Sans KR", Arial, sans-serif; }
+      .caption { font: 500 13px Inter, "Noto Sans KR", Arial, sans-serif; }
+      .card { transform-box: fill-box; transform-origin: center; animation: breathe 8s ease-in-out infinite; }
+      .c1 { animation-delay: 0s; }
+      .c2 { animation-delay: 2s; }
+      .c3 { animation-delay: 4s; }
+      .c4 { animation-delay: 6s; }
+      .pulse { transform-box: fill-box; transform-origin: center; animation: pulse 2s ease-in-out infinite; }
+      .flow { stroke-dasharray: 1030; stroke-dashoffset: 1030; animation: flow 8s ease-in-out infinite; }
+      .dot1 { animation: dot 8s ease-in-out infinite 0s; }
+      .dot2 { animation: dot 8s ease-in-out infinite 2s; }
+      .dot3 { animation: dot 8s ease-in-out infinite 4s; }
+      .dot4 { animation: dot 8s ease-in-out infinite 6s; }
+      @keyframes breathe {
+        0%, 18%, 100% { transform: translateY(0); opacity: .92; }
+        8% { transform: translateY(-5px); opacity: 1; }
+      }
+      @keyframes pulse {
+        0%, 100% { transform: scale(.88); opacity: .58; }
+        50% { transform: scale(1.18); opacity: 1; }
+      }
+      @keyframes flow {
+        0% { stroke-dashoffset: 1030; }
+        18% { stroke-dashoffset: 780; }
+        43% { stroke-dashoffset: 520; }
+        68% { stroke-dashoffset: 260; }
+        92%, 100% { stroke-dashoffset: 0; }
+      }
+      @keyframes dot {
+        0%, 21%, 100% { opacity: .25; }
+        8%, 16% { opacity: 1; }
+      }
+    </style>
+  </defs>
+
+  <rect width="1200" height="230" rx="28" fill="url(#bg)"/>
+  <circle cx="1050" cy="10" r="180" fill="#6ca68a" opacity=".06"/>
+  <circle cx="90" cy="226" r="150" fill="#d7a92d" opacity=".045"/>
+
+  <line x1="62" y1="24" x2="1138" y2="24" stroke="#c6dacf" stroke-width="3" stroke-linecap="round"/>
+  <line class="flow" x1="62" y1="24" x2="1138" y2="24" stroke="url(#goldLine)" stroke-width="5" stroke-linecap="round"/>
+  <g>
+    <circle class="dot1" cx="160" cy="24" r="8" fill="#d7a92d"/>
+    <circle class="dot2" cx="450" cy="24" r="8" fill="#4b8f70"/>
+    <circle class="dot3" cx="740" cy="24" r="8" fill="#6fb393"/>
+    <circle class="dot4" cx="1030" cy="24" r="8" fill="#d7a92d"/>
+  </g>
+
+  <g class="card c1" filter="url(#shadow)">
+    <rect x="30" y="47" width="270" height="158" rx="25" fill="url(#darkCard)" stroke="#d7a92d" stroke-width="2.5"/>
+    <circle cx="55" cy="73" r="6" fill="#d7a92d"/>
+    <text x="69" y="78" class="status" fill="#bddbca">verified</text>
+    <text x="52" y="111" class="label" fill="#bcd8ca">MODEL</text>
+    <text x="52" y="151" class="value" fill="#f1cb59">ET + PAIR</text>
+    <text x="52" y="181" class="caption" fill="#b7d0c3">76:24 hybrid blend</text>
+    <rect x="52" y="190" width="224" height="7" rx="4" fill="#ffffff" opacity=".12"/>
+    <rect x="52" y="190" height="7" rx="4" fill="#d7a92d">
+      <animate attributeName="width" values="0;224;224" keyTimes="0;.18;1" dur="8s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <g class="card c2" filter="url(#shadow)">
+    <rect x="320" y="47" width="270" height="158" rx="25" fill="#ffffff" stroke="#4b8f70" stroke-width="2"/>
+    <circle cx="345" cy="73" r="6" fill="#4b8f70"/>
+    <text x="359" y="78" class="status" fill="#547966">verified</text>
+    <text x="342" y="111" class="label" fill="#547966">EXTRA TREES</text>
+    <text x="342" y="151" class="value" fill="#133f33">1,200</text>
+    <text x="342" y="181" class="caption" fill="#708b7c">tree estimators</text>
+    <rect x="342" y="190" width="224" height="7" rx="4" fill="#dde9e2"/>
+    <rect x="342" y="190" height="7" rx="4" fill="#4b8f70">
+      <animate attributeName="width" values="0;0;224;224" keyTimes="0;.2;.43;1" dur="8s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <g class="card c3" filter="url(#shadow)">
+    <rect x="610" y="47" width="270" height="158" rx="25" fill="#ffffff" stroke="#6fb393" stroke-width="2"/>
+    <circle cx="635" cy="73" r="6" fill="#6fb393"/>
+    <text x="649" y="78" class="status" fill="#547966">verified</text>
+    <text x="632" y="111" class="label" fill="#547966">TREE QUANTILE</text>
+    <text x="632" y="151" class="value" fill="#133f33">54%</text>
+    <text x="632" y="181" class="caption" fill="#708b7c">Pair Q 48% · fold-local</text>
+    <rect x="632" y="190" width="224" height="7" rx="4" fill="#dde9e2"/>
+    <rect x="632" y="190" height="7" rx="4" fill="#6fb393">
+      <animate attributeName="width" values="0;0;0;224;224" keyTimes="0;.4;.45;.68;1" dur="8s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <g class="card c4" filter="url(#shadow)">
+    <rect x="900" y="47" width="270" height="158" rx="25" fill="#ffffff" stroke="#d7a92d" stroke-width="2.5"/>
+    <circle class="pulse" cx="925" cy="73" r="7" fill="#d7a92d" filter="url(#goldGlow)"/>
+    <text x="939" y="78" class="status" fill="#7a6840">verified</text>
+    <text x="922" y="111" class="label" fill="#6d765f">PUBLIC MAE</text>
+    <text x="922" y="149" class="mae" fill="#133f33">0.1266866667</text>
+    <text x="922" y="181" class="caption" fill="#708b7c">lower is better</text>
+    <rect x="922" y="190" width="224" height="7" rx="4" fill="#eee8d4"/>
+    <rect x="922" y="190" height="7" rx="4" fill="#d7a92d">
+      <animate attributeName="width" values="0;0;0;0;224;224" keyTimes="0;.6;.65;.72;.92;1" dur="8s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</svg>
