@@ -14,7 +14,7 @@
 <p align="center">
   <a href="https://github.com/thisisstress"><img src="./assets/nav-overview.svg" width="112" alt="Overview" /></a>
   <a href="#research"><img src="./assets/nav-research.svg" width="112" alt="Research" /></a>
-  <a href="#baseline"><img src="./assets/nav-baseline.svg" width="112" alt="Baseline V1" /></a><br />
+  <a href="#baseline"><img src="./assets/nav-baseline.svg" width="112" alt="Current result" /></a><br />
   <a href="#workflow"><img src="./assets/nav-workflow.svg" width="112" alt="Workflow" /></a>
   <a href="#principles"><img src="./assets/nav-principles.svg" width="112" alt="Principles" /></a>
   <a href="#team"><img src="./assets/nav-team.svg" width="112" alt="Team" /></a><br />
@@ -22,15 +22,16 @@
   <a href="#status"><img src="./assets/nav-status.svg" width="112" alt="Experiment status" /></a>
 </p>
 
-<a href="#baseline" aria-label="현재 재현 가능한 기준 모델로 이동">
-  <img src="./assets/metrics.gif" width="100%" alt="animated reproducible benchmark metrics" />
+<a href="#baseline" aria-label="현재 확인된 모델 결과로 이동">
+  <img src="./assets/metrics.gif" width="100%" alt="animated current model metrics" />
 </a>
 
 <!-- CURRENT-RESULT:START -->
 
-> **Research in progress · 2026-08-06**  
-> 이 화면의 수치는 **최종 우승 모델이 아니라 현재 공개 가능한 재현 기준점 V1**입니다.  
-> 최종 모델·최종 점수·공개 리포·발표 자료는 연구 종료 후 이 블록과 `profile/content.json`에서 갱신합니다.
+> **Research in progress · current result updated 2026-08-07**  
+> 이 화면은 **2026-08-06 통합 모델의 현재 확인 결과**를 표시합니다.  
+> `ExtraTrees 1,200` · `Tree Q=54%` · `Pair Q=48%` · `Blend 76:24` · **Public MAE 0.1266866667**  
+> 최종 공개 리포와 발표 자료가 확정되면 이 블록과 `profile/content.json`을 한 번 더 갱신합니다.
 
 <!-- CURRENT-RESULT:END -->
 
@@ -45,7 +46,7 @@
 </a>
 
 <p align="center">
-  <a href="#baseline" aria-label="현재 재현 기준 모델로 이동">
+  <a href="#baseline" aria-label="현재 확인 결과로 이동">
     <img src="./assets/research-cards.gif" width="100%" alt="animated research capability cards" />
   </a>
 </p>
@@ -54,26 +55,27 @@
   <strong>Health signals</strong> · <strong>Reproducible ML</strong> · <strong>Shared evidence</strong>
 </p>
 
-<a href="#baseline" aria-label="기준 모델 섹션으로 이동">
+<a href="#baseline" aria-label="현재 결과 섹션으로 이동">
   <img src="./assets/section-spacer.svg" width="100%" alt="" />
 </a>
 
 <a id="baseline"></a>
 
-<a href="#baseline" aria-label="현재 재현 가능한 기준 모델 섹션">
-  <img src="./assets/section-baseline.svg" width="100%" alt="02 Baseline V1 — Current reproducible benchmark" />
+<a href="#baseline" aria-label="현재 확인된 모델 결과 섹션">
+  <img src="./assets/section-baseline.svg" width="100%" alt="02 Current Result — ExtraTrees and Pair-Neighbor" />
 </a>
 
 <p align="center">
   <a href="#workflow" aria-label="연구 워크플로로 이동">
-    <img src="./assets/baseline-architecture.gif" width="100%" alt="animated V1 model architecture" />
+    <img src="./assets/baseline-architecture.gif" width="100%" alt="animated ExtraTrees and Pair-Neighbor architecture" />
   </a>
 </p>
 
 <p align="center">
-  <strong>Current reproducible benchmark · not the final champion</strong><br />
-  <code>ExtraTrees × 1,200</code> · <code>max_features=1</code><br />
-  <code>Q=0.51</code> · <strong>Public MAE 0.1282776667</strong>
+  <strong>Current verified public result · final publication pending</strong><br />
+  <code>ExtraTrees × 1,200</code> · <code>Pair-Neighbor 8 features / 28 pairs</code><br />
+  <code>Tree Q=0.54</code> · <code>Pair Q=0.48</code> · <code>Blend 76:24</code><br />
+  <strong>Public MAE 0.1266866667</strong>
 </p>
 
 <a href="#workflow" aria-label="워크플로 섹션으로 이동">
@@ -97,9 +99,9 @@
 
 1. **Data** — Train에서만 결측치 처리와 인코딩 기준을 학습합니다.
 2. **Features** — BMI, 맥압, 평균동맥압, 대사 비율과 결측 패턴을 구성합니다.
-3. **Model** — ExtraTrees의 강한 무작위성으로 비선형 관계를 학습합니다.
-4. **Aggregation** — 평균 대신 51% 분위수로 MAE에 맞춘 예측을 만듭니다.
-5. **Validation** — 여러 Seed와 그룹 분할에서 개선이 유지되는지 확인합니다.
+3. **Models** — ExtraTrees는 전역 비선형 패턴을, Pair-Neighbor는 국소 유사 프로필을 학습합니다.
+4. **Aggregation** — Tree 54% 분위수와 Pair 48% 분위수를 `76:24`로 결합합니다.
+5. **Validation** — Fold-local 처리와 반복 검증으로 개선의 재현성을 확인합니다.
 
 </details>
 
@@ -124,7 +126,7 @@
 
 - 원본 대회 데이터는 공개하지 않습니다.
 - 제출 CSV와 학습 산출물은 공개하지 않습니다.
-- Private Score는 공식 공개 이후에만 기록합니다.
+- 공개가 허용된 성능 기록만 게시합니다.
 - 공개 코드에는 비밀키와 개인 식별 정보를 포함하지 않습니다.
 
 </details>
@@ -136,7 +138,7 @@
 <a id="team"></a>
 
 <a href="#team" aria-label="팀 섹션">
-  <img src="./assets/section-team.svg" width="100%" alt="05 Team — Three researchers, one shared baseline" />
+  <img src="./assets/section-team.svg" width="100%" alt="05 Team — Three researchers, one shared model" />
 </a>
 
 <p align="center">
@@ -147,7 +149,7 @@
 
 <p align="center">
   <strong>김지현 · 박빛샘 · 안상균</strong><br />
-  <sub>3 researchers · shared evidence · final model pending</sub>
+  <sub>3 researchers · shared evidence · final publication pending</sub>
 </p>
 
 <a href="#repositories" aria-label="연구 저장소 섹션으로 이동">
@@ -188,8 +190,8 @@
 
 <p align="center">
   <sub>
-    Animation snapshot: 2026-07-31 · Research status checked: 2026-08-06 ·
-    update <code>profile/content.json</code> and regenerate assets when the final result is fixed.
+    Current result snapshot: 2026-08-07 ·
+    update <code>profile/content.json</code> and regenerate assets when the final publication is fixed.
   </sub>
 </p>
 
