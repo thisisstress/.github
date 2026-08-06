@@ -1,0 +1,185 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">THIS IS STRESS current research result hero</title>
+  <desc id="desc">A polished emerald and gold research banner for the ExtraTrees and Pair-Neighbor public result.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#102f27"/>
+      <stop offset="0.42" stop-color="#06241d"/>
+      <stop offset="1" stop-color="#00120f"/>
+    </linearGradient>
+    <radialGradient id="leftGlow" cx="0.15" cy="0.05" r="0.8">
+      <stop offset="0" stop-color="#79b397" stop-opacity=".34"/>
+      <stop offset="0.46" stop-color="#2b6d55" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#00120f" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="goldGlow" cx="0.55" cy="0.48" r="0.55">
+      <stop offset="0" stop-color="#e8b23d" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#e8b23d" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="goldText" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#efe7d0"/>
+      <stop offset="0.5" stop-color="#f2cf67"/>
+      <stop offset="1" stop-color="#c89224"/>
+    </linearGradient>
+    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b3329" stop-opacity=".96"/>
+      <stop offset="1" stop-color="#041d18" stop-opacity=".92"/>
+    </linearGradient>
+    <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#67b08c"/>
+      <stop offset="0.6" stop-color="#d6a42d"/>
+      <stop offset="1" stop-color="#f2cf67"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000" flood-opacity=".28"/>
+    </filter>
+    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="tinyGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="2.1" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="plotClip"><rect x="824" y="285" width="340" height="102" rx="14"/></clipPath>
+    <style>
+      .sans { font-family: Inter, "Noto Sans KR", Arial, sans-serif; }
+      .serif { font-family: Georgia, "Times New Roman", serif; }
+      .floatA { transform-box: fill-box; transform-origin: center; animation: floatA 8s ease-in-out infinite; }
+      .floatB { transform-box: fill-box; transform-origin: center; animation: floatB 10s ease-in-out infinite; }
+      .pulse { transform-box: fill-box; transform-origin: center; animation: pulse 3.6s ease-in-out infinite; }
+      .pulse2 { transform-box: fill-box; transform-origin: center; animation: pulse 3.6s ease-in-out infinite 1.2s; }
+      .pulse3 { transform-box: fill-box; transform-origin: center; animation: pulse 3.6s ease-in-out infinite 2.4s; }
+      .orbit1 { transform-box: fill-box; transform-origin: center; animation: orbitSpin 24s linear infinite; }
+      .orbit2 { transform-box: fill-box; transform-origin: center; animation: orbitSpinReverse 31s linear infinite; }
+      .dash { stroke-dasharray: 16 12; animation: dashMove 9s linear infinite; }
+      .wave { stroke-dasharray: 1200; stroke-dashoffset: 1200; animation: drawWave 7.5s ease-in-out infinite; }
+      .spark { animation: twinkle 5s ease-in-out infinite; }
+      .spark2 { animation: twinkle 5s ease-in-out infinite 1.7s; }
+      .spark3 { animation: twinkle 5s ease-in-out infinite 3.2s; }
+      .metric { transform-box: fill-box; transform-origin: center; animation: metricBreathe 6s ease-in-out infinite; }
+      .shine { animation: shine 7s ease-in-out infinite; }
+      @keyframes floatA { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-7px)} }
+      @keyframes floatB { 0%,100%{transform:translate(0,0)} 50%{transform:translate(5px,-5px)} }
+      @keyframes pulse { 0%,100%{transform:scale(.92);opacity:.72} 50%{transform:scale(1.12);opacity:1} }
+      @keyframes orbitSpin { to{transform:rotate(360deg)} }
+      @keyframes orbitSpinReverse { to{transform:rotate(-360deg)} }
+      @keyframes dashMove { to{stroke-dashoffset:-280} }
+      @keyframes drawWave { 0%{stroke-dashoffset:1200;opacity:.25} 42%,82%{stroke-dashoffset:0;opacity:1} 100%{stroke-dashoffset:-1200;opacity:.25} }
+      @keyframes twinkle { 0%,100%{opacity:.2} 45%{opacity:1} }
+      @keyframes metricBreathe { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-4px)} }
+      @keyframes shine { 0%,18%,100%{opacity:0;transform:translateX(-80px)} 42%{opacity:.9} 62%{opacity:0;transform:translateX(720px)} }
+    </style>
+  </defs>
+
+  <rect width="1200" height="420" fill="url(#bg)"/>
+  <rect width="1200" height="420" fill="url(#leftGlow)"/>
+  <rect width="1200" height="420" fill="url(#goldGlow)"/>
+
+  <g opacity=".2">
+    <path d="M0 42 C160 2 260 18 406 88" stroke="#95c3ad" stroke-width="28" fill="none" filter="url(#softGlow)"/>
+    <path d="M-40 80 C130 22 302 42 505 130" stroke="#9cc7b3" stroke-width="5" fill="none" opacity=".42"/>
+  </g>
+
+  <g class="spark" fill="#edbd4c">
+    <circle cx="847" cy="41" r="2.4"/><circle cx="886" cy="67" r="1.8"/><circle cx="1058" cy="55" r="2.1"/>
+    <circle cx="1124" cy="111" r="2.4"/><circle cx="983" cy="145" r="1.8"/><circle cx="761" cy="246" r="2.4"/>
+  </g>
+  <g class="spark2" fill="#8bc3a6">
+    <circle cx="723" cy="96" r="2"/><circle cx="791" cy="188" r="1.7"/><circle cx="1094" cy="215" r="2.2"/>
+    <circle cx="655" cy="326" r="1.9"/><circle cx="1006" cy="382" r="1.6"/>
+  </g>
+  <g class="spark3" fill="#f4d87f">
+    <circle cx="842" cy="193" r="1.7"/><circle cx="930" cy="92" r="2"/><circle cx="1150" cy="246" r="1.8"/>
+    <circle cx="710" cy="363" r="2.1"/><circle cx="1087" cy="321" r="1.9"/>
+  </g>
+
+  <g class="floatA">
+    <rect x="59" y="57" width="255" height="40" rx="20" fill="#0a3027" fill-opacity=".82" stroke="#d7aa34" stroke-width="1.4"/>
+    <circle cx="80" cy="77" r="4.5" fill="#f1ca5a" filter="url(#tinyGlow)"/>
+    <text x="96" y="83" class="sans" font-size="13" font-weight="750" letter-spacing="2.1" fill="#f1ca5a">PUBLIC RESEARCH PROFILE</text>
+  </g>
+
+  <text x="58" y="178" class="serif" font-size="74" font-weight="650" fill="url(#goldText)" letter-spacing="1">THIS IS STRESS</text>
+  <rect x="346" y="155" width="126" height="3" rx="2" fill="#e9b73d" opacity=".62" filter="url(#tinyGlow)"/>
+  <g class="shine" opacity="0">
+    <rect x="74" y="119" width="65" height="70" fill="#fff8d1" opacity=".12" transform="skewX(-18)"/>
+  </g>
+
+  <text x="61" y="227" class="sans" font-size="28" font-weight="780" fill="#e0b547">Health Data × Reproducible ML</text>
+  <text x="61" y="269" class="sans" font-size="19" font-weight="500" fill="#f3eee2">스트레스 지수 예측을 더 정확하고, 더 재현 가능하게.</text>
+  <text x="61" y="311" class="sans" font-size="14" fill="#d5ded8">Tabular ML</text>
+  <circle cx="153" cy="306" r="2.3" fill="#e0b547"/>
+  <text x="171" y="311" class="sans" font-size="14" fill="#d5ded8">Controlled Experiments</text>
+  <circle cx="326" cy="306" r="2.3" fill="#e0b547"/>
+  <text x="344" y="311" class="sans" font-size="14" fill="#d5ded8">Shared Evidence</text>
+
+  <g class="floatB" filter="url(#shadow)">
+    <rect x="61" y="341" width="305" height="48" rx="24" fill="#072820" stroke="#2f6b55"/>
+    <circle cx="88" cy="365" r="22" fill="#103d31" stroke="#d7aa34"/>
+    <path d="M88 351 L100 357 V366 C100 374 94 379 88 382 C82 379 76 374 76 366 V357 Z" fill="none" stroke="#efc85c" stroke-width="2"/>
+    <path d="M82 365 L86 369 L94 360" fill="none" stroke="#efc85c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="121" y="371" class="sans" font-size="14" font-weight="700" fill="#eef2ee">ET + PAIR</text>
+    <text x="203" y="371" class="sans" font-size="14" fill="#c6d0ca">/</text>
+    <text x="224" y="371" class="sans" font-size="14" font-weight="760" fill="#e4b744">PUBLIC RESULT</text>
+  </g>
+
+  <g class="orbit1" opacity=".64">
+    <ellipse cx="868" cy="192" rx="242" ry="93" fill="none" stroke="#d6a42d" stroke-width="1.8" class="dash"/>
+    <circle cx="1099" cy="162" r="5" fill="#f2cf67" filter="url(#softGlow)"/>
+  </g>
+  <g class="orbit2" opacity=".38">
+    <ellipse cx="875" cy="193" rx="195" ry="125" fill="none" stroke="#6da88a" stroke-width="1.5" class="dash"/>
+    <circle cx="724" cy="269" r="4" fill="#82bea0" filter="url(#tinyGlow)"/>
+  </g>
+
+  <g stroke="#d3bd66" stroke-width="1.6" fill="none" opacity=".84">
+    <path d="M824 91 L782 134 L865 134"/>
+    <path d="M782 134 L748 178 L806 178"/>
+    <path d="M865 134 L833 178 L900 178"/>
+    <path d="M748 178 L724 222 L771 222"/>
+    <path d="M806 178 L785 222 L826 222"/>
+    <path d="M833 178 L817 222 L851 222"/>
+    <path d="M900 178 L875 222 L925 222"/>
+  </g>
+
+  <g>
+    <circle class="pulse" cx="824" cy="91" r="14" fill="#e4aa27" stroke="#ffe28a" stroke-width="2" filter="url(#softGlow)"/>
+    <circle cx="782" cy="134" r="10" fill="#174a3a" stroke="#e6c75e" stroke-width="1.7"/>
+    <circle class="pulse2" cx="865" cy="134" r="10" fill="#174a3a" stroke="#e6c75e" stroke-width="1.7"/>
+    <circle cx="748" cy="178" r="8" fill="#164534" stroke="#d6bb57" stroke-width="1.5"/>
+    <circle cx="806" cy="178" r="8" fill="#164534" stroke="#d6bb57" stroke-width="1.5"/>
+    <circle class="pulse3" cx="833" cy="178" r="8" fill="#d89d23" stroke="#ffe28a" stroke-width="1.7" filter="url(#tinyGlow)"/>
+    <circle cx="900" cy="178" r="8" fill="#164534" stroke="#d6bb57" stroke-width="1.5"/>
+    <circle cx="724" cy="222" r="6" fill="#123c2f" stroke="#8fc3a5"/>
+    <circle class="pulse2" cx="771" cy="222" r="6" fill="#dca32b" stroke="#ffe28a"/>
+    <circle cx="785" cy="222" r="6" fill="#123c2f" stroke="#8fc3a5"/>
+    <circle cx="826" cy="222" r="6" fill="#123c2f" stroke="#8fc3a5"/>
+    <circle cx="817" cy="222" r="6" fill="#123c2f" stroke="#8fc3a5"/>
+    <circle cx="851" cy="222" r="6" fill="#123c2f" stroke="#8fc3a5"/>
+    <circle cx="875" cy="222" r="6" fill="#123c2f" stroke="#8fc3a5"/>
+    <circle cx="925" cy="222" r="6" fill="#123c2f" stroke="#8fc3a5"/>
+  </g>
+
+  <g class="metric" filter="url(#shadow)">
+    <rect x="946" y="70" width="212" height="102" rx="18" fill="url(#card)" stroke="#d7aa34" stroke-opacity=".76"/>
+    <rect x="965" y="88" width="32" height="32" rx="8" fill="#123c30" stroke="#4c8d70"/>
+    <path d="M972 111 L979 104 L985 109 L992 98" fill="none" stroke="#f0c857" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="992" cy="98" r="2.5" fill="#f0c857"/>
+    <text x="1010" y="109" class="sans" font-size="13" font-weight="760" letter-spacing="1.4" fill="#edbd4c">PUBLIC MAE</text>
+    <text x="966" y="148" class="sans" font-size="26" font-weight="820" fill="#f3ca5c">0.1266866667</text>
+  </g>
+
+  <g clip-path="url(#plotClip)">
+    <rect x="824" y="285" width="340" height="102" rx="14" fill="#082820" fill-opacity=".42"/>
+    <g stroke="#315b4a" stroke-width="1" opacity=".38">
+      <line x1="840" y1="310" x2="1148" y2="310"/><line x1="840" y1="340" x2="1148" y2="340"/><line x1="840" y1="370" x2="1148" y2="370"/>
+      <line x1="880" y1="295" x2="880" y2="380"/><line x1="950" y1="295" x2="950" y2="380"/><line x1="1020" y1="295" x2="1020" y2="380"/><line x1="1090" y1="295" x2="1090" y2="380"/>
+    </g>
+    <path class="wave" d="M840 368 C866 368 876 362 894 351 C913 338 930 355 948 337 C966 319 984 333 1003 319 C1025 300 1044 324 1062 306 C1080 289 1095 314 1115 290 C1128 274 1140 261 1153 246" fill="none" stroke="url(#lineGrad)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" filter="url(#tinyGlow)"/>
+    <g fill="#f1ca5a" stroke="#ffe79a" stroke-width="1">
+      <circle cx="840" cy="368" r="3"/><circle cx="894" cy="351" r="3"/><circle cx="948" cy="337" r="3"/><circle cx="1003" cy="319" r="3"/><circle cx="1062" cy="306" r="3"/><circle cx="1115" cy="290" r="3"/><circle class="pulse" cx="1153" cy="246" r="4.5"/>
+    </g>
+  </g>
+</svg>
