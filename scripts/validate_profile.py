@@ -50,6 +50,36 @@ def main() -> None:
             f"{sorted(anchors)}"
         )
 
+    # GitHub may turn an unwrapped README image into a direct link to the
+    # underlying GIF/SVG file. Every profile image must therefore have an
+    # explicit, meaningful destination.
+    without_linked_images = re.sub(
+        r"<a\b[^>]*>.*?<img\b[^>]*>.*?</a>",
+        "",
+        readme,
+        flags=re.IGNORECASE | re.DOTALL,
+    )
+    if re.search(r"<img\b", without_linked_images, flags=re.IGNORECASE):
+        fail("Every README image must be wrapped in an explicit link")
+
+    asset_link_targets = re.findall(
+        r'href="([^"]*(?:assets/|\.(?:gif|png|svg)(?:\?[^"]*)?$)[^"]*)"',
+        readme,
+        flags=re.IGNORECASE,
+    )
+    if asset_link_targets:
+        fail(
+            "README images must not link to raw asset files: "
+            f"{asset_link_targets}"
+        )
+
+    for marker in [
+        "<!-- CURRENT-RESULT:START -->",
+        "<!-- CURRENT-RESULT:END -->",
+    ]:
+        if readme.count(marker) != 1:
+            fail(f"README marker must appear exactly once: {marker}")
+
     svg_paths = sorted(ASSETS.glob("*.svg"))
     for path in svg_paths:
         ET.parse(path)
@@ -70,13 +100,40 @@ def main() -> None:
         if path.stat().st_size > 2 * 1024 * 1024:
             fail(f"GIF exceeds 2MB: {path.name}")
 
-    content = json.loads((PROFILE / "content.json").read_text(encoding="utf-8"))
+    content = json.loads(
+        (PROFILE / "content.json").read_text(encoding="utf-8")
+    )
     if len(content.get("team", [])) != 3:
         fail("content.json team must contain exactly three names")
     if len(content.get("repository_map", [])) != 4:
         fail("content.json repository_map must contain four items")
     if not content.get("experiment_status", {}).get("items"):
         fail("content.json experiment_status.items must not be empty")
+
+    profile_status = content.get("profile_status", {})
+    if profile_status.get("state") not in {
+        "research_in_progress",
+        "research_complete",
+    }:
+        fail(
+            "content.json profile_status.state must be "
+            "research_in_progress or research_complete"
+        )
+    if not profile_status.get("as_of"):
+        fail("content.json profile_status.as_of must not be empty")
+
+    final_release = content.get("final_release", {})
+    if final_release.get("status") not in {"pending", "published"}:
+        fail(
+            "content.json final_release.status must be pending or published"
+        )
+    if final_release.get("status") == "published":
+        for key in ["model", "public_mae", "updated_at"]:
+            if not final_release.get(key):
+                fail(
+                    "Published final_release is missing required field: "
+                    f"{key}"
+                )
 
     forbidden_suffixes = {".csv", ".parquet", ".pkl", ".joblib", ".env"}
     forbidden_files = [
