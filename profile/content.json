@@ -2,11 +2,25 @@
   "organization": "thisisstress",
   "title": "THIS IS STRESS",
   "subtitle": "Health Data × Reproducible ML",
-  "tagline_ko": "스트레스 지수 예측을 더 정확하고, 더 설명 가능하게.",
+  "tagline_ko": "스트레스 지수 예측을 더 정확하고, 더 재현 가능하게.",
+  "profile_status": {
+    "state": "research_in_progress",
+    "as_of": "2026-08-06",
+    "display_note_ko": "현재 공개 프로필은 재현 가능한 V1 기준 모델을 표시하며, 최종 모델은 연구 종료 후 갱신합니다."
+  },
   "baseline": "V1 Weighted Quantile ExtraTrees",
   "public_mae": "0.1282776667",
   "model": "ExtraTrees × 1,200",
   "aggregation": "51% Quantile",
+  "final_release": {
+    "status": "pending",
+    "model": null,
+    "public_mae": null,
+    "private_mae": null,
+    "repository_url": null,
+    "presentation_url": null,
+    "updated_at": null
+  },
   "team": [
     "김지현",
     "박빛샘",
