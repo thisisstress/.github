@@ -47,12 +47,16 @@
 
 <p align="center">
   <a href="#baseline" aria-label="현재 확인 결과로 이동">
-    <img src="./assets/research-cards.gif" width="100%" alt="animated research capability cards" />
+    <img src="./assets/research-visual.svg" width="100%" alt="animated flow from health signals to hybrid modeling and shared evidence" />
   </a>
 </p>
 
+| Health signals | Hybrid modeling | Shared evidence |
+|---|---|---|
+| BMI, 맥압, 평균동맥압, 콜레스테롤·혈당 비율과 결측 패턴처럼 원본 건강 데이터를 더 의미 있게 표현합니다. | ExtraTrees가 전역 비선형 패턴을, Pair-Neighbor가 국소 유사 프로필을 보완하는 구조를 검증합니다. | Fold-local 전처리와 재현 가능한 실험 기록을 바탕으로 개인 실험을 팀의 공통 근거로 축적합니다. |
+
 <p align="center">
-  <strong>Health signals</strong> · <strong>Reproducible ML</strong> · <strong>Shared evidence</strong>
+  <sub>이미지는 연구 흐름만 표현하고, 모델명·수치·설명은 README 텍스트로 분리해 이후 결과 변경에도 재사용할 수 있도록 구성했습니다.</sub>
 </p>
 
 <a href="#baseline" aria-label="현재 결과 섹션으로 이동">
