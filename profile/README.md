@@ -1,7 +1,9 @@
 <a id="top"></a>
 
 <p align="center">
-  <img src="./assets/hero.gif" width="100%" alt="thisisstress animated research profile banner" />
+  <a href="#research" aria-label="연구 소개로 이동">
+    <img src="./assets/hero.gif" width="100%" alt="thisisstress animated research profile banner" />
+  </a>
 </p>
 
 <p align="center">
@@ -20,45 +22,74 @@
   <a href="#status"><img src="./assets/nav-status.svg" width="112" alt="Experiment status" /></a>
 </p>
 
-<img src="./assets/metrics.gif" width="100%" alt="animated V1 baseline metrics" />
+<a href="#baseline" aria-label="현재 재현 가능한 기준 모델로 이동">
+  <img src="./assets/metrics.gif" width="100%" alt="animated reproducible benchmark metrics" />
+</a>
 
-<img src="./assets/section-spacer.svg" width="100%" alt="" />
+<!-- CURRENT-RESULT:START -->
+
+> **Research in progress · 2026-08-06**  
+> 이 화면의 수치는 **최종 우승 모델이 아니라 현재 공개 가능한 재현 기준점 V1**입니다.  
+> 최종 모델·최종 점수·공개 리포·발표 자료는 연구 종료 후 이 블록과 `profile/content.json`에서 갱신합니다.
+
+<!-- CURRENT-RESULT:END -->
+
+<a href="#research" aria-label="연구 섹션으로 이동">
+  <img src="./assets/section-spacer.svg" width="100%" alt="" />
+</a>
 
 <a id="research"></a>
 
-<img src="./assets/section-research.svg" width="100%" alt="01 Research — What we are building" />
+<a href="#research" aria-label="연구 섹션">
+  <img src="./assets/section-research.svg" width="100%" alt="01 Research — What we are building" />
+</a>
 
 <p align="center">
-  <img src="./assets/research-cards.gif" width="100%" alt="animated research capability cards" />
+  <a href="#baseline" aria-label="현재 재현 기준 모델로 이동">
+    <img src="./assets/research-cards.gif" width="100%" alt="animated research capability cards" />
+  </a>
 </p>
 
 <p align="center">
   <strong>Health signals</strong> · <strong>Reproducible ML</strong> · <strong>Shared evidence</strong>
 </p>
 
-<img src="./assets/section-spacer.svg" width="100%" alt="" />
+<a href="#baseline" aria-label="기준 모델 섹션으로 이동">
+  <img src="./assets/section-spacer.svg" width="100%" alt="" />
+</a>
 
 <a id="baseline"></a>
 
-<img src="./assets/section-baseline.svg" width="100%" alt="02 Baseline V1 — Current reproducible benchmark" />
+<a href="#baseline" aria-label="현재 재현 가능한 기준 모델 섹션">
+  <img src="./assets/section-baseline.svg" width="100%" alt="02 Baseline V1 — Current reproducible benchmark" />
+</a>
 
 <p align="center">
-  <img src="./assets/baseline-architecture.gif" width="100%" alt="animated V1 model architecture" />
+  <a href="#workflow" aria-label="연구 워크플로로 이동">
+    <img src="./assets/baseline-architecture.gif" width="100%" alt="animated V1 model architecture" />
+  </a>
 </p>
 
 <p align="center">
+  <strong>Current reproducible benchmark · not the final champion</strong><br />
   <code>ExtraTrees × 1,200</code> · <code>max_features=1</code><br />
   <code>Q=0.51</code> · <strong>Public MAE 0.1282776667</strong>
 </p>
 
-<img src="./assets/section-spacer.svg" width="100%" alt="" />
+<a href="#workflow" aria-label="워크플로 섹션으로 이동">
+  <img src="./assets/section-spacer.svg" width="100%" alt="" />
+</a>
 
 <a id="workflow"></a>
 
-<img src="./assets/section-workflow.svg" width="100%" alt="03 Workflow — From data to validated evidence" />
+<a href="#workflow" aria-label="워크플로 섹션">
+  <img src="./assets/section-workflow.svg" width="100%" alt="03 Workflow — From data to validated evidence" />
+</a>
 
 <p align="center">
-  <img src="./assets/pipeline.gif" width="100%" alt="animated research workflow" />
+  <a href="#principles" aria-label="연구 원칙으로 이동">
+    <img src="./assets/pipeline.gif" width="100%" alt="animated research workflow" />
+  </a>
 </p>
 
 <details>
@@ -72,13 +103,19 @@
 
 </details>
 
-<img src="./assets/section-spacer.svg" width="100%" alt="" />
+<a href="#principles" aria-label="연구 원칙 섹션으로 이동">
+  <img src="./assets/section-spacer.svg" width="100%" alt="" />
+</a>
 
 <a id="principles"></a>
 
-<img src="./assets/section-principles.svg" width="100%" alt="04 Principles — Rules that protect reproducibility" />
+<a href="#principles" aria-label="연구 원칙 섹션">
+  <img src="./assets/section-principles.svg" width="100%" alt="04 Principles — Rules that protect reproducibility" />
+</a>
 
-<img src="./assets/principles.gif" width="100%" alt="animated research principles" />
+<a href="#team" aria-label="팀 섹션으로 이동">
+  <img src="./assets/principles.gif" width="100%" alt="animated research principles" />
+</a>
 
 <details>
 <summary><strong>Public profile policy</strong></summary>
@@ -92,53 +129,76 @@
 
 </details>
 
-<img src="./assets/section-spacer.svg" width="100%" alt="" />
+<a href="#team" aria-label="팀 섹션으로 이동">
+  <img src="./assets/section-spacer.svg" width="100%" alt="" />
+</a>
 
 <a id="team"></a>
 
-<img src="./assets/section-team.svg" width="100%" alt="05 Team — Three researchers, one shared baseline" />
+<a href="#team" aria-label="팀 섹션">
+  <img src="./assets/section-team.svg" width="100%" alt="05 Team — Three researchers, one shared baseline" />
+</a>
 
 <p align="center">
-  <img src="./assets/team-network.gif" width="100%" alt="animated thisisstress team network" />
+  <a href="#repositories" aria-label="연구 저장소 지도로 이동">
+    <img src="./assets/team-network.gif" width="100%" alt="animated thisisstress team network" />
+  </a>
 </p>
 
 <p align="center">
   <strong>김지현 · 박빛샘 · 안상균</strong><br />
-  <sub>3 researchers · 1 baseline · shared evidence</sub>
+  <sub>3 researchers · shared evidence · final model pending</sub>
 </p>
 
-<img src="./assets/section-spacer.svg" width="100%" alt="" />
+<a href="#repositories" aria-label="연구 저장소 섹션으로 이동">
+  <img src="./assets/section-spacer.svg" width="100%" alt="" />
+</a>
 
 <a id="repositories"></a>
 
-<img src="./assets/section-repositories.svg" width="100%" alt="06 Repositories — Research workspace map" />
+<a href="#repositories" aria-label="연구 저장소 섹션">
+  <img src="./assets/section-repositories.svg" width="100%" alt="06 Repositories — Research workspace map" />
+</a>
 
 <p align="center">
-  <img src="./assets/repository-map.gif" width="100%" alt="animated private research repository map" />
+  <a href="#status" aria-label="실험 현황으로 이동">
+    <img src="./assets/repository-map.gif" width="100%" alt="animated private research repository map" />
+  </a>
 </p>
 
 <p align="center">
-  <sub>Repositories remain private until the competition and disclosure policy allow a public release.</sub>
+  <sub>Research repositories remain private until the competition and disclosure policy allow a public release.</sub>
 </p>
 
-<img src="./assets/section-spacer.svg" width="100%" alt="" />
+<a href="#status" aria-label="실험 현황 섹션으로 이동">
+  <img src="./assets/section-spacer.svg" width="100%" alt="" />
+</a>
 
 <a id="status"></a>
 
-<img src="./assets/section-status.svg" width="100%" alt="07 Experiment Status — Current research snapshot" />
+<a href="#status" aria-label="실험 현황 섹션">
+  <img src="./assets/section-status.svg" width="100%" alt="07 Experiment Status — Current research snapshot" />
+</a>
 
 <p align="center">
-  <img src="./assets/experiment-status.gif" width="100%" alt="animated experiment registry snapshot" />
+  <a href="#top" aria-label="페이지 상단으로 이동">
+    <img src="./assets/experiment-status.gif" width="100%" alt="animated experiment registry snapshot" />
+  </a>
 </p>
 
 <p align="center">
-  <sub>Snapshot dated 2026-07-31 · update <code>profile/content.json</code> when research status changes.</sub>
+  <sub>
+    Animation snapshot: 2026-07-31 · Research status checked: 2026-08-06 ·
+    update <code>profile/content.json</code> and regenerate assets when the final result is fixed.
+  </sub>
 </p>
 
-<img src="./assets/section-spacer.svg" width="100%" alt="" />
+<a href="#top" aria-label="페이지 상단으로 이동">
+  <img src="./assets/section-spacer.svg" width="100%" alt="" />
+</a>
 
 <p align="center">
-  <a href="https://github.com/thisisstress">
+  <a href="https://github.com/thisisstress" aria-label="thisisstress organization overview">
     <img src="./assets/brand-footer.gif" width="100%" alt="thisisstress animated brand footer" />
   </a>
 </p>
