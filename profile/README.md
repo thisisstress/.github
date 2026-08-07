@@ -98,23 +98,27 @@
 <a id="workflow"></a>
 
 <a href="#workflow" aria-label="워크플로 섹션">
-  <img src="./assets/section-workflow.svg" width="100%" alt="03 Workflow — From data to validated evidence" />
+  <img src="./assets/section-workflow.svg" width="100%" alt="03 Workflow — From health data to final validation" />
 </a>
 
 <p align="center">
   <a href="#principles" aria-label="연구 원칙으로 이동">
-    <img src="./assets/pipeline.gif" width="100%" alt="animated research workflow" />
+    <img src="./assets/final-workflow.svg" width="100%" alt="건강 데이터가 Train 기반 전처리, 파생변수, 하이브리드 모델링, 검증과 최종 선택으로 이어지는 5단계 애니메이션" />
   </a>
 </p>
+
+| 01 Data | 02 Preprocess | 03 Features | 04 Hybrid Model | 05 Validate |
+|---|---|---|---|---|
+| 신체·건강·생활 데이터 | Train 기준 결측·인코딩 | BMI·혈압·대사·결측 파생 | ExtraTrees + Pair-Neighbor | CV·Public·Private 근거 종합 |
 
 <details>
 <summary><strong>5-step workflow details</strong></summary>
 
-1. **Data** — Train에서만 결측치 처리와 인코딩 기준을 학습합니다.
-2. **Features** — BMI, 맥압, 평균동맥압, 대사 비율과 결측 패턴을 구성합니다.
-3. **Models** — ExtraTrees는 전역 비선형 패턴을, Pair-Neighbor는 국소 유사 프로필을 학습합니다.
-4. **Aggregation** — Tree 54% 분위수와 Pair 48% 분위수를 `76:24`로 결합합니다.
-5. **Validation** — Fold-local 처리와 반복 검증으로 개선의 재현성을 확인합니다.
+1. **Data** — Train 3,000건 × 18개 컬럼에서 `stress_score`를 학습하고, Test 3,000건 × 17개 컬럼의 점수를 예측합니다.
+2. **Preprocess** — 수치형 결측은 Train 중앙값, 범주형 결측은 `missing` 범주로 처리하고 One-Hot Encoding 기준도 Train에서만 학습합니다.
+3. **Features** — BMI, 맥압, 평균동맥압, 혈압 비율, 콜레스테롤·혈당 비율, 결측치 개수를 만들고 중요 피처 선택 기회를 높입니다. 최종 모델에서는 `gender` 제거와 Fold-local Winsorization도 적용합니다.
+4. **Hybrid Model** — ExtraTrees 1,200개의 54% 분위수와 8개 피처·28개 Pair-Neighbor의 48% 분위수를 `76:24`로 결합하고, 거리 `< 0.2`의 근접중복은 최근접 Train 타깃으로 보정합니다.
+5. **Validate & Select** — 내부 CV와 실제 Public·Private 결과를 함께 확인합니다. Public `0.1265`의 Fresh V6보다 검증 근거가 완전한 **8월 6일 통합모델**을 최종 채택했습니다.
 
 </details>
 
