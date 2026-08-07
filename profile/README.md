@@ -129,21 +129,32 @@
 <a id="principles"></a>
 
 <a href="#principles" aria-label="연구 원칙 섹션">
-  <img src="./assets/section-principles.svg" width="100%" alt="04 Principles — Rules that protect reproducibility" />
+  <img src="./assets/section-principles.svg" width="100%" alt="04 Principles — Evidence before leaderboard" />
 </a>
 
-<a href="#team" aria-label="팀 섹션으로 이동">
-  <img src="./assets/principles.gif" width="100%" alt="animated research principles" />
-</a>
+<p align="center">
+  <a href="#team" aria-label="팀 섹션으로 이동">
+    <img src="./assets/final-principles.svg" width="100%" alt="Train 기준 전처리, 데이터 누수 방지, 고정 설정 재현성, 검증 근거 기반 최종 선택을 표현한 애니메이션" />
+  </a>
+</p>
+
+| 01 Train-only | 02 No Leakage | 03 Reproducible | 04 Evidence-based |
+|---|---|---|---|
+| 전처리 기준은 Train에서 학습 | Test 전체 통계를 모델 선택에 사용하지 않음 | 고정 설정과 실행 기록을 남김 | 한 번의 점수보다 CV·Public·Private 근거를 함께 확인 |
+
+<p align="center">
+  <strong>좋은 점수보다 먼저, 같은 조건에서 다시 확인할 수 있는 결과를 남깁니다.</strong><br />
+  <sub>최종 모델 역시 Public 최저값 하나가 아니라 재현 가능한 내부 검증과 Private 결과까지 확인한 뒤 선택했습니다.</sub>
+</p>
 
 <details>
-<summary><strong>Public profile policy</strong></summary>
+<summary><strong>Research & disclosure policy</strong></summary>
 
-이 프로필에는 **재현 가능한 연구 방법, 모델 구조, 검증 원칙과 공개 가능한 결과**만 게시합니다.
-
-- 원본 대회 데이터는 공개하지 않습니다.
-- 제출 CSV와 학습 산출물은 공개하지 않습니다.
-- 공개가 허용된 성능 기록만 게시합니다.
+- 수치형 결측값, 범주형 인코딩, Winsorization과 Rank 기준은 해당 Train 범위에서만 계산합니다.
+- Test 전체 분포나 다른 Test 행의 정보를 이용해 모델이나 하이퍼파라미터를 선택하지 않습니다.
+- 주요 모델 설정과 난수 시드를 고정하고 Notebook·GitHub 기록을 남겨 재현 가능성을 확보합니다.
+- Public 점수만으로 후보를 승격하지 않고 내부 CV, 안정성, 실제 Public·Private 근거를 구분해 해석합니다.
+- 원본 대회 데이터, 제출 CSV와 비공개 학습 산출물은 공개하지 않습니다.
 - 공개 코드에는 비밀키와 개인 식별 정보를 포함하지 않습니다.
 
 </details>
