@@ -166,18 +166,22 @@
 <a id="team"></a>
 
 <a href="#team" aria-label="팀 섹션">
-  <img src="./assets/section-team.svg" width="100%" alt="05 Team — Three researchers, one shared model" />
+  <img src="./assets/section-team.svg" width="100%" alt="05 Team — Three roles, one final model" />
 </a>
 
 <p align="center">
   <a href="#repositories" aria-label="연구 저장소 지도로 이동">
-    <img src="./assets/team-network.gif" width="100%" alt="animated thisisstress team network" />
+    <img src="./assets/final-team.svg" width="100%" alt="세 연구자가 서로 다른 역할의 연구 흐름을 하나의 공통 근거와 최종 모델로 연결하는 애니메이션" />
   </a>
 </p>
 
+| 김지현 · 팀장 | 박빛샘 | 안상균 |
+|---|---|---|
+| 프로젝트 일정 조율 · 파생변수 · 모델 개선 | 발표 자료 제작 · ExtraTrees · 분위수 조정 | GitHub·Notion 관리 · 대안 모델 · 튜닝 |
+
 <p align="center">
-  <strong>김지현 · 박빛샘 · 안상균</strong><br />
-  <sub>3 researchers · shared evidence · final publication pending</sub>
+  <strong>가설 공유 → 개별 실험 → 결과 비교 → 효과가 확인된 개선안 축적</strong><br />
+  <sub>Notion과 ZEP으로 소통하고, GitHub 저장소를 통해 코드·설정·실험 결과를 공유했습니다.</sub>
 </p>
 
 <a href="#repositories" aria-label="연구 저장소 섹션으로 이동">
