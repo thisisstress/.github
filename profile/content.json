@@ -41,25 +41,25 @@
   "repository_map": [
     {
       "name": "stress_project_JH",
-      "role": "Individual research node",
+      "role": "Team V7 and Pair-Neighbor lineage",
       "visibility": "private",
       "public_url": null
     },
     {
       "name": "stress_project_BS",
-      "role": "Individual research node",
+      "role": "Final BS 8/6 model, ExtraTrees/Pair refinement, presentation",
       "visibility": "private",
       "public_url": null
     },
     {
       "name": "stress_project_SK",
-      "role": "Individual research node",
+      "role": "Alternative models, robustness validation, research engine records",
       "visibility": "private",
       "public_url": null
     },
     {
       "name": "stress_project_UNIFIED",
-      "role": "Shared research hub",
+      "role": "Representative lineage, scores, and shared team hub",
       "visibility": "private",
       "public_url": null
     }
@@ -72,55 +72,35 @@
         "status": "VERIFIED",
         "detail": "ExtraTrees + Pair-Neighbor",
         "evidence": "Public MAE 0.1266866667",
-        "accent": [
-          209,
-          161,
-          45
-        ]
+        "accent": [209, 161, 45]
       },
       {
         "title": "TREE BRANCH",
         "status": "VERIFIED",
         "detail": "1,200 ExtraTrees · Tree Q54",
         "evidence": "gender removed · fold-local preprocessing",
-        "accent": [
-          66,
-          145,
-          108
-        ]
+        "accent": [66, 145, 108]
       },
       {
         "title": "PAIR BRANCH",
         "status": "VERIFIED",
         "detail": "8 features · 28 pairs · Pair Q48",
         "evidence": "rank-based local neighbor signal",
-        "accent": [
-          92,
-          160,
-          126
-        ]
+        "accent": [92, 160, 126]
       },
       {
         "title": "HYBRID BLEND",
         "status": "VERIFIED",
         "detail": "ExtraTrees 76% · Pair 24%",
         "evidence": "near-duplicate override at distance < 0.2",
-        "accent": [
-          46,
-          108,
-          83
-        ]
+        "accent": [46, 108, 83]
       },
       {
         "title": "FINAL PUBLICATION",
         "status": "PENDING",
         "detail": "Final report and presentation alignment",
         "evidence": "current result published · one more update planned",
-        "accent": [
-          122,
-          151,
-          136
-        ]
+        "accent": [122, 151, 136]
       }
     ]
   }
