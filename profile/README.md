@@ -2,13 +2,21 @@
 
 <p align="center">
   <a href="#research" aria-label="연구 소개로 이동">
-    <img src="./assets/hero-current.svg" width="100%" alt="thisisstress smooth current-result research profile banner" />
+    <img src="./assets/hero-current.svg" width="100%" alt="건강 신호, ExtraTrees, Pair-Neighbor가 하나의 예측으로 결합되는 추상 애니메이션" />
   </a>
 </p>
 
+<h1 align="center">THIS IS STRESS</h1>
+
 <p align="center">
-  <strong>건강 데이터를 더 정확하고, 더 재현 가능하게.</strong><br />
-  스트레스 지수 예측을 위한 팀 연구 허브입니다.
+  <strong>스트레스 지수 예측 해커톤 · 2거 스트레스조</strong><br />
+  개인의 건강·생활 데이터를 바탕으로 0~1 범위의 스트레스 점수를 예측합니다.
+</p>
+
+<p align="center">
+  <strong>최종 채택 · 8월 6일 통합모델</strong><br />
+  <code>ExtraTrees 76%</code> + <code>Pair-Neighbor 24%</code><br />
+  <strong>Public MAE 0.1266866667</strong> · Private MAE 0.1473
 </p>
 
 <p align="center">
@@ -22,16 +30,16 @@
   <a href="#status"><img src="./assets/nav-status.svg" width="112" alt="Experiment status" /></a>
 </p>
 
-<a href="#baseline" aria-label="현재 확인된 모델 결과로 이동">
-  <img src="./assets/metrics-current.svg" width="100%" alt="animated current ExtraTrees and Pair-Neighbor metrics" />
+<a href="#baseline" aria-label="최종 모델 결과로 이동">
+  <img src="./assets/metrics-current.svg" width="100%" alt="animated ExtraTrees and Pair-Neighbor metrics" />
 </a>
 
 <!-- CURRENT-RESULT:START -->
 
-> **Research in progress · current result updated 2026-08-07**  
-> 이 화면은 **2026-08-06 통합 모델의 현재 확인 결과**를 표시합니다.  
-> `ExtraTrees 1,200` · `Tree Q=54%` · `Pair Q=48%` · `Blend 76:24` · **Public MAE 0.1266866667**  
-> 최종 공개 리포와 발표 자료가 확정되면 이 블록과 `profile/content.json`을 한 번 더 갱신합니다.
+> **Final presentation aligned · updated 2026-08-08**  
+> 최종 발표에서는 **재현 가능하고 Private까지 확인된 8월 6일 통합모델**을 최종 채택했습니다.  
+> `ExtraTrees 1,200` · `Tree Q=54%` · `Pair Q=48%` · `Blend 76:24` · **Public MAE 0.1266866667 · Private MAE 0.1473**  
+> Public `0.1265`의 Fresh V6는 내부·Private 검증 기록이 없어 최종 채택에서 제외했습니다.
 
 <!-- CURRENT-RESULT:END -->
 
