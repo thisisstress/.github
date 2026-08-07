@@ -22,17 +22,13 @@
 <p align="center">
   <a href="https://github.com/thisisstress"><img src="./assets/nav-overview.svg" width="112" alt="Overview" /></a>
   <a href="#research"><img src="./assets/nav-research.svg" width="112" alt="Research" /></a>
-  <a href="#baseline"><img src="./assets/nav-baseline.svg" width="112" alt="Current result" /></a><br />
+  <a href="#baseline"><img src="./assets/nav-baseline.svg" width="112" alt="Final result" /></a><br />
   <a href="#workflow"><img src="./assets/nav-workflow.svg" width="112" alt="Workflow" /></a>
   <a href="#principles"><img src="./assets/nav-principles.svg" width="112" alt="Principles" /></a>
   <a href="#team"><img src="./assets/nav-team.svg" width="112" alt="Team" /></a><br />
   <a href="#repositories"><img src="./assets/nav-repositories.svg" width="112" alt="Repositories" /></a>
   <a href="#status"><img src="./assets/nav-status.svg" width="112" alt="Experiment status" /></a>
 </p>
-
-<a href="#baseline" aria-label="최종 모델 결과로 이동">
-  <img src="./assets/metrics-current.svg" width="100%" alt="animated ExtraTrees and Pair-Neighbor metrics" />
-</a>
 
 <!-- CURRENT-RESULT:START -->
 
@@ -54,7 +50,7 @@
 </a>
 
 <p align="center">
-  <a href="#baseline" aria-label="현재 확인 결과로 이동">
+  <a href="#baseline" aria-label="최종 결과로 이동">
     <img src="./assets/research-visual.svg" width="100%" alt="animated flow from health signals to hybrid modeling and shared evidence" />
   </a>
 </p>
@@ -67,27 +63,32 @@
   <sub>이미지는 연구 흐름만 표현하고, 모델명·수치·설명은 README 텍스트로 분리해 이후 결과 변경에도 재사용할 수 있도록 구성했습니다.</sub>
 </p>
 
-<a href="#baseline" aria-label="현재 결과 섹션으로 이동">
+<a href="#baseline" aria-label="최종 결과 섹션으로 이동">
   <img src="./assets/section-spacer.svg" width="100%" alt="" />
 </a>
 
 <a id="baseline"></a>
 
-<a href="#baseline" aria-label="현재 확인된 모델 결과 섹션">
-  <img src="./assets/section-baseline.svg" width="100%" alt="02 Current Result — ExtraTrees and Pair-Neighbor" />
+<a href="#baseline" aria-label="최종 모델 결과 섹션">
+  <img src="./assets/section-baseline.svg" width="100%" alt="02 Final Result — final adopted hybrid model" />
 </a>
 
 <p align="center">
   <a href="#workflow" aria-label="연구 워크플로로 이동">
-    <img src="./assets/baseline-architecture.gif" width="100%" alt="animated ExtraTrees and Pair-Neighbor architecture" />
+    <img src="./assets/final-architecture.svg" width="100%" alt="건강 신호가 ExtraTrees와 Pair-Neighbor 두 분기로 흐른 뒤 블렌드와 근접중복 보정을 거쳐 최종 예측으로 합쳐지는 애니메이션" />
   </a>
 </p>
 
 <p align="center">
-  <strong>Current verified public result · final publication pending</strong><br />
-  <code>ExtraTrees × 1,200</code> · <code>Pair-Neighbor 8 features / 28 pairs</code><br />
-  <code>Tree Q=0.54</code> · <code>Pair Q=0.48</code> · <code>Blend 76:24</code><br />
-  <strong>Public MAE 0.1266866667</strong>
+  <strong>Final adopted model · BS 8/6</strong><br />
+  <code>ExtraTrees × 1,200</code> · <code>Tree Q=0.54</code><br />
+  <code>Pair-Neighbor 8 features / 28 pairs</code> · <code>Pair Q=0.48</code><br />
+  <code>Blend 76:24</code> · <code>Near-duplicate override &lt; 0.2</code><br />
+  <strong>Public MAE 0.1266866667</strong> · Private MAE 0.1473
+</p>
+
+<p align="center">
+  <sub>최종 발표에서는 Public 최저값만이 아니라 내부 검증과 Private 결과까지 확인된 모델을 최종 채택했습니다.</sub>
 </p>
 
 <a href="#workflow" aria-label="워크플로 섹션으로 이동">
