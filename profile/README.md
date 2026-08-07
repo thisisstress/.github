@@ -191,17 +191,25 @@
 <a id="repositories"></a>
 
 <a href="#repositories" aria-label="연구 저장소 섹션">
-  <img src="./assets/section-repositories.svg" width="100%" alt="06 Repositories — Research workspace map" />
+  <img src="./assets/section-repositories.svg" width="100%" alt="06 Repositories — Four research nodes, one shared lineage" />
 </a>
 
 <p align="center">
   <a href="#status" aria-label="실험 현황으로 이동">
-    <img src="./assets/repository-map.gif" width="100%" alt="animated private research repository map" />
+    <img src="./assets/final-repositories.svg" width="100%" alt="JH, BS, SK의 세 연구 노드가 UNIFIED 공통 계보 허브로 연결되는 애니메이션" />
   </a>
 </p>
 
+| Repository | 역할 | 현재 접근 |
+|---|---|---|
+| `stress_project_JH` | Team V7 · Pair-Neighbor와 팀 기준 계보 | Private |
+| `stress_project_BS` | 최종 BS 8/6 · ExtraTrees/Pair 고도화 · 발표자료 | Private |
+| `stress_project_SK` | 대안 모델 · 강건성 검증 · 연구 엔진 기록 | Private |
+| `stress_project_UNIFIED` | 대표 모델 계보 · 점수 · 팀 공통 허브 | Private |
+
 <p align="center">
-  <sub>Research repositories remain private until the competition and disclosure policy allow a public release.</sub>
+  <strong>개별 연구는 분리하고, 확인된 계보와 결과는 UNIFIED에서 연결합니다.</strong><br />
+  <sub>네 저장소는 현재 모두 Private이며, 접근 권한이 있는 팀원에게만 표시됩니다. 공개 전환 시점은 이 README에서 미리 약속하지 않습니다.</sub>
 </p>
 
 <a href="#status" aria-label="실험 현황 섹션으로 이동">
