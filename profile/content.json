@@ -6,7 +6,7 @@
   "profile_status": {
     "state": "final_presentation_aligned",
     "as_of": "2026-08-08",
-    "display_note_ko": "최종 발표 기준 8월 6일 통합모델을 채택 결과로 표시합니다."
+    "display_note_ko": "최종 발표 기준 8월 6일 팀 통합모델을 채택 결과로 표시합니다."
   },
   "baseline": "ExtraTrees + Pair-Neighbor",
   "baseline_label": "FINAL ADOPTED",
@@ -22,11 +22,11 @@
   "pair_quantile": 0.48,
   "pair_quantile_display": "48%",
   "blend": "76:24",
-  "hero_status": "FINAL ADOPTED  /  8·6 INTEGRATED MODEL",
+  "hero_status": "FINAL ADOPTED  /  8·6 TEAM INTEGRATED MODEL",
   "aggregation": "Tree 54% · Pair 48%",
   "final_release": {
     "status": "adopted",
-    "model": "BS 8/6 — ExtraTrees + Pair-Neighbor",
+    "model": "8/6 Team Integrated Model — ExtraTrees + Pair-Neighbor",
     "public_mae": "0.1266866667",
     "private_mae": "0.1473",
     "repository_url": "https://github.com/thisisstress/stress_project_BS",
@@ -41,25 +41,25 @@
   "repository_map": [
     {
       "name": "stress_project_JH",
-      "role": "Team V7 and Pair-Neighbor lineage",
+      "role": "V7 and Pair-Neighbor experiments and team reference records",
       "visibility": "private",
       "public_url": null
     },
     {
       "name": "stress_project_BS",
-      "role": "Final BS 8/6 model, ExtraTrees/Pair refinement, presentation",
+      "role": "ExtraTrees/Pair refinement experiments and final presentation records",
       "visibility": "private",
       "public_url": null
     },
     {
       "name": "stress_project_SK",
-      "role": "Alternative models, robustness validation, research engine records",
+      "role": "Alternative-model and robustness-validation research records",
       "visibility": "private",
       "public_url": null
     },
     {
       "name": "stress_project_UNIFIED",
-      "role": "Representative lineage, scores, and shared team hub",
+      "role": "Shared team hub for representative lineage and scores",
       "visibility": "private",
       "public_url": null
     }
@@ -75,14 +75,14 @@
         "accent": [92, 160, 126]
       },
       {
-        "title": "BS V34",
+        "title": "V34",
         "status": "LINEAGE_MILESTONE",
         "detail": "Tree and Pair joint tuning",
         "evidence": "CV 0.148033 · Public 0.1271866667",
         "accent": [66, 145, 108]
       },
       {
-        "title": "BS 8/6",
+        "title": "8/6 TEAM INTEGRATED",
         "status": "FINAL_ADOPTED",
         "detail": "ExtraTrees 76% · Pair-Neighbor 24%",
         "evidence": "CV 0.147300 · Public 0.1266866667 · Private 0.1473",
