@@ -65,42 +65,42 @@
     }
   ],
   "experiment_status": {
-    "snapshot_date": "2026-08-07",
+    "snapshot_date": "2026-08-08",
     "items": [
       {
-        "title": "CURRENT RESULT",
-        "status": "VERIFIED",
-        "detail": "ExtraTrees + Pair-Neighbor",
-        "evidence": "Public MAE 0.1266866667",
-        "accent": [209, 161, 45]
-      },
-      {
-        "title": "TREE BRANCH",
-        "status": "VERIFIED",
-        "detail": "1,200 ExtraTrees · Tree Q54",
-        "evidence": "gender removed · fold-local preprocessing",
-        "accent": [66, 145, 108]
-      },
-      {
-        "title": "PAIR BRANCH",
-        "status": "VERIFIED",
-        "detail": "8 features · 28 pairs · Pair Q48",
-        "evidence": "rank-based local neighbor signal",
+        "title": "TEAM V7",
+        "status": "LINEAGE_MILESTONE",
+        "detail": "Pair-Neighbor team benchmark",
+        "evidence": "CV 0.146644 · Public 0.1272333333",
         "accent": [92, 160, 126]
       },
       {
-        "title": "HYBRID BLEND",
-        "status": "VERIFIED",
-        "detail": "ExtraTrees 76% · Pair 24%",
-        "evidence": "near-duplicate override at distance < 0.2",
-        "accent": [46, 108, 83]
+        "title": "BS V34",
+        "status": "LINEAGE_MILESTONE",
+        "detail": "Tree and Pair joint tuning",
+        "evidence": "CV 0.148033 · Public 0.1271866667",
+        "accent": [66, 145, 108]
       },
       {
-        "title": "FINAL PUBLICATION",
-        "status": "PENDING",
-        "detail": "Final report and presentation alignment",
-        "evidence": "current result published · one more update planned",
-        "accent": [122, 151, 136]
+        "title": "BS 8/6",
+        "status": "FINAL_ADOPTED",
+        "detail": "ExtraTrees 76% · Pair-Neighbor 24%",
+        "evidence": "CV 0.147300 · Public 0.1266866667 · Private 0.1473",
+        "accent": [209, 161, 45]
+      },
+      {
+        "title": "P56C GOWER",
+        "status": "INDEPENDENT_PRESERVED",
+        "detail": "MI-weighted Gower alternative model",
+        "evidence": "Robust CV 0.149096 · Public 0.130060",
+        "accent": [104, 157, 132]
+      },
+      {
+        "title": "FRESH V6",
+        "status": "NOT_ADOPTED_PUBLIC_ONLY",
+        "detail": "Lowest observed Public score, incomplete validation record",
+        "evidence": "Public 0.1265 · no internal/Private validation record",
+        "accent": [166, 151, 105]
       }
     ]
   }
