@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="240" viewBox="0 0 1200 240" role="img" aria-labelledby="title desc">
+  <title id="title">THIS IS STRESS final footer animation</title>
+  <desc id="desc">Text-free animated signature showing health-data signals and three research streams converging into one final validated model.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B2A23"/>
+      <stop offset="0.52" stop-color="#071F1A"/>
+      <stop offset="1" stop-color="#03110F"/>
+    </linearGradient>
+    <radialGradient id="greenGlow" cx="0.12" cy="0.5" r="0.58">
+      <stop offset="0" stop-color="#6DB598" stop-opacity=".24"/>
+      <stop offset="1" stop-color="#6DB598" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="goldGlow" cx="0.86" cy="0.5" r="0.50">
+      <stop offset="0" stop-color="#E8BC4D" stop-opacity=".25"/>
+      <stop offset="1" stop-color="#E8BC4D" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="flow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#68AF91"/>
+      <stop offset="0.55" stop-color="#8EC6AC"/>
+      <stop offset="1" stop-color="#E2B84A"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF0A9"/>
+      <stop offset="0.42" stop-color="#E8BE52"/>
+      <stop offset="1" stop-color="#9D6811"/>
+    </linearGradient>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+    <style>
+      .path{stroke-dasharray:13 12;animation:flow 8s linear infinite}
+      .path2{stroke-dasharray:9 13;animation:flow 10s linear infinite reverse}
+      .pulse{transform-box:fill-box;transform-origin:center;animation:pulse 3.8s ease-in-out infinite}
+      .pulse2{transform-box:fill-box;transform-origin:center;animation:pulse 3.8s ease-in-out infinite 1.2s}
+      .float{transform-box:fill-box;transform-origin:center;animation:float 6.5s ease-in-out infinite}
+      .orbit{transform-box:fill-box;transform-origin:center;animation:spin 24s linear infinite}
+      .orbit2{transform-box:fill-box;transform-origin:center;animation:spinReverse 31s linear infinite}
+      @keyframes flow{to{stroke-dashoffset:-260}}
+      @keyframes pulse{0%,100%{transform:scale(.88);opacity:.68}50%{transform:scale(1.13);opacity:1}}
+      @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+      @keyframes spin{to{transform:rotate(360deg)}}
+      @keyframes spinReverse{to{transform:rotate(-360deg)}}
+    </style>
+  </defs>
+
+  <rect width="1200" height="240" rx="28" fill="url(#bg)"/>
+  <rect width="1200" height="240" rx="28" fill="url(#greenGlow)"/>
+  <rect width="1200" height="240" rx="28" fill="url(#goldGlow)"/>
+
+  <circle cx="120" cy="120" r="88" fill="#75B596" opacity=".07" filter="url(#soft)"/>
+  <circle cx="1050" cy="120" r="92" fill="#E3B948" opacity=".08" filter="url(#soft)"/>
+
+  <!-- three research streams -->
+  <g class="float">
+    <circle cx="118" cy="72" r="24" fill="#103B30" stroke="#70B394" stroke-width="2"/>
+    <path d="M106 72h24M118 60v24" stroke="#93C8AF" stroke-width="2.5" stroke-linecap="round"/>
+  </g>
+  <g class="float" style="animation-delay:1.6s">
+    <circle cx="118" cy="120" r="24" fill="#103B30" stroke="#70B394" stroke-width="2"/>
+    <path d="M104 127c8-20 20-20 28 0M106 114h24" fill="none" stroke="#93C8AF" stroke-width="2.4" stroke-linecap="round"/>
+  </g>
+  <g class="float" style="animation-delay:3.2s">
+    <circle cx="118" cy="168" r="24" fill="#17382F" stroke="#C49A30" stroke-width="2"/>
+    <path d="M106 176l12-18 12 18M109 171h18" fill="none" stroke="#E0BC58" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <path d="M142 72 C280 72 315 101 430 112" fill="none" stroke="#5FA789" stroke-width="3.5" class="path"/>
+  <path d="M142 120 H430" fill="none" stroke="#79B79B" stroke-width="3.5" class="path2"/>
+  <path d="M142 168 C280 168 315 139 430 128" fill="none" stroke="#C49931" stroke-width="3.5" class="path"/>
+
+  <!-- shared evidence hub -->
+  <g>
+    <circle cx="510" cy="120" r="58" fill="#0B332A" stroke="#5F9F83" stroke-width="2.5"/>
+    <circle cx="510" cy="120" r="37" fill="#123F33" stroke="#8EC4AA" stroke-width="2"/>
+    <g stroke="#8FC5AB" stroke-width="2" fill="none" opacity=".8">
+      <path d="M490 100l20 20 21-18M490 141l20-21 21 21"/>
+    </g>
+    <circle class="pulse" cx="510" cy="120" r="12" fill="#D8AD3E" filter="url(#glow)"/>
+    <g class="orbit" opacity=".38"><ellipse cx="510" cy="120" rx="78" ry="29" fill="none" stroke="#7FB89E" stroke-width="1.5" stroke-dasharray="7 9"/></g>
+  </g>
+
+  <!-- model blend -->
+  <path d="M568 120 H750" fill="none" stroke="url(#flow)" stroke-width="5" stroke-linecap="round" class="path"/>
+  <circle r="6" fill="#E5BB4D" filter="url(#glow)">
+    <animateMotion dur="5.5s" repeatCount="indefinite" path="M568 120 H750"/>
+  </circle>
+
+  <g>
+    <circle cx="815" cy="120" r="57" fill="#0B3028" stroke="#B68B25" stroke-width="2.5"/>
+    <circle cx="815" cy="120" r="39" fill="#133E32" stroke="#D5AD43" stroke-width="2"/>
+    <circle cx="794" cy="111" r="9" fill="#55977A"/>
+    <circle cx="835" cy="130" r="8" fill="#70AD91"/>
+    <circle class="pulse2" cx="815" cy="120" r="13" fill="url(#gold)" filter="url(#glow)"/>
+    <g class="orbit2" opacity=".42"><ellipse cx="815" cy="120" rx="79" ry="26" fill="none" stroke="#D0A43A" stroke-width="1.5" stroke-dasharray="8 10"/></g>
+  </g>
+
+  <!-- final validated signal -->
+  <path d="M872 120 H1014" fill="none" stroke="#D4A53A" stroke-width="5" stroke-linecap="round" class="path2"/>
+  <circle cx="1070" cy="120" r="52" fill="#E4B844" opacity=".10" filter="url(#soft)"/>
+  <circle class="pulse" cx="1070" cy="120" r="30" fill="url(#gold)" stroke="#EAC45E" stroke-width="2" filter="url(#glow)"/>
+  <circle cx="1070" cy="120" r="11" fill="#FFF4C2"/>
+  <path d="M1059 120l8 8 16-18" fill="none" stroke="#78500B" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- subtle frame details -->
+  <circle class="pulse2" cx="1142" cy="44" r="3" fill="#E6BD54"/>
+  <circle class="pulse" cx="1094" cy="194" r="2.7" fill="#83BCA2"/>
+  <circle class="pulse2" cx="656" cy="49" r="2.5" fill="#E7C35E"/>
+  <circle class="pulse" cx="376" cy="197" r="2.8" fill="#75B499"/>
+</svg>
