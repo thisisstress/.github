@@ -38,20 +38,22 @@ GitHub 조직의 공개 메인 화면은 **Public `.github` 리포지토리의 `
   "blend": "76:24",
   "final_release": {
     "status": "adopted",
-    "model": "BS 8/6 — ExtraTrees + Pair-Neighbor"
+    "model": "8/6 Team Integrated Model — ExtraTrees + Pair-Neighbor"
   }
 }
 ```
 
 현재 최종 발표 기준은 다음과 같습니다.
 
-- 최종 채택: **BS 8/6 — ExtraTrees + Pair-Neighbor**
+- 최종 채택: **8/6 Team Integrated Model — ExtraTrees + Pair-Neighbor**
 - Public MAE: **0.1266866667**
 - Private MAE: **0.1473**
 - ExtraTrees 1,200
 - Tree Quantile 54%
 - Pair Quantile 48%
 - Blend 76:24
+
+모델 표시명은 팀 공동 결과를 기준으로 사용하고, 개별 리포명은 실행 원본이나 기록 위치를 추적하는 출처 정보로만 사용합니다.
 
 ## 3. 활성 애니메이션 자산
 
