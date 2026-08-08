@@ -1,4 +1,4 @@
-"""Validate the public organization profile package."""
+"""Validate the final public organization profile package."""
 
 from __future__ import annotations
 
@@ -34,6 +34,30 @@ def main() -> None:
     if missing:
         fail(f"Missing README assets: {missing}")
 
+    # The final profile intentionally uses vector animation only. Historical
+    # GIF files may remain in profile/assets for provenance, but README must
+    # not actively reference them.
+    active_gifs = [
+        source for source in local_sources
+        if source.lower().split("?", 1)[0].endswith(".gif")
+    ]
+    if active_gifs:
+        fail(f"README still references legacy GIF assets: {active_gifs}")
+
+    required_vector_assets = {
+        "./assets/hero-current.svg",
+        "./assets/final-architecture.svg",
+        "./assets/final-workflow.svg",
+        "./assets/final-principles.svg",
+        "./assets/final-team.svg",
+        "./assets/final-repositories.svg",
+        "./assets/final-status.svg",
+        "./assets/final-footer.svg",
+    }
+    missing_required = sorted(required_vector_assets - set(local_sources))
+    if missing_required:
+        fail(f"README is missing final vector assets: {missing_required}")
+
     anchors = set(re.findall(r'<a id="([^"]+)"', readme))
     anchor_links = set(re.findall(r'href="#([^"]+)"', readme))
     unresolved = sorted(anchor_links - anchors)
@@ -51,8 +75,8 @@ def main() -> None:
         )
 
     # GitHub may turn an unwrapped README image into a direct link to the
-    # underlying GIF/SVG file. Every profile image must therefore have an
-    # explicit, meaningful destination.
+    # underlying file. Every profile image therefore has an explicit,
+    # meaningful destination.
     without_linked_images = re.sub(
         r"<a\b[^>]*>.*?<img\b[^>]*>.*?</a>",
         "",
@@ -80,14 +104,34 @@ def main() -> None:
         if readme.count(marker) != 1:
             fail(f"README marker must appear exactly once: {marker}")
 
+    stale_readme_phrases = [
+        "final publication pending",
+        "research in progress · current result",
+        "current result snapshot: 2026-08-07",
+        "brand-footer.gif",
+        "experiment-status.gif",
+        "repository-map.gif",
+        "team-network.gif",
+        "principles.gif",
+        "pipeline.gif",
+        "baseline-architecture.gif",
+    ]
+    lower_readme = readme.lower()
+    stale_hits = [
+        phrase for phrase in stale_readme_phrases
+        if phrase.lower() in lower_readme
+    ]
+    if stale_hits:
+        fail(f"README contains stale profile text/assets: {stale_hits}")
+
     svg_paths = sorted(ASSETS.glob("*.svg"))
     for path in svg_paths:
         ET.parse(path)
 
+    # Legacy GIFs are archival rather than active profile dependencies. Keep
+    # validating any that remain so repository corruption is still detected,
+    # but do not require a fixed historical count.
     gif_paths = sorted(ASSETS.glob("*.gif"))
-    if len(gif_paths) != 10:
-        fail(f"Expected 10 GIF assets, found {len(gif_paths)}")
-
     for path in gif_paths:
         image = Image.open(path)
         frame_count = sum(1 for _ in ImageSequence.Iterator(image))
@@ -96,9 +140,9 @@ def main() -> None:
         image.seek(frame_count - 1)
         image.load()
         if image.width > 1000:
-            fail(f"GIF exceeds 1000px width: {path.name}")
+            fail(f"Legacy GIF exceeds 1000px width: {path.name}")
         if path.stat().st_size > 2 * 1024 * 1024:
-            fail(f"GIF exceeds 2MB: {path.name}")
+            fail(f"Legacy GIF exceeds 2MB: {path.name}")
 
     content = json.loads(
         (PROFILE / "content.json").read_text(encoding="utf-8")
@@ -114,24 +158,24 @@ def main() -> None:
     if profile_status.get("state") not in {
         "research_in_progress",
         "research_complete",
+        "final_presentation_aligned",
     }:
         fail(
-            "content.json profile_status.state must be "
-            "research_in_progress or research_complete"
+            "content.json profile_status.state must be a supported profile state"
         )
     if not profile_status.get("as_of"):
         fail("content.json profile_status.as_of must not be empty")
 
     final_release = content.get("final_release", {})
-    if final_release.get("status") not in {"pending", "published"}:
+    if final_release.get("status") not in {"pending", "published", "adopted"}:
         fail(
-            "content.json final_release.status must be pending or published"
+            "content.json final_release.status must be pending, published, or adopted"
         )
-    if final_release.get("status") == "published":
+    if final_release.get("status") in {"published", "adopted"}:
         for key in ["model", "public_mae", "updated_at"]:
             if not final_release.get(key):
                 fail(
-                    "Published final_release is missing required field: "
+                    "Final release is missing required field: "
                     f"{key}"
                 )
 
@@ -161,20 +205,23 @@ def main() -> None:
     ).read_text(encoding="utf-8")
     for required in [
         "permissions:",
-        "contents: write",
-        "python scripts/render_assets.py",
+        "contents: read",
         "python scripts/validate_profile.py",
-        "git diff --quiet -- profile/assets",
     ]:
         if required not in workflow:
             fail(f"Workflow is missing: {required}")
 
+    active_vector_count = sum(
+        1 for source in local_sources
+        if source.lower().split("?", 1)[0].endswith(".svg")
+    )
     print(
         "PASS: "
         f"{len(local_sources)} README assets, "
         f"{len(anchors)} anchors, "
-        f"{len(svg_paths)} SVGs, "
-        f"{len(gif_paths)} GIFs"
+        f"{active_vector_count} active SVG references, "
+        f"{len(svg_paths)} SVG files, "
+        f"{len(gif_paths)} archival GIFs"
     )
 
 
