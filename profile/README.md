@@ -219,20 +219,26 @@
 <a id="status"></a>
 
 <a href="#status" aria-label="실험 현황 섹션">
-  <img src="./assets/section-status.svg" width="100%" alt="07 Experiment Status — Current research snapshot" />
+  <img src="./assets/section-status.svg" width="100%" alt="07 Experiment Status — Final research snapshot" />
 </a>
 
 <p align="center">
   <a href="#top" aria-label="페이지 상단으로 이동">
-    <img src="./assets/experiment-status.gif" width="100%" alt="animated experiment registry snapshot" />
+    <img src="./assets/final-status.svg" width="100%" alt="Team V7과 BS V34가 최종 BS 8/6 모델로 이어지고, P56C Gower와 Fresh V6가 별도 판단 분기로 보존되는 최종 연구 상태 애니메이션" />
   </a>
 </p>
 
+| 모델 | 내부 검증 | Public MAE | 상태 |
+|---|---:|---:|---|
+| Team V7 Pair-Neighbor | 0.146644 | 0.1272333333 | 계보 이정표 |
+| BS V34 Tree·Pair Joint Tuning | 0.148033 | 0.1271866667 | 계보 이정표 |
+| **BS 8/6 Final Integrated Model** | **0.147300** | **0.1266866667** | **최종 채택 · Private 0.1473** |
+| P56C MI-weighted Gower | Robust CV 0.149096 | 0.130060 | 독립 모델 · 보존 |
+| Fresh V6 | — | **0.1265** | 미채택 · 내부/Private 검증 기록 없음 |
+
 <p align="center">
-  <sub>
-    Current result snapshot: 2026-08-07 ·
-    update <code>profile/content.json</code> and regenerate assets when the final publication is fixed.
-  </sub>
+  <strong>Final research snapshot · 2026-08-08</strong><br />
+  <sub>내부 MAE는 모델별 split·seed·검증 계약이 다를 수 있어 작은 차이를 직접 순위화하지 않습니다. 최종 채택은 재현 가능한 내부 검증과 Public·Private 근거를 함께 고려했습니다.</sub>
 </p>
 
 <a href="#top" aria-label="페이지 상단으로 이동">
