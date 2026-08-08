@@ -247,10 +247,12 @@
 
 <p align="center">
   <a href="https://github.com/thisisstress" aria-label="thisisstress organization overview">
-    <img src="./assets/brand-footer.gif" width="100%" alt="thisisstress animated brand footer" />
+    <img src="./assets/final-footer.svg" width="100%" alt="건강 데이터와 세 연구 흐름이 공통 근거를 거쳐 최종 검증 모델로 모이는 THIS IS STRESS 시그니처 애니메이션" />
   </a>
 </p>
 
 <p align="center">
-  <sub>Click the footer to return to the organization overview.</sub>
+  <strong>THIS IS STRESS · Final presentation aligned</strong><br />
+  <sub>Health Data × Reproducible ML · Final adopted model: BS 8/6</sub><br />
+  <sub>Public MAE 0.1266866667 · Private MAE 0.1473 · Click the animation to return to the organization overview.</sub>
 </p>
