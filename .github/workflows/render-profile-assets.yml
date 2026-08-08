@@ -1,266 +1,29 @@
-name: Render organization profile assets
+name: Validate organization profile
 
 on:
   push:
     branches:
       - main
     paths:
-      - "profile/content.json"
-      - "scripts/render_assets.py"
+      - "profile/**"
       - "scripts/validate_profile.py"
       - "requirements.txt"
       - ".github/workflows/render-profile-assets.yml"
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
-  group: organization-profile-assets
+  group: organization-profile-validation
   cancel-in-progress: true
 
 jobs:
-  render-and-validate:
+  validate-profile:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
-
-      - name: Update renderer to current-result schema
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-
-          path = Path("scripts/render_assets.py")
-          text = path.read_text(encoding="utf-8")
-
-          def replace_once(old: str, new: str, label: str) -> None:
-              global text
-              if old in text:
-                  text = text.replace(old, new, 1)
-              elif new not in text:
-                  raise RuntimeError(f"Renderer patch target not found: {label}")
-
-          replace_once(
-              '''        cards = [
-                      ("BASELINE", "V1"),
-                      ("PUBLIC MAE", CONTENT.get("public_mae", "N/A")),
-                      ("MODEL", CONTENT.get("model", "ExtraTrees × 1,200").upper()),
-                      ("TEAM", f"{len(CONTENT.get('team', []))} RESEARCHERS"),
-                  ]''',
-              '''        cards = [
-                      ("MODEL", CONTENT.get("metric_model", "ET + PAIR")),
-                      ("PUBLIC MAE", CONTENT.get("public_mae", "N/A")),
-                      ("TREE Q", CONTENT.get("tree_quantile_display", "54%")),
-                      ("BLEND", CONTENT.get("blend", "76:24")),
-                  ]''',
-              "brand footer cards",
-          )
-
-          replace_once(
-              '''        ("baseline", "02", "BASELINE V1", "Current reproducible benchmark",
-                   f"{CONTENT.get('baseline', 'Weighted Quantile ExtraTrees')} · "
-                   f"Public MAE {CONTENT.get('public_mae', 'N/A')}"),''',
-              '''        ("baseline", "02", "CURRENT RESULT", "ExtraTrees × Pair-Neighbor",
-                   f"{CONTENT.get('baseline', 'ExtraTrees + Pair-Neighbor')} · "
-                   f"Public MAE {CONTENT.get('public_mae', 'N/A')}"),''',
-              "section current result",
-          )
-
-          replace_once(
-              '''        ("baseline", "BASELINE", "tree"),''',
-              '''        ("baseline", "RESULT", "tree"),''',
-              "navigation result label",
-          )
-
-          replace_once(
-              '''        d.text((88, 325), "BASELINE V1  /  ACTIVE RESEARCH",
-                         font=font(14, True), fill=(204, 226, 215, 242))''',
-              '''        d.text((88, 325), CONTENT.get(
-                         "hero_status", "ET + PAIR  /  PUBLIC RESULT"
-                     ), font=font(14, True), fill=(204, 226, 215, 242))''',
-              "hero status",
-          )
-
-          replace_once(
-              '''def render_metrics():
-              W, H = 1200, 230
-              cards = [
-                  {"label": "BASELINE", "value": "V1",
-                   "caption": "current team baseline", "accent": (219, 170, 45)},
-                  {"label": "MODEL", "value": "1,200",
-                   "caption": "ExtraTrees estimators", "accent": (75, 143, 112)},
-                  {"label": "AGGREGATION", "value": "51%",
-                   "caption": "tree prediction quantile", "accent": (107, 177, 146)},
-                  {"label": "PUBLIC MAE", "value": CONTENT["public_mae"],
-                   "caption": "lower is better", "accent": (219, 170, 45)},
-              ]
-
-              def count_text(target, progress):
-                  if target == "V1":
-                      return "V1"
-                  if target == "1,200":
-                      return f"{int(1200 * progress):,}"
-                  if target == "51%":
-                      return f"{int(round(51 * progress))}%"
-                  if target == CONTENT["public_mae"]:
-                      start_value = 0.24944
-                      target_value = float(target)
-                      current = start_value + (target_value - start_value) * progress
-                      return f"{current:.10f}"
-                  return target''',
-              '''def render_metrics():
-              W, H = 1200, 230
-              metric_model = CONTENT.get("metric_model", "ET + PAIR")
-              tree_estimators = CONTENT.get("tree_estimators_display", "1,200")
-              tree_quantile = CONTENT.get("tree_quantile_display", "54%")
-              pair_quantile = CONTENT.get("pair_quantile_display", "48%")
-              cards = [
-                  {"label": "MODEL", "value": metric_model,
-                   "caption": CONTENT.get("metric_model_caption", "76:24 hybrid blend"),
-                   "accent": (219, 170, 45)},
-                  {"label": "EXTRA TREES", "value": tree_estimators,
-                   "caption": "tree estimators", "accent": (75, 143, 112)},
-                  {"label": "TREE QUANTILE", "value": tree_quantile,
-                   "caption": f"Pair Q {pair_quantile} · fold-local",
-                   "accent": (107, 177, 146)},
-                  {"label": "PUBLIC MAE", "value": CONTENT["public_mae"],
-                   "caption": "lower is better", "accent": (219, 170, 45)},
-              ]
-
-              def count_text(target, progress):
-                  if target == metric_model:
-                      return target
-                  if target == tree_estimators:
-                      total = int(str(tree_estimators).replace(",", ""))
-                      return f"{int(total * progress):,}"
-                  if target == tree_quantile:
-                      total = int(str(tree_quantile).rstrip("%"))
-                      return f"{int(round(total * progress))}%"
-                  if target == CONTENT["public_mae"]:
-                      start_value = 0.24944
-                      target_value = float(target)
-                      current = start_value + (target_value - start_value) * progress
-                      return f"{current:.10f}"
-                  return target''',
-              "metrics cards",
-          )
-
-          replace_once(
-              '''            value_size = 21 if index == 3 else (28 if index == 1 else 29)''',
-              '''            value_size = 21 if index == 3 else (24 if index == 0 else 28)''',
-              "metrics value sizing",
-          )
-
-          replace_once(
-              '''        "owner": "V1",
-                  "role": "SHARED BASELINE HUB",''',
-              '''        "owner": CONTENT.get("hub_label", "HYB"),
-                  "role": "SHARED RESEARCH HUB",''',
-              "repository hub",
-          )
-
-          replace_once(
-              '''        draw.text((x + 35, y + 34), "V1",
-                            font=font(16, True),''',
-              '''        draw.text((x + 35, y + 34), hub["owner"],
-                            font=font(16, True),''',
-              "repository hub badge",
-          )
-
-          text = text.replace('"SHARED V1"', '"SHARED MODEL"')
-          text = text.replace('"1 BASELINE"', '"1 CURRENT MODEL"')
-
-          replace_once(
-              '''    stages = [
-                  {"title": "INPUT", "subtitle": "17 health & lifestyle columns",
-                   "accent": (62, 125, 98), "kind": "input"},
-                  {"title": "FEATURES", "subtitle": "BMI · MAP · ratios · missing",
-                   "accent": (88, 151, 119), "kind": "features"},
-                  {"title": "EXTRATREES", "subtitle": "1,200 randomized trees",
-                   "accent": (36, 92, 72), "kind": "forest"},
-                  {"title": "Q51", "subtitle": "51% tree-prediction quantile",
-                   "accent": (208, 162, 46), "kind": "quantile"},
-                  {"title": "OUTPUT", "subtitle": "stress_score · clipped 0–1",
-                   "accent": (50, 115, 88), "kind": "output"},
-              ]''',
-              '''    stages = [
-                  {"title": "INPUT", "subtitle": "17 health & lifestyle columns",
-                   "accent": (62, 125, 98), "kind": "input"},
-                  {"title": "FEATURES", "subtitle": "BMI · MAP · ratios · missing",
-                   "accent": (88, 151, 119), "kind": "features"},
-                  {"title": "EXTRATREES", "subtitle":
-                   f"{CONTENT.get('tree_estimators_display', '1,200')} trees · "
-                   f"{CONTENT.get('tree_quantile_display', '54%')} quantile",
-                   "accent": (36, 92, 72), "kind": "forest"},
-                  {"title": "PAIR", "subtitle":
-                   f"8 features · 28 pairs · {CONTENT.get('pair_quantile_display', '48%')}",
-                   "accent": (208, 162, 46), "kind": "quantile"},
-                  {"title": "BLEND", "subtitle":
-                   f"{CONTENT.get('blend', '76:24')} · override · clip",
-                   "accent": (50, 115, 88), "kind": "output"},
-              ]''',
-              "hybrid architecture stages",
-          )
-
-          replace_once(
-              '''        draw.text((42, 24), "BASELINE V1 ARCHITECTURE",
-                            font=font(16, True), fill=(57, 111, 89, 255))
-                  draw.text(
-                      (42, 50),
-                      "Weighted Quantile ExtraTrees · one controlled inference path",''',
-              '''        draw.text((42, 24), "CURRENT HYBRID ARCHITECTURE",
-                            font=font(16, True), fill=(57, 111, 89, 255))
-                  draw.text(
-                      (42, 50),
-                      "ExtraTrees + Pair-Neighbor · one reproducible inference path",''',
-              "hybrid architecture heading",
-          )
-
-          replace_once(
-              '''        metadata = [
-                      ("TREES", "1,200"),
-                      ("MAX FEATURES", "1"),
-                      ("LEAF", "1"),
-                      ("QUANTILE", "0.51"),
-                      ("PUBLIC MAE", CONTENT.get("public_mae", "N/A")),
-                  ]''',
-              '''        metadata = [
-                      ("TREES", CONTENT.get("tree_estimators_display", "1,200")),
-                      ("TREE Q", CONTENT.get("tree_quantile_display", "54%")),
-                      ("PAIR Q", CONTENT.get("pair_quantile_display", "48%")),
-                      ("BLEND", CONTENT.get("blend", "76:24")),
-                      ("PUBLIC MAE", CONTENT.get("public_mae", "N/A")),
-                  ]''',
-              "hybrid architecture metadata",
-          )
-
-          replace_once(
-              '''    stages = [
-                  {"code": "01", "label": "DATA", "sub": "Train-only", "accent": (48, 112, 88)},
-                  {"code": "02", "label": "FEATURES", "sub": "Health signals", "accent": (76, 142, 111)},
-                  {"code": "03", "label": "MODEL", "sub": "1,200 trees", "accent": (107, 174, 144)},
-                  {"code": "04", "label": "Q51", "sub": "51% quantile", "accent": (205, 160, 48)},
-                  {"code": "05", "label": "VALIDATE", "sub": "Multi-seed", "accent": (34, 92, 71)},
-              ]''',
-              '''    stages = [
-                  {"code": "01", "label": "DATA", "sub": "Train-only", "accent": (48, 112, 88)},
-                  {"code": "02", "label": "FEATURES", "sub": "Health signals", "accent": (76, 142, 111)},
-                  {"code": "03", "label": "TREE", "sub": "1,200 · Q54", "accent": (107, 174, 144)},
-                  {"code": "04", "label": "PAIR", "sub": "28 pairs · Q48", "accent": (205, 160, 48)},
-                  {"code": "05", "label": "VALIDATE", "sub": "Blend 76:24", "accent": (34, 92, 71)},
-              ]''',
-              "hybrid workflow stages",
-          )
-
-          replace_once(
-              '''        draw.text((60, 200), "V1 baseline",''',
-              '''        draw.text((60, 200), "current hybrid",''',
-              "workflow current hybrid",
-          )
-
-          path.write_text(text, encoding="utf-8")
-          PY
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -268,33 +31,11 @@ jobs:
           python-version: "3.12"
           cache: pip
 
-      - name: Install system fonts
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y fonts-noto-cjk
-
       - name: Install dependencies
         run: python -m pip install -r requirements.txt
-
-      - name: Regenerate profile assets
-        run: python scripts/render_assets.py
 
       - name: Validate organization profile
         run: python scripts/validate_profile.py
 
       - name: Check whitespace
         run: git diff --check
-
-      - name: Commit regenerated assets and renderer
-        shell: bash
-        run: |
-          if git diff --quiet -- profile/assets scripts/render_assets.py; then
-            echo "No generated asset or renderer changes."
-            exit 0
-          fi
-
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add profile/assets scripts/render_assets.py
-          git commit -m "chore: regenerate current-result profile animations"
-          git push
