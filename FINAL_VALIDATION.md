@@ -54,10 +54,13 @@ The current validator checks:
 
 - Profile state: `final_presentation_aligned`
 - Final release status: `adopted`
-- Final model: **BS 8/6 — ExtraTrees + Pair-Neighbor**
+- Final model: **8/6 Team Integrated Model — ExtraTrees + Pair-Neighbor**
 - Public MAE: **0.1266866667**
 - Private MAE: **0.1473**
 - Snapshot date: **2026-08-08**
+
+Model display names in the organization profile use team-level naming. Individual
+repository names are retained only where needed to identify source or record locations.
 
 ## Automation safety change
 
