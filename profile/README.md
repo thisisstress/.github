@@ -80,7 +80,7 @@
 </p>
 
 <p align="center">
-  <strong>Final adopted model · BS 8/6</strong><br />
+  <strong>Final adopted model · 8/6 Team Integrated Model</strong><br />
   <code>ExtraTrees × 1,200</code> · <code>Tree Q=0.54</code><br />
   <code>Pair-Neighbor 8 features / 28 pairs</code> · <code>Pair Q=0.48</code><br />
   <code>Blend 76:24</code> · <code>Near-duplicate override &lt; 0.2</code><br />
@@ -175,11 +175,12 @@
   </a>
 </p>
 
-| 김지현 · 팀장 | 박빛샘 | 안상균 |
+| 김지현 | 박빛샘 | 안상균 |
 |---|---|---|
 | 프로젝트 일정 조율 · 파생변수 · 모델 개선 | 발표 자료 제작 · ExtraTrees · 분위수 조정 | GitHub·Notion 관리 · 대안 모델 · 튜닝 |
 
 <p align="center">
+  <sub>역할 표는 발표자료 기준의 주요 담당 영역을 요약한 것이며, 실제 가설·개선안은 팀 내 공유와 결합 과정을 거쳤습니다.</sub><br />
   <strong>가설 공유 → 개별 실험 → 결과 비교 → 효과가 확인된 개선안 축적</strong><br />
   <sub>Notion과 ZEP으로 소통하고, GitHub 저장소를 통해 코드·설정·실험 결과를 공유했습니다.</sub>
 </p>
@@ -196,20 +197,20 @@
 
 <p align="center">
   <a href="#status" aria-label="실험 현황으로 이동">
-    <img src="./assets/final-repositories.svg" width="100%" alt="JH, BS, SK의 세 연구 노드가 UNIFIED 공통 계보 허브로 연결되는 애니메이션" />
+    <img src="./assets/final-repositories.svg" width="100%" alt="세 개의 역할별 연구 저장소가 UNIFIED 공통 계보 허브로 연결되는 애니메이션" />
   </a>
 </p>
 
-| Repository | 역할 | 현재 접근 |
+| Repository | 주요 기록 | 현재 접근 |
 |---|---|---|
-| `stress_project_JH` | Team V7 · Pair-Neighbor와 팀 기준 계보 | Private |
-| `stress_project_BS` | 최종 BS 8/6 · ExtraTrees/Pair 고도화 · 발표자료 | Private |
-| `stress_project_SK` | 대안 모델 · 강건성 검증 · 연구 엔진 기록 | Private |
-| `stress_project_UNIFIED` | 대표 모델 계보 · 점수 · 팀 공통 허브 | Private |
+| `stress_project_JH` | V7·Pair-Neighbor 관련 실험과 팀 기준 기록 | Private |
+| `stress_project_BS` | ExtraTrees·Pair 개선 실험과 최종 발표 자료 기록 | Private |
+| `stress_project_SK` | 대안 모델·강건성 검증과 연구 과정 기록 | Private |
+| `stress_project_UNIFIED` | 대표 모델 계보·점수의 팀 공통 정리 허브 | Private |
 
 <p align="center">
-  <strong>개별 연구는 분리하고, 확인된 계보와 결과는 UNIFIED에서 연결합니다.</strong><br />
-  <sub>네 저장소는 현재 모두 Private이며, 접근 권한이 있는 팀원에게만 표시됩니다. 공개 전환 시점은 이 README에서 미리 약속하지 않습니다.</sub>
+  <strong>역할별 연구 기록은 각 저장소에 보존하고, 확인된 계보와 결과는 UNIFIED에서 함께 연결합니다.</strong><br />
+  <sub>리포명은 기록 위치를 뜻하며 모델·성과의 개인 소유나 기여도 순위를 의미하지 않습니다. 네 저장소는 현재 모두 Private입니다.</sub>
 </p>
 
 <a href="#status" aria-label="실험 현황 섹션으로 이동">
@@ -224,15 +225,15 @@
 
 <p align="center">
   <a href="#top" aria-label="페이지 상단으로 이동">
-    <img src="./assets/final-status.svg" width="100%" alt="Team V7과 BS V34가 최종 BS 8/6 모델로 이어지고, P56C Gower와 Fresh V6가 별도 판단 분기로 보존되는 최종 연구 상태 애니메이션" />
+    <img src="./assets/final-status.svg" width="100%" alt="Team V7과 V34가 8월 6일 팀 통합모델로 이어지고, P56C Gower와 Fresh V6가 별도 판단 분기로 보존되는 최종 연구 상태 애니메이션" />
   </a>
 </p>
 
 | 모델 | 내부 검증 | Public MAE | 상태 |
 |---|---:|---:|---|
 | Team V7 Pair-Neighbor | 0.146644 | 0.1272333333 | 계보 이정표 |
-| BS V34 Tree·Pair Joint Tuning | 0.148033 | 0.1271866667 | 계보 이정표 |
-| **BS 8/6 Final Integrated Model** | **0.147300** | **0.1266866667** | **최종 채택 · Private 0.1473** |
+| V34 Tree·Pair Joint Tuning | 0.148033 | 0.1271866667 | 계보 이정표 |
+| **8/6 Team Integrated Model** | **0.147300** | **0.1266866667** | **최종 채택 · Private 0.1473** |
 | P56C MI-weighted Gower | Robust CV 0.149096 | 0.130060 | 독립 모델 · 보존 |
 | Fresh V6 | — | **0.1265** | 미채택 · 내부/Private 검증 기록 없음 |
 
@@ -253,6 +254,6 @@
 
 <p align="center">
   <strong>THIS IS STRESS · Final presentation aligned</strong><br />
-  <sub>Health Data × Reproducible ML · Final adopted model: BS 8/6</sub><br />
+  <sub>Health Data × Reproducible ML · Final adopted model: 8/6 Team Integrated Model</sub><br />
   <sub>Public MAE 0.1266866667 · Private MAE 0.1473 · Click the animation to return to the organization overview.</sub>
 </p>
