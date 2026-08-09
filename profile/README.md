@@ -40,13 +40,14 @@ Public `0.1265`를 기록한 별도 후보도 있었지만 내부 검증과 Priv
 
 ## Model Lineage
 
-<p align="center">
-  <a href="https://github.com/thisisstress/stress_project_UNIFIED">
-    <img src="./assets/model-lineage-current.svg" width="100%" alt="Stress score model lineage" />
-  </a>
-</p>
+```mermaid
+flowchart LR
+    V1[Weighted Quantile<br/>ExtraTrees] --> V7[V7<br/>Pair-Neighbor]
+    V7 --> V34[V34<br/>Tree + Pair tuning]
+    V34 --> FINAL[BS 8/6<br/>Final Integrated Model]
+```
 
-대표 흐름은 **Weighted Quantile ExtraTrees → V7 Pair-Neighbor → V34 Tree·Pair 조정 → BS 8/6 최종 통합**입니다.
+세부 점수와 원본 위치는 [`stress_project_UNIFIED`](https://github.com/thisisstress/stress_project_UNIFIED)에 정리되어 있습니다.
 
 ## Repositories
 
