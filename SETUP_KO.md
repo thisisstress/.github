@@ -18,7 +18,7 @@ GitHub Organization 메인 화면은 Public `.github` 저장소의 `profile/READ
    └─ render-profile-assets.yml
 ```
 
-현재 랜딩페이지에서 직접 사용하는 시각 자료는 `hero-current.svg`와 `final-architecture.svg` 두 개입니다. 두 이미지는 README에서 링크 래퍼 없이 순수 `<img>` 요소로 표시해 사용자가 이미지를 눌렀을 때 다른 페이지나 SVG 원본으로 이동하지 않도록 유지합니다.
+현재 랜딩페이지에서 직접 사용하는 시각 자료는 `hero-current.svg`와 `final-architecture.svg` 두 개입니다. 두 이미지는 README에서 `#_` no-op 링크로 감싸, 클릭하더라도 SVG 원본 파일이나 다른 페이지로 이동하지 않도록 합니다.
 
 ## 최종 결과
 
@@ -47,7 +47,7 @@ GitHub Actions의 `Validate organization profile` workflow는 쓰기 권한 없�
 
 - README가 사용하는 두 SVG 파일의 존재와 XML 파싱
 - 활성 GIF 참조가 없는지
-- 프로필 이미지가 링크로 감싸져 있지 않은지
+- 모든 프로필 이미지가 `#_` no-op 링크로 감싸져 있는지
 - 최종 모델명과 MAE 값
 - 네 저장소의 공개 상태 메타데이터
 - 난임·흡연 Organization 문구가 섞이지 않았는지
@@ -65,6 +65,6 @@ git diff --check
 
 새 공식 결과가 생긴 경우 먼저 근거가 되는 발표자료와 원본 저장소를 확인한 뒤 `profile/content.json`과 `profile/README.md`를 같은 값으로 수정합니다. 시각 구조가 달라질 때만 SVG를 수정합니다.
 
-프로필 이미지는 클릭 이동을 만들지 않도록 `<a>`로 감싸지 않습니다. 새 이미지를 추가할 때도 동일하게 링크 없는 `<img>`로 유지합니다.
+프로필 이미지는 GitHub의 기본 이미지 이동 대신 현재 페이지에 머물도록 `<a href="#_">...</a>` 형태로 감쌉니다. 새 이미지를 추가할 때도 동일한 no-op 링크 방식을 사용합니다.
 
 `.github` 저장소에는 원본 대회 데이터, 제출 CSV, 비밀키, 개인 식별 정보, 공개되지 않은 연구 산출물을 복사하지 않습니다.
