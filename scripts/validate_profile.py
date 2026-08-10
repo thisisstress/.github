@@ -68,13 +68,16 @@ def main() -> None:
         fail(f"README references legacy GIF assets: {active_gifs}")
 
     image_count = len(re.findall(r"<img\b", readme, flags=re.IGNORECASE))
-    noop_linked_images = len(re.findall(
-        r'<a\s+href="#_"[^>]*>\s*<img\b[^>]*>\s*</a>',
+    if image_count != len(ACTIVE_ASSETS):
+        fail(f"README must contain exactly {len(ACTIVE_ASSETS)} profile images")
+
+    linked_images = re.findall(
+        r"<a\b[^>]*>\s*<img\b[^>]*>\s*</a>",
         readme,
         flags=re.IGNORECASE | re.DOTALL,
-    ))
-    if image_count != noop_linked_images:
-        fail("Every profile image must use the no-op #_ link wrapper")
+    )
+    if linked_images:
+        fail("Profile images must not be wrapped in links")
 
     for source in sorted(local_sources):
         ET.parse(PROFILE / source)
@@ -155,7 +158,8 @@ def main() -> None:
     print(
         "PASS: simplified profile validated; "
         f"{len(local_sources)} active SVGs, "
-        f"{len(repository_map)} repository visibility records"
+        f"{len(repository_map)} repository visibility records, "
+        "profile images unlinked"
     )
 
 
