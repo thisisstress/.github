@@ -1,90 +1,57 @@
-# Final profile validation report
+# Final profile validation
 
-Validated on **2026-08-08** for the final-presentation-aligned
-`thisisstress/.github` organization profile.
+Validated on **2026-08-10** for the current `thisisstress/.github` Organization profile.
 
 ## Result
 
-**PASS — final SVG profile validated on GitHub Actions**
+**PASS**
 
 - Workflow: `Validate organization profile`
-- Trigger commit: `9df1cf7faae043a2d5d60097737abb741a902c8e`
-- Workflow run: `31237505015`
-- Conclusion: **success**
+- Run: `31357367641`
+- Run number: `24`
+- Trigger commit: `ecf10077e75016c985c24dd87c24dc66b39b8f6d`
+- Conclusion: `success`
 
-## Final profile contract
+## Active profile contract
 
-The active organization README now uses vector assets for every animated visual.
-Legacy GIF files remain only as historical repository assets and are not referenced
-by the active README.
-
-Required final animation set:
+The public landing page intentionally uses only two SVG visuals:
 
 - `profile/assets/hero-current.svg`
 - `profile/assets/final-architecture.svg`
-- `profile/assets/final-workflow.svg`
-- `profile/assets/final-principles.svg`
-- `profile/assets/final-team.svg`
-- `profile/assets/final-repositories.svg`
-- `profile/assets/final-status.svg`
-- `profile/assets/final-footer.svg`
 
-## Validation checks
-
-The current validator checks:
-
-- README local asset references exist
-- no active README reference points to a legacy GIF
-- required final SVG assets are present
-- all eight profile anchors resolve exactly
-- every README image has an explicit navigation destination
-- README images do not link directly to raw asset files
-- final-result markers occur exactly once
-- stale `pending` / legacy GIF wording is absent from README
-- every SVG in `profile/assets` parses as XML
-- archival GIFs, when present, still decode and remain within historical size limits
-- `content.json` contains exactly three team members and four repository nodes
-- final presentation status and final release state use the supported schema
-- experiment status is non-empty
-- forbidden public data/model file types are absent
-- files above 10 MB are absent
-- the validation workflow is read-only and invokes `scripts/validate_profile.py`
+The reader-facing content remains in `profile/README.md`. Images use a `#_` no-op link wrapper so clicking them does not open the raw SVG asset.
 
 ## Final presentation state
 
-- Profile state: `final_presentation_aligned`
-- Final release status: `adopted`
-- Final model: **8/6 Team Integrated Model — ExtraTrees + Pair-Neighbor**
+- Final model: **BS 8/6 — ExtraTrees + Pair-Neighbor**
+- Internal validation MAE: **0.147300**
 - Public MAE: **0.1266866667**
 - Private MAE: **0.1473**
-- Snapshot date: **2026-08-08**
+- Blend: **ExtraTrees 76% + Pair-Neighbor 24%**
 
-Model display names in the organization profile use team-level naming. Individual
-repository names are retained only where needed to identify source or record locations.
+## Repository visibility metadata
 
-## Automation safety change
+| Repository | Visibility |
+|---|---|
+| `stress_project_UNIFIED` | Public |
+| `stress_project_BS` | Public |
+| `stress_project_JH` | Public |
+| `stress_project_SK` | Private |
 
-The previous workflow automatically regenerated GIF-era assets from
-`scripts/render_assets.py`. That behavior was intentionally removed because the
-final profile now contains hand-curated SVG animations and final-presentation
-section headers.
+`profile/content.json` is aligned with this state.
 
-The workflow is now **validation-only**:
+## Validation checks
 
-- repository checkout
-- Python setup
-- dependency installation
-- `python scripts/validate_profile.py`
-- `git diff --check`
+The current validator confirms:
 
-It has `contents: read` permission and cannot overwrite the final visual assets.
+- the two active SVG references exist and parse correctly
+- no active GIF is referenced by the landing README
+- profile images use the no-op link wrapper
+- final model and MAE metadata match the adopted result
+- repository visibility metadata matches the current four-repository layout
+- fertility and smoking Organization content is not mixed into the active profile package
+- public data/model artifact types such as CSV, parquet, pickle, joblib, and `.env` are absent
+- files larger than 10 MB are absent
+- the GitHub Actions workflow has read-only contents permission
 
-## Transition note
-
-A previously queued legacy render run (`31237500468`) started from an older
-commit while the validator/workflow migration was being applied. It completed
-with **failure at validation**, and its asset commit step was **skipped**. No
-legacy regenerated assets from that run were pushed to `main`.
-
-The following validation-only run (`31237505015`) completed successfully and is
-the authoritative final profile validation result.
+The obsolete renderer, dependency file, GIF optimization metadata, and unused `final-*` SVGs from the previous multi-section landing contract were removed during this cleanup.
