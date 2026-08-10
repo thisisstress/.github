@@ -42,14 +42,14 @@
     {
       "name": "stress_project_JH",
       "role": "V7 and Pair-Neighbor experiments and team reference records",
-      "visibility": "private",
-      "public_url": null
+      "visibility": "public",
+      "public_url": "https://github.com/thisisstress/stress_project_JH"
     },
     {
       "name": "stress_project_BS",
       "role": "ExtraTrees/Pair refinement experiments and final presentation records",
-      "visibility": "private",
-      "public_url": null
+      "visibility": "public",
+      "public_url": "https://github.com/thisisstress/stress_project_BS"
     },
     {
       "name": "stress_project_SK",
@@ -60,8 +60,8 @@
     {
       "name": "stress_project_UNIFIED",
       "role": "Shared team hub for representative lineage and scores",
-      "visibility": "private",
-      "public_url": null
+      "visibility": "public",
+      "public_url": "https://github.com/thisisstress/stress_project_UNIFIED"
     }
   ],
   "experiment_status": {
