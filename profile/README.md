@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/hero-current.svg" width="100%" alt="THIS IS STRESS" />
+  <a href="#_" aria-label="THIS IS STRESS visual"><img src="./assets/hero-current.svg" width="100%" alt="THIS IS STRESS" /></a>
 </p>
 
 <h1 align="center">THIS IS STRESS</h1>
@@ -31,7 +31,7 @@ Train 3,000건의 신체·건강·생활 정보를 이용하는 정형 데이터
 | Blend | **ExtraTrees 76% + Pair-Neighbor 24%** |
 
 <p align="center">
-  <img src="./assets/final-architecture.svg" width="100%" alt="ExtraTrees and Pair-Neighbor final architecture" />
+  <a href="#_" aria-label="ExtraTrees and Pair-Neighbor final architecture visual"><img src="./assets/final-architecture.svg" width="100%" alt="ExtraTrees and Pair-Neighbor final architecture" /></a>
 </p>
 
 최종 모델은 1,200개의 ExtraTree 예측을 54% 분위수로 집계하고, 8개 피처의 28개 Pair 공간에서 얻은 이웃 예측을 48% 분위수로 집계한 뒤 `76:24`로 결합합니다. 거리 `< 0.2`의 근접중복은 최근접 Train 타깃으로 보정하고 최종 값을 0.01 단위로 반올림합니다.
