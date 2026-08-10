@@ -71,13 +71,13 @@ def main() -> None:
     if image_count != len(ACTIVE_ASSETS):
         fail(f"README must contain exactly {len(ACTIVE_ASSETS)} profile images")
 
-    linked_images = re.findall(
-        r"<a\b[^>]*>\s*<img\b[^>]*>\s*</a>",
+    noop_linked_images = re.findall(
+        r'<a\b[^>]*href="#_"[^>]*>\s*<img\b[^>]*>\s*</a>',
         readme,
         flags=re.IGNORECASE | re.DOTALL,
     )
-    if linked_images:
-        fail("Profile images must not be wrapped in links")
+    if len(noop_linked_images) != image_count:
+        fail("Every profile image must use the no-op #_ link wrapper")
 
     for source in sorted(local_sources):
         ET.parse(PROFILE / source)
@@ -159,7 +159,7 @@ def main() -> None:
         "PASS: simplified profile validated; "
         f"{len(local_sources)} active SVGs, "
         f"{len(repository_map)} repository visibility records, "
-        "profile images unlinked"
+        "profile images use #_ no-op wrappers"
     )
 
 
