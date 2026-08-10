@@ -7,9 +7,9 @@ Validated on **2026-08-10** for the current `thisisstress/.github` Organization 
 **PASS**
 
 - Workflow: `Validate organization profile`
-- Run: `31357674791`
-- Run number: `26`
-- Trigger commit: `38f06ea4d1097c995c1dde2e3cd519477c96c7b0`
+- Run: `31358791351`
+- Run number: `28`
+- Trigger commit: `9b83f98425d5b768b84559e4582cb1723ebd29f9`
 - Conclusion: `success`
 
 ## Active profile contract
@@ -19,7 +19,7 @@ The public landing page intentionally uses only two SVG visuals:
 - `profile/assets/hero-current.svg`
 - `profile/assets/final-architecture.svg`
 
-The reader-facing content remains in `profile/README.md`. Both SVGs are rendered as plain HTML `<img>` elements with no surrounding `<a>` link, so the README itself does not assign a click destination to either animation.
+The reader-facing content remains in `profile/README.md`. Both SVGs use a `#_` no-op link wrapper. GitHub may still treat the image as clickable, but clicking it stays on the current README instead of opening the raw SVG asset or another page.
 
 ## Final presentation state
 
@@ -46,7 +46,7 @@ The current validator confirms:
 
 - the two active SVG references exist and parse correctly
 - no active GIF is referenced by the landing README
-- profile images are not wrapped in links
+- every profile image uses the `#_` no-op link wrapper
 - final model and MAE metadata match the adopted result
 - repository visibility metadata matches the current four-repository layout
 - fertility and smoking Organization content is not mixed into the active profile package
