@@ -1,8 +1,8 @@
 # thisisstress Organization Profile 관리
 
-GitHub Organization 메인 화면은 Public `.github` 저장소의 `profile/README.md`를 사용합니다.
+**Entry:** `profile/README.md`
 
-## 현재 공개 구조
+## 공개 구조
 
 ```text
 .github/
@@ -18,7 +18,8 @@ GitHub Organization 메인 화면은 Public `.github` 저장소의 `profile/READ
    └─ render-profile-assets.yml
 ```
 
-현재 랜딩페이지에서 직접 사용하는 시각 자료는 `hero-current.svg`와 `final-architecture.svg` 두 개입니다. 두 이미지는 README에서 `#_` no-op 링크로 감싸, 클릭하더라도 SVG 원본 파일이나 다른 페이지로 이동하지 않도록 합니다.
+**Active visuals:** `hero-current.svg` · `final-architecture.svg`  
+**Image link contract:** `<a href="#_">...</a>`
 
 ## 최종 결과
 
@@ -28,7 +29,7 @@ GitHub Organization 메인 화면은 Public `.github` 저장소의 `profile/READ
 - Private MAE: **0.1473**
 - Blend: **ExtraTrees 76% + Pair-Neighbor 24%**
 
-최종 결과의 원본과 모델 계보는 `stress_project_UNIFIED`와 `stress_project_BS`를 기준으로 확인합니다.
+**Result SSOT:** `stress_project_UNIFIED` · `stress_project_BS`
 
 ## Repository 공개 상태
 
@@ -39,32 +40,30 @@ GitHub Organization 메인 화면은 Public `.github` 저장소의 `profile/READ
 | `stress_project_JH` | Public |
 | `stress_project_SK` | Private |
 
-`profile/content.json`의 `repository_map`도 이 상태와 일치하게 유지합니다.
+**Metadata mirror:** `profile/content.json.repository_map`
 
-## 검증
+## 검증 계약
 
-GitHub Actions의 `Validate organization profile` workflow는 쓰기 권한 없이 다음 항목을 확인합니다.
+`Validate organization profile` · read-only contents permission
 
-- README가 사용하는 두 SVG 파일의 존재와 XML 파싱
-- 활성 GIF 참조가 없는지
-- 모든 프로필 이미지가 `#_` no-op 링크로 감싸져 있는지
-- 최종 모델명과 MAE 값
-- 네 저장소의 공개 상태 메타데이터
-- 난임·흡연 Organization 문구가 섞이지 않았는지
-- CSV, parquet, pickle, joblib, `.env` 등의 공개 금지 파일 여부
-- 10MB 초과 파일 여부
-
-로컬에서는 추가 패키지 설치 없이 실행할 수 있습니다.
+- active SVG 존재 · XML parse
+- active GIF reference 없음
+- profile image `#_` wrapper
+- final model / MAE metadata
+- repository visibility metadata
+- unrelated fertility/smoking Organization copy 없음
+- CSV · parquet · pickle · joblib · `.env` 공개 금지
+- file size ≤ 10 MB
 
 ```bash
 python scripts/validate_profile.py
 git diff --check
 ```
 
-## 수정 원칙
+## 수정 규칙
 
-새 공식 결과가 생긴 경우 먼저 근거가 되는 발표자료와 원본 저장소를 확인한 뒤 `profile/content.json`과 `profile/README.md`를 같은 값으로 수정합니다. 시각 구조가 달라질 때만 SVG를 수정합니다.
-
-프로필 이미지는 GitHub의 기본 이미지 이동 대신 현재 페이지에 머물도록 `<a href="#_">...</a>` 형태로 감쌉니다. 새 이미지를 추가할 때도 동일한 no-op 링크 방식을 사용합니다.
-
-`.github` 저장소에는 원본 대회 데이터, 제출 CSV, 비밀키, 개인 식별 정보, 공개되지 않은 연구 산출물을 복사하지 않습니다.
+1. 공식 근거 확인 — 발표자료 · source repository
+2. `profile/content.json` / `profile/README.md` 동기화
+3. 시각 구조 변경 시에만 SVG 수정
+4. 신규 profile image → `#_` wrapper 유지
+5. 원본 대회 데이터 · submission CSV · secret · PII · 비공개 연구 artifact 복사 금지
