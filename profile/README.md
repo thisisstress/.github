@@ -62,10 +62,14 @@ flowchart LR
 
 ## Team
 
-| 김지현 | 박빛샘 | 안상균 |
+| [김지현](https://github.com/KimPooh) | [박빛샘](https://github.com/qlctoa) | [안상균](https://github.com/emotigom) |
 |---|---|---|
 | 일정 조율 · 파생변수 · 모델 개선 | 발표 자료 · ExtraTrees · 분위수 조정 | GitHub·Notion · 대안 모델 · 튜닝 |
 
 역할은 발표자료의 주요 담당 영역을 기준으로 한 요약이며, 가설·실험·검증과 최종 모델 선정은 팀 협업으로 진행했습니다.
 
 연구 결과는 실제 의료 판단이나 임상 의사결정을 위한 모델이 아닙니다.
+
+## License and attribution
+
+조직 프로필의 팀 제작 코드·문서·원본 시각 자료는 [MIT License](https://github.com/thisisstress/.github/blob/main/LICENSE)로 공개합니다. 세 팀원의 공동 저자 표기와 적용 제외 항목은 [AUTHORS.md](https://github.com/thisisstress/.github/blob/main/AUTHORS.md)와 [LICENSE_SCOPE.md](https://github.com/thisisstress/.github/blob/main/LICENSE_SCOPE.md)에서 확인할 수 있습니다.
