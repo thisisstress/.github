@@ -49,9 +49,9 @@
 - V14 `0.1278085845` → 최종은 약 **0.88% 상대 감소**이지만, V14는 historical public reference이며 canonical baseline으로 사용하지 않습니다.
 - 서로 다른 내부 검증 계약의 미세 MAE는 직접 순위화하지 않습니다.
 
-**Fresh V6:** Public `0.1265`가 관측됐지만 최종 모델과 동등한 내부/Private 검증·재현 계약이 확보되지 않아 canonical final로 채택하지 않았습니다.
+**Selection note:** Public-only 탐색 후보와 최종 채택 모델은 구분해 기록하며, 최종 결과는 재현 가능한 검증 계약과 함께 해석합니다.
 
-→ [점수 해석·비교 규칙](https://github.com/thisisstress/stress_project_UNIFIED/blob/main/docs/EVALUATION_NOTES.md)
+→ [점수 해석·비교 규칙과 미채택 후보 설명](https://github.com/thisisstress/stress_project_UNIFIED/blob/main/docs/EVALUATION_NOTES.md)
 
 ## Model Lineage
 
@@ -79,7 +79,7 @@ flowchart LR
 
 | [김지현](https://github.com/KimPooh) | [박빛샘](https://github.com/qlctoa) | [안상균](https://github.com/emotigom) |
 |---|---|---|
-| 일정 조율 · 파생변수 · 모델 개선 | 발표 자료 · ExtraTrees · 분위수 조정 | GitHub·Notion · 대안 모델 · 튜닝 |
+| 실험 일정 조율 · 파생변수 설계 · 모델 개선 | 결과 시각화·발표 구성 · ExtraTrees · 분위수 조정 | 실험 기록·재현성 관리 · 대안 모델 연구 · 튜닝 |
 
 **Role labels:** 발표 자료와 저장소 기록 기준 주요 담당 영역 · 가설 수립/실험/검증/최종 선정은 팀 협업
 
