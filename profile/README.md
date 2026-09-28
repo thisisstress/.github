@@ -41,7 +41,17 @@
 **Near-duplicate:** distance `< 0.2` → nearest Train target  
 **Output:** 0.01 rounding
 
-**Fresh V6:** Public `0.1265` · 내부/Private 검증 계약 부족 · 미채택
+### Score interpretation
+
+- **MAE는 낮을수록 우수**합니다.
+- 초기 공통 기준점 V1 `0.1282776667` → 최종 `0.1266866667`: ΔMAE `-0.0015910` (약 **1.24% 상대 감소**)
+- 후반 팀 계보 이정표 V7 `0.1272333333` → 최종 `0.1266866667`: ΔMAE `-0.0005467` (약 **0.43% 상대 감소**)
+- V14 `0.1278085845` → 최종은 약 **0.88% 상대 감소**이지만, V14는 historical public reference이며 canonical baseline으로 사용하지 않습니다.
+- 서로 다른 내부 검증 계약의 미세 MAE는 직접 순위화하지 않습니다.
+
+**Fresh V6:** Public `0.1265`가 관측됐지만 최종 모델과 동등한 내부/Private 검증·재현 계약이 확보되지 않아 canonical final로 채택하지 않았습니다.
+
+→ [점수 해석·비교 규칙](https://github.com/thisisstress/stress_project_UNIFIED/blob/main/docs/EVALUATION_NOTES.md)
 
 ## Model Lineage
 
@@ -61,7 +71,7 @@ flowchart LR
 | **[`stress_project_UNIFIED`](https://github.com/thisisstress/stress_project_UNIFIED)** | **팀 최종 결과 · 모델 계보 · 주요 점수** |
 | [`stress_project_BS`](https://github.com/thisisstress/stress_project_BS) | 최종 BS 8/6 · ExtraTrees/Pair-Neighbor |
 | [`stress_project_JH`](https://github.com/thisisstress/stress_project_JH) | V7 Pair-Neighbor · 재현 코드 |
-| `stress_project_SK` | 대안 모델 · UQC/Gower · 내부 R&D |
+| `stress_project_SK` *(private)* | 대안 모델 · UQC/Gower · 후속 내부 R&D · 공개 최종 근거에는 사용하지 않음 |
 
 **Reading order:** UNIFIED → BS / JH → SK
 
