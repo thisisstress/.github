@@ -73,7 +73,8 @@ flowchart LR
 | [`stress_project_JH`](https://github.com/thisisstress/stress_project_JH) | V7 Pair-Neighbor · 재현 코드 |
 | `stress_project_SK` *(private)* | 대안 모델 · UQC/Gower · 후속 내부 R&D · 공개 최종 근거에는 사용하지 않음 |
 
-**Reading order:** UNIFIED → BS / JH → SK
+**Public reading order:** UNIFIED → BS / JH  
+**Internal follow-up:** SK는 private 후속 R&D 저장소로 공개 검증 경로에 포함하지 않음
 
 ## Team
 
