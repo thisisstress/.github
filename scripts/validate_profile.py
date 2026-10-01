@@ -13,9 +13,19 @@ PROFILE = ROOT / "profile"
 ASSETS = PROFILE / "assets"
 README = PROFILE / "README.md"
 
-ACTIVE_ASSETS = {
-    "./assets/hero-current.svg",
+ALLOWED_ASSETS = {
+    "./assets/hero.gif",
+    "./assets/overview-snapshot.jpg",
     "./assets/final-architecture.svg",
+    "./assets/final-architecture.jpg",
+    "./assets/model-journey.jpg",
+    "./assets/validation-evidence.jpg",
+    "./assets/footer-endcap.jpg",
+}
+
+REQUIRED_ASSETS = {
+    "./assets/hero.gif",
+    "./assets/overview-snapshot.jpg",
 }
 
 EXPECTED_REPOSITORIES = {
@@ -47,11 +57,20 @@ def main() -> None:
         if not source.startswith(("http://", "https://"))
     }
 
-    if local_sources != ACTIVE_ASSETS:
-        fail(
-            "Active README assets differ from the simplified profile contract: "
-            f"{sorted(local_sources)}"
-        )
+    unexpected_assets = sorted(local_sources - ALLOWED_ASSETS)
+    if unexpected_assets:
+        fail(f"Unexpected README assets: {unexpected_assets}")
+
+    missing_required = sorted(REQUIRED_ASSETS - local_sources)
+    if missing_required:
+        fail(f"Required README assets are missing: {missing_required}")
+
+    architecture_assets = {
+        "./assets/final-architecture.svg",
+        "./assets/final-architecture.jpg",
+    }
+    if len(local_sources & architecture_assets) != 1:
+        fail("README must reference exactly one final-architecture asset")
 
     missing = [
         source for source in sorted(local_sources)
@@ -64,12 +83,12 @@ def main() -> None:
         source for source in sources
         if source.lower().split("?", 1)[0].endswith(".gif")
     ]
-    if active_gifs:
-        fail(f"README references legacy GIF assets: {active_gifs}")
+    if active_gifs != ["./assets/hero.gif"]:
+        fail(f"README must use hero.gif as its only animated image: {active_gifs}")
 
     image_count = len(re.findall(r"<img\b", readme, flags=re.IGNORECASE))
-    if image_count != len(ACTIVE_ASSETS):
-        fail(f"README must contain exactly {len(ACTIVE_ASSETS)} profile images")
+    if image_count != len(local_sources):
+        fail("README image count must match its unique local asset references")
 
     noop_linked_images = re.findall(
         r'<a\b[^>]*href="#_"[^>]*>\s*<img\b[^>]*>\s*</a>',
@@ -80,7 +99,8 @@ def main() -> None:
         fail("Every profile image must use the no-op #_ link wrapper")
 
     for source in sorted(local_sources):
-        ET.parse(PROFILE / source)
+        if source.lower().endswith(".svg"):
+            ET.parse(PROFILE / source)
 
     content_path = PROFILE / "content.json"
     content_text = content_path.read_text(encoding="utf-8")
@@ -114,7 +134,11 @@ def main() -> None:
     scan_text = "\n".join([
         readme,
         content_text,
-        *[(PROFILE / source).read_text(encoding="utf-8") for source in sorted(local_sources)],
+        *[
+            (PROFILE / source).read_text(encoding="utf-8")
+            for source in sorted(local_sources)
+            if source.lower().endswith(".svg")
+        ],
     ]).lower()
     contamination = sorted(
         term for term in FORBIDDEN_CROSS_PROJECT_TERMS
@@ -156,10 +180,10 @@ def main() -> None:
             fail(f"Workflow is missing: {required}")
 
     print(
-        "PASS: simplified profile validated; "
-        f"{len(local_sources)} active SVGs, "
+        "PASS: organization profile validated; "
+        f"{len(local_sources)} active visual assets, "
         f"{len(repository_map)} repository visibility records, "
-        "profile images use #_ no-op wrappers"
+        "one animated hero and framed static panels"
     )
 
 
