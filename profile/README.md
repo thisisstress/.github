@@ -15,7 +15,7 @@
 </p>
 
 <p align="center">
-  <img src="./assets/overview-snapshot.jpg" width="100%" alt="THIS IS STRESS project snapshot — task, training data, metric, final blend and MAE" />
+  <a href="#_" aria-label="THIS IS STRESS project snapshot"><img src="./assets/overview-snapshot.jpg" width="100%" alt="THIS IS STRESS project snapshot — task, training data, metric, final blend and MAE" /></a>
 </p>
 
 ## Project
