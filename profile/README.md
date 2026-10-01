@@ -36,7 +36,7 @@
 | Blend | **ExtraTrees 76% + Pair-Neighbor 24%** |
 
 <p align="center">
-  <a href="#_" aria-label="ExtraTrees and Pair-Neighbor final architecture visual"><img src="./assets/final-architecture.svg" width="100%" alt="ExtraTrees and Pair-Neighbor final architecture" /></a>
+  <a href="#_" aria-label="ExtraTrees and Pair-Neighbor final architecture visual"><img src="./assets/final-architecture.jpg" width="100%" alt="ExtraTrees and Pair-Neighbor final architecture" /></a>
 </p>
 
 **Tree:** 1,200 ExtraTrees · Q54  
