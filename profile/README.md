@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="#_" aria-label="THIS IS STRESS visual"><img src="./assets/hero-current.svg" width="100%" alt="THIS IS STRESS" /></a>
+  <a href="#_" aria-label="THIS IS STRESS animated research visual"><img src="./assets/hero.gif" width="100%" alt="THIS IS STRESS — global and local reasoning converge into evidence" /></a>
 </p>
 
 <h1 align="center">THIS IS STRESS</h1>
@@ -12,6 +12,10 @@
 <p align="center">
   <strong>Final: BS 8/6 · ExtraTrees 76% + Pair-Neighbor 24%</strong><br />
   Public MAE <strong>0.1266866667</strong> · Private MAE <strong>0.1473</strong>
+</p>
+
+<p align="center">
+  <img src="./assets/overview-snapshot.jpg" width="100%" alt="THIS IS STRESS project snapshot — task, training data, metric, final blend and MAE" />
 </p>
 
 ## Project
