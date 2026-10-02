@@ -72,6 +72,11 @@ def main() -> None:
     if missing_required:
         fail(f"Required README assets are missing: {missing_required}")
 
+    if local_sources != REQUIRED_ASSETS:
+        extra = sorted(local_sources - REQUIRED_ASSETS)
+        missing = sorted(REQUIRED_ASSETS - local_sources)
+        fail(f"README must use exactly the six final visual assets; extra={extra}, missing={missing}")
+
     architecture_assets = {
         "./assets/final-architecture.svg",
         "./assets/final-architecture.jpg",
