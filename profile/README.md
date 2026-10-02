@@ -10,22 +10,13 @@
 </p>
 
 <p align="center">
-  <strong>Final: BS 8/6 · ExtraTrees 76% + Pair-Neighbor 24%</strong><br />
-  Public MAE <strong>0.1266866667</strong> · Private MAE <strong>0.1473</strong>
-</p>
-
-<p align="center">
   <a href="#_" aria-label="THIS IS STRESS project snapshot"><img src="./assets/overview-snapshot.jpg" width="100%" alt="THIS IS STRESS project snapshot — task, training data, metric, final blend and MAE" /></a>
 </p>
 
-## Project
+## Project & Final Result
 
-**Task:** Train 3,000건 기반 `stress_score` 회귀  
-**Target range:** `0~1`  
-**Metric:** MAE  
+**Task:** Train 3,000건 기반 `stress_score` 회귀 · **Target:** `0~1` · **Metric:** MAE  
 **Feature axes:** BMI · 맥압 · 평균동맥압 · 콜레스테롤/혈당 비율 · 결측 패턴
-
-## Final Result
 
 | 항목 | 결과 |
 |---|---:|
@@ -45,23 +36,28 @@
 **Near-duplicate:** distance `< 0.2` → nearest Train target  
 **Output:** 0.01 rounding
 
-### Score interpretation
+<details>
+<summary><strong>Score interpretation & comparison rules</strong></summary>
 
 - **MAE는 낮을수록 우수**합니다.
 - 초기 공통 기준점 V1 `0.1282776667` → 최종 `0.1266866667`: ΔMAE `-0.0015910` (약 **1.24% 상대 감소**)
 - 후반 팀 계보 이정표 V7 `0.1272333333` → 최종 `0.1266866667`: ΔMAE `-0.0005467` (약 **0.43% 상대 감소**)
 - V14 `0.1278085845` → 최종은 약 **0.88% 상대 감소**이지만, V14는 historical public reference이며 canonical baseline으로 사용하지 않습니다.
 - 서로 다른 내부 검증 계약의 미세 MAE는 직접 순위화하지 않습니다.
-
-**Selection note:** Public-only 탐색 후보와 최종 채택 모델은 구분해 기록하며, 최종 결과는 재현 가능한 검증 계약과 함께 해석합니다.
+- Public-only 탐색 후보와 최종 채택 모델은 구분해 기록하며, 최종 결과는 재현 가능한 검증 계약과 함께 해석합니다.
 
 → [점수 해석·비교 규칙과 미채택 후보 설명](https://github.com/thisisstress/stress_project_UNIFIED/blob/main/docs/EVALUATION_NOTES.md)
 
-## Model Lineage
+</details>
+
+## Model Journey
 
 <p align="center">
   <a href="#_" aria-label="Model journey from data audit to final adopted blend"><img src="./assets/model-journey.svg" width="100%" alt="Model journey — audit, exploration, ExtraTrees champion, Pair-Neighbor complement and final adopted blend" /></a>
 </p>
+
+<details>
+<summary><strong>Exact model lineage</strong></summary>
 
 ```mermaid
 flowchart LR
@@ -71,6 +67,8 @@ flowchart LR
 ```
 
 **SSOT:** [`stress_project_UNIFIED`](https://github.com/thisisstress/stress_project_UNIFIED)
+
+</details>
 
 ## Validation & Evidence
 
@@ -92,9 +90,9 @@ flowchart LR
 
 ## Team
 
-| [김지현](https://github.com/KimPooh) | [박빛샘](https://github.com/qlctoa) | [안상균](https://github.com/emotigom) |
-|---|---|---|
-| 실험 일정 조율 · 파생변수 설계 · 모델 개선 | 결과 시각화·발표 구성 · ExtraTrees · 분위수 조정 | 실험 기록·재현성 관리 · 대안 모델 연구 · 튜닝 |
+- **[김지현](https://github.com/KimPooh)** — 실험 일정 조율 · 파생변수 설계 · 모델 개선
+- **[박빛샘](https://github.com/qlctoa)** — 결과 시각화·발표 구성 · ExtraTrees · 분위수 조정
+- **[안상균](https://github.com/emotigom)** — 실험 기록·재현성 관리 · 대안 모델 연구 · 튜닝
 
 **Role labels:** 발표 자료와 저장소 기록 기준 주요 담당 영역 · 가설 수립/실험/검증/최종 선정은 팀 협업
 
