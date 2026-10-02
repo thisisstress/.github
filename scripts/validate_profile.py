@@ -17,19 +17,15 @@ ALLOWED_ASSETS = {
     "./assets/hero-premium.svg",
     "./assets/overview-snapshot.svg",
     "./assets/final-architecture.svg",
-    "./assets/final-architecture.svg",
-    "./assets/model-journey.jpg",
     "./assets/model-journey.svg",
-    "./assets/validation-evidence.jpg",
     "./assets/validation-evidence.svg",
-    "./assets/footer-endcap.jpg",
     "./assets/footer-endcap.svg",
 }
 
 REQUIRED_ASSETS = {
-    "./assets/hero.gif",
-    "./assets/overview-snapshot.jpg",
-    "./assets/final-architecture.jpg",
+    "./assets/hero-premium.svg",
+    "./assets/overview-snapshot.svg",
+    "./assets/final-architecture.svg",
     "./assets/model-journey.svg",
     "./assets/validation-evidence.svg",
     "./assets/footer-endcap.svg",
