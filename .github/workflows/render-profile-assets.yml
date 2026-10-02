@@ -41,6 +41,20 @@ jobs:
       - name: Render visual QA preview
         run: python scripts/render_profile_preview.py
 
+      - name: Render Chromium visual QA
+        run: |
+          CHROME="$(command -v google-chrome || command -v google-chrome-stable || command -v chromium-browser || command -v chromium)"
+          test -n "$CHROME"
+          "$CHROME" \
+            --headless=new \
+            --no-sandbox \
+            --disable-gpu \
+            --allow-file-access-from-files \
+            --hide-scrollbars \
+            --window-size=1260,4300 \
+            --screenshot=artifacts/profile-preview/profile-browser-contact-sheet.png \
+            "file://$GITHUB_WORKSPACE/artifacts/profile-preview/browser-preview.html"
+
       - name: Upload visual QA preview
         uses: actions/upload-artifact@v4
         with:
