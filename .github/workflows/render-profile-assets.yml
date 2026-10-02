@@ -34,3 +34,16 @@ jobs:
 
       - name: Check whitespace
         run: git diff --check
+
+      - name: Install visual QA renderer
+        run: python -m pip install --disable-pip-version-check --quiet cairosvg pillow
+
+      - name: Render visual QA preview
+        run: python scripts/render_profile_preview.py
+
+      - name: Upload visual QA preview
+        uses: actions/upload-artifact@v4
+        with:
+          name: organization-profile-visual-qa
+          path: artifacts/profile-preview/
+          retention-days: 7
