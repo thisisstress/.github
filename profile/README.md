@@ -30,14 +30,14 @@
   <a href="./assets/final-architecture.jpg" aria-label="ExtraTrees and Pair-Neighbor final architecture visual"><img src="./assets/final-architecture.jpg" width="86%" alt="ExtraTrees and Pair-Neighbor final architecture" /></a>
 </p>
 
+<details>
+<summary><strong>Technical details & score interpretation</strong></summary>
+
 **Tree:** 1,200 ExtraTrees · Q54  
 **Pair:** 8 features · 28 pair spaces · Q48  
 **Blend:** `76:24`  
 **Near-duplicate:** distance `< 0.2` → nearest Train target  
 **Output:** 0.01 rounding
-
-<details>
-<summary><strong>Score interpretation & comparison rules</strong></summary>
 
 - **MAE는 낮을수록 우수**합니다.
 - 초기 공통 기준점 V1 `0.1282776667` → 최종 `0.1266866667`: ΔMAE `-0.0015910` (약 **1.24% 상대 감소**)
@@ -76,14 +76,14 @@ flowchart LR
   <a href="./assets/validation-evidence.svg" aria-label="Validation principles and evidence"><img src="./assets/validation-evidence.svg" width="100%" alt="Validation and evidence — data size, final MAE, leakage guards and interpretation boundaries" /></a>
 </p>
 
+**Scope:** 해커톤·예측 연구용 · 임상 의사결정용 모델 아님.
+
 ## Repositories
 
-| Repository | 범위 |
-|---|---|
-| **[`stress_project_UNIFIED`](https://github.com/thisisstress/stress_project_UNIFIED)** | **팀 최종 결과 · 모델 계보 · 주요 점수** |
-| [`stress_project_BS`](https://github.com/thisisstress/stress_project_BS) | 최종 BS 8/6 · ExtraTrees/Pair-Neighbor |
-| [`stress_project_JH`](https://github.com/thisisstress/stress_project_JH) | V7 Pair-Neighbor · 재현 코드 |
-| `stress_project_SK` *(private)* | 대안 모델 · UQC/Gower · 후속 내부 R&D · 공개 최종 근거에는 사용하지 않음 |
+- **[`stress_project_UNIFIED`](https://github.com/thisisstress/stress_project_UNIFIED)** — **팀 최종 결과 · 모델 계보 · 주요 점수**
+- [`stress_project_BS`](https://github.com/thisisstress/stress_project_BS) — 최종 BS 8/6 · ExtraTrees/Pair-Neighbor
+- [`stress_project_JH`](https://github.com/thisisstress/stress_project_JH) — V7 Pair-Neighbor · 재현 코드
+- `stress_project_SK` *(private)* — 대안 모델 · UQC/Gower · 후속 내부 R&D · 공개 최종 근거에는 사용하지 않음
 
 **Public reading order:** UNIFIED → BS / JH  
 **Internal follow-up:** SK는 private 후속 R&D 저장소로 공개 검증 경로에 포함하지 않음
@@ -96,7 +96,6 @@ flowchart LR
 
 **Role labels:** 발표 자료와 저장소 기록 기준 주요 담당 영역 · 가설 수립/실험/검증/최종 선정은 팀 협업
 
-**용도 제한:** 임상 의사결정용 모델 아님.
 
 ## License and attribution
 
