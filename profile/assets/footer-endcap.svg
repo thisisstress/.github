@@ -63,14 +63,14 @@
   </g>
 
   <!-- miniature local neighborhoods -->
-  <g transform="translate(1010 118)" stroke="#8dc79e" stroke-width="2" fill="#79bd8f">
+  <g transform="translate(1120 158)" stroke="#8dc79e" stroke-width="2" fill="#79bd8f">
     <path d="M0 28L30 8L44 42L0 28M76 34L103 12L126 39L76 34"/>
     <circle cx="0" cy="28" r="5"/><circle cx="30" cy="8" r="5"/><circle cx="44" cy="42" r="5"/>
     <circle cx="76" cy="34" r="5"/><circle cx="103" cy="12" r="5"/><circle cx="126" cy="39" r="5"/>
   </g>
 
   <!-- miniature tree -->
-  <g transform="translate(1240 76)" stroke="#d7b253" stroke-width="3" fill="none" stroke-linecap="round">
+  <g transform="translate(1310 92)" stroke="#d7b253" stroke-width="3" fill="none" stroke-linecap="round">
     <path d="M70 94V50M70 56L40 30M70 56L100 30M40 30L22 12M40 30L52 8M100 30L86 8M100 30L118 12"/>
     <g fill="#e8c25d" stroke="none">
       <circle cx="70" cy="94" r="6"/><circle cx="40" cy="30" r="5"/><circle cx="100" cy="30" r="5"/>
@@ -79,7 +79,7 @@
   </g>
 
   <!-- evidence core -->
-  <g transform="translate(1436 146)" filter="url(#glow)">
+  <g transform="translate(1480 162)" filter="url(#glow)">
     <circle r="43" fill="#d9a83f" opacity=".10"><animate attributeName="r" values="40;48;40" dur="7s" repeatCount="indefinite"/><animate attributeName="opacity" values=".06;.16;.06" dur="7s" repeatCount="indefinite"/></circle>
     <circle r="27" fill="none" stroke="#dcb04d" stroke-opacity=".65"/>
     <circle r="12" fill="#e8bb52"><animate attributeName="r" values="11;13;11" dur="7s" repeatCount="indefinite"/></circle>
@@ -96,7 +96,7 @@
 
   <g font-family="system-ui, -apple-system, 'Segoe UI', Arial, sans-serif">
     <text x="240" y="96" font-size="17" font-weight="700" letter-spacing="5" fill="#b7d4aa">THIS IS STRESS</text>
-    <text x="240" y="157" font-size="45" font-weight="800"><tspan fill="#f4efd9">Understand stress. </tspan><tspan fill="url(#gold)">Brighter days ahead.</tspan></text>
+    <text x="240" y="157" font-size="43" font-weight="800"><tspan fill="#f4efd9">Understand stress. </tspan><tspan fill="url(#gold)">Brighter days ahead.</tspan></text>
     <text x="242" y="195" font-size="21" fill="#a7c7a3">Data · Models · People · Evidence in context</text>
 
     <text x="240" y="286" font-size="14" font-weight="700" letter-spacing="3.2" fill="#d2bf7a">REAL DATA · THOUGHTFUL MODELLING · RESPONSIBLE VALIDATION</text>
