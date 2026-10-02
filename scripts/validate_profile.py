@@ -14,10 +14,10 @@ ASSETS = PROFILE / "assets"
 README = PROFILE / "README.md"
 
 ALLOWED_ASSETS = {
-    "./assets/hero.gif",
-    "./assets/overview-snapshot.jpg",
+    "./assets/hero-premium.svg",
+    "./assets/overview-snapshot.svg",
     "./assets/final-architecture.svg",
-    "./assets/final-architecture.jpg",
+    "./assets/final-architecture.svg",
     "./assets/model-journey.jpg",
     "./assets/model-journey.svg",
     "./assets/validation-evidence.jpg",
@@ -95,8 +95,8 @@ def main() -> None:
         source for source in sources
         if source.lower().split("?", 1)[0].endswith(".gif")
     ]
-    if active_gifs != ["./assets/hero.gif"]:
-        fail(f"README must use hero.gif as its only animated image: {active_gifs}")
+    if active_gifs:
+        fail(f"Final profile must use static crisp panels only: {active_gifs}")
 
     image_count = len(re.findall(r"<img\b", readme, flags=re.IGNORECASE))
     if image_count != len(local_sources):
@@ -111,10 +111,7 @@ def main() -> None:
         fail("Every profile image must be wrapped by a link")
 
     for href, source in linked_images:
-        if source == "./assets/hero.gif":
-            if href != "#_":
-                fail("Animated hero must keep the no-op #_ link")
-        elif href not in {"#_", source}:
+        if href not in {"#_", source}:
             fail(f"Static profile panel must link to itself for expansion: {source} -> {href}")
 
     for source in sorted(local_sources):
@@ -202,7 +199,7 @@ def main() -> None:
         "PASS: organization profile validated; "
         f"{len(local_sources)} active visual assets, "
         f"{len(repository_map)} repository visibility records, "
-        "one animated hero and five framed static panels"
+        "six framed static panels"
     )
 
 

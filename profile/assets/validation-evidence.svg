@@ -34,8 +34,7 @@
   <g font-family="Inter, Arial, sans-serif">
     <text x="70" y="82" font-size="18" font-weight="700" letter-spacing="5" fill="#b9d8ad">VALIDATION &amp; EVIDENCE</text>
     <line x1="370" y1="76" x2="445" y2="76" stroke="#e7bd58" stroke-width="3"/>
-    <text x="70" y="140" font-size="52" font-weight="800" fill="#f5efd9">Trustworthy progress,</text>
-    <text x="546" y="140" font-size="52" font-weight="800" fill="url(#gold)">careful boundaries</text>
+    <text x="70" y="140" font-size="48" font-weight="800"><tspan fill="#f5efd9">Trustworthy progress, </tspan><tspan fill="url(#gold)">careful boundaries</tspan></text>
     <text x="72" y="178" font-size="22" fill="#a9caa8">Performance is only meaningful when the validation contract is clear.</text>
     <text x="1515" y="80" text-anchor="end" font-size="14" font-weight="700" letter-spacing="3" fill="#d7c58a">REAL DATA · RESPONSIBLE VALIDATION</text>
     <text x="1515" y="108" text-anchor="end" font-size="15" fill="#a9caa8">Not just numbers. Evidence with context.</text>

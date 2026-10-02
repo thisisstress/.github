@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="560" viewBox="0 0 1600 560" role="img" aria-labelledby="title desc">
+<title id="title">THIS IS STRESS</title>
+<desc id="desc">Warm forest-green research hero connecting people, global reasoning, local neighborhoods and evidence.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#06291f"/><stop offset=".55" stop-color="#0b3a2d"/><stop offset="1" stop-color="#071f19"/></linearGradient>
+  <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#f8edc9"/><stop offset=".5" stop-color="#e8bd58"/><stop offset="1" stop-color="#b77b20"/></linearGradient>
+  <linearGradient id="mint" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#c5e0b7"/><stop offset="1" stop-color="#6fb68a"/></linearGradient>
+  <radialGradient id="halo"><stop stop-color="#e9c45d" stop-opacity=".28"/><stop offset="1" stop-color="#e9c45d" stop-opacity="0"/></radialGradient>
+  <filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#00150f" flood-opacity=".35"/></filter>
+</defs>
+<rect width="1600" height="560" rx="30" fill="url(#bg)"/>
+<rect x="22" y="22" width="1556" height="516" rx="27" fill="none" stroke="#9bc69f" stroke-opacity=".58" stroke-width="2"/>
+<circle cx="250" cy="287" r="220" fill="url(#halo)"/>
+<circle cx="1460" cy="112" r="230" fill="#dfb34d" opacity=".05"/>
+<path d="M0 470 C250 405 430 545 690 480 C935 420 1180 505 1600 406 L1600 560 L0 560Z" fill="#08251d"/>
+<path d="M0 492 C220 438 420 554 675 498 C930 440 1160 526 1600 426" fill="none" stroke="#8ab999" stroke-opacity=".1" stroke-width="68"/>
+
+<!-- simplified brand character -->
+<g transform="translate(75 118)" filter="url(#shadow)">
+  <ellipse cx="142" cy="142" rx="120" ry="132" fill="#486b50" opacity=".42"/>
+  <g fill="#385f44">
+    <ellipse cx="26" cy="165" rx="20" ry="62" transform="rotate(-26 26 165)"/>
+    <ellipse cx="56" cy="120" rx="18" ry="48" transform="rotate(24 56 120)"/>
+    <ellipse cx="50" cy="218" rx="18" ry="54" transform="rotate(-48 50 218)"/>
+  </g>
+  <circle cx="136" cy="100" r="52" fill="#c97948"/>
+  <path d="M91 102 C91 45 182 36 192 99 C178 78 157 72 129 75 C112 77 101 87 91 102Z" fill="#754126"/>
+  <circle cx="139" cy="101" r="37" fill="#f1b37f"/>
+  <path d="M117 98 Q124 104 131 98M146 98 Q153 104 160 98" fill="none" stroke="#71402b" stroke-width="2.3" stroke-linecap="round"/>
+  <path d="M134 116 Q141 122 150 115" fill="none" stroke="#bd6c56" stroke-width="2" stroke-linecap="round"/>
+  <path d="M89 160 Q117 124 155 139 Q194 158 203 212 L135 232 L73 207Z" fill="#e9b94f"/>
+  <path d="M133 191 Q161 177 184 196 Q202 214 197 245 Q187 286 143 286 Q105 282 92 252 Q87 223 104 202Z" fill="#f5ecda"/>
+  <path d="M106 206 Q91 241 73 273" fill="none" stroke="#f1b37f" stroke-width="21" stroke-linecap="round"/>
+  <path d="M165 205 Q190 230 215 248" fill="none" stroke="#f1b37f" stroke-width="21" stroke-linecap="round"/>
+  <ellipse cx="68" cy="279" rx="27" ry="12" fill="#f1b37f" transform="rotate(-9 68 279)"/>
+  <ellipse cx="222" cy="252" rx="27" ry="12" fill="#f1b37f" transform="rotate(12 222 252)"/>
+</g>
+
+<!-- brand/title -->
+<g font-family="Inter, Arial, sans-serif">
+  <text x="390" y="112" font-size="17" font-weight="700" letter-spacing="5" fill="#b8d7ad">PEOPLE · DATA · MODELS · EVIDENCE</text>
+  <text x="390" y="205" font-size="78" font-weight="850" fill="#f6efd9">THIS IS <tspan fill="url(#gold)">STRESS</tspan></text>
+  <text x="393" y="254" font-size="27" font-weight="650" fill="#b6d2ad">Stress score regression · MAE · reproducible model selection</text>
+  <text x="393" y="300" font-size="19" fill="#9fc29e">Two complementary reasoning systems, one carefully validated final blend.</text>
+</g>
+
+<!-- flow -->
+<g fill="none" stroke-linecap="round">
+  <path d="M690 395 C850 330 990 410 1160 345 C1280 298 1370 315 1470 277" stroke="#6ab38a" stroke-width="3.2" opacity=".65"/>
+  <path d="M690 420 C860 365 1010 445 1170 365 C1300 304 1388 334 1470 285" stroke="#e1b54b" stroke-width="2.8" opacity=".72"/>
+  <path d="M690 370 C840 305 1000 372 1150 330 C1270 296 1380 304 1470 270" stroke="#b1d5b1" stroke-width="1.8" opacity=".35"/>
+</g>
+
+<!-- global tree -->
+<g transform="translate(930 300)" stroke="#dbb957" stroke-width="3.2" fill="none" stroke-linecap="round">
+  <path d="M170 92V54M170 58L130 28M170 58L210 28M130 28L105 8M130 28L146 0M210 28L192 2M210 28L235 10"/>
+  <g fill="#e4bd56" stroke="none"><circle cx="170" cy="92" r="7"/><circle cx="130" cy="28" r="6"/><circle cx="210" cy="28" r="6"/><circle cx="105" cy="8" r="5"/><circle cx="146" cy="0" r="5"/><circle cx="192" cy="2" r="5"/><circle cx="235" cy="10" r="5"/></g>
+</g>
+
+<!-- local neighborhoods -->
+<g transform="translate(760 388)" stroke="#8bc8a0" stroke-width="2.3" fill="#77bb8c">
+  <path d="M0 22L30 4L45 35L0 22M75 30L103 8L128 34L75 30M158 24L181 6L205 28L158 24"/>
+  <circle cx="0" cy="22" r="5"/><circle cx="30" cy="4" r="5"/><circle cx="45" cy="35" r="5"/>
+  <circle cx="75" cy="30" r="5"/><circle cx="103" cy="8" r="5"/><circle cx="128" cy="34" r="5"/>
+  <circle cx="158" cy="24" r="5"/><circle cx="181" cy="6" r="5"/><circle cx="205" cy="28" r="5"/>
+</g>
+
+<!-- evidence core -->
+<g transform="translate(1470 280)" filter="url(#glow)">
+  <circle r="58" fill="#dcae42" opacity=".10"/>
+  <circle r="38" fill="none" stroke="#dcb24d" stroke-opacity=".62" stroke-width="2"/>
+  <circle r="17" fill="#e8bd56"/>
+  <circle r="7" fill="#fff1b8"/>
+</g>
+
+<g font-family="Inter, Arial, sans-serif">
+  <text x="760" y="485" font-size="14" font-weight="700" letter-spacing="3.4" fill="#d6c17d">GLOBAL PATTERNS</text>
+  <text x="1045" y="485" font-size="14" font-weight="700" letter-spacing="3.4" fill="#aed0ac">LOCAL NEIGHBORHOODS</text>
+  <text x="1332" y="485" font-size="14" font-weight="700" letter-spacing="3.4" fill="#e0bb59">FINAL EVIDENCE</text>
+</g>
+</svg>

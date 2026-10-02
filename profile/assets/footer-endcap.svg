@@ -85,8 +85,7 @@
 
   <g font-family="Inter, Arial, sans-serif">
     <text x="240" y="96" font-size="17" font-weight="700" letter-spacing="5" fill="#b7d4aa">THIS IS STRESS</text>
-    <text x="240" y="157" font-size="49" font-weight="800" fill="#f4efd9">Understand stress.</text>
-    <text x="626" y="157" font-size="49" font-weight="800" fill="url(#gold)">Brighter days ahead.</text>
+    <text x="240" y="157" font-size="45" font-weight="800"><tspan fill="#f4efd9">Understand stress. </tspan><tspan fill="url(#gold)">Brighter days ahead.</tspan></text>
     <text x="242" y="195" font-size="21" fill="#a7c7a3">Data · Models · People · Evidence in context</text>
 
     <text x="240" y="286" font-size="14" font-weight="700" letter-spacing="3.5" fill="#d2bf7a">REAL DATA · THOUGHTFUL MODELLING · RESPONSIBLE VALIDATION</text>

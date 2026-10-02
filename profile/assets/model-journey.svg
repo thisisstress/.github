@@ -38,8 +38,7 @@
   <g font-family="Inter, Arial, sans-serif">
     <text x="72" y="88" font-size="18" font-weight="700" letter-spacing="5" fill="#b9d8ad">MODEL JOURNEY</text>
     <line x1="315" y1="82" x2="390" y2="82" stroke="#e7bd58" stroke-width="3"/>
-    <text x="72" y="145" font-size="54" font-weight="800" fill="#f5efd9">From experiments to</text>
-    <text x="570" y="145" font-size="54" font-weight="800" fill="url(#gold)">a stronger final blend</text>
+    <text x="72" y="145" font-size="50" font-weight="800"><tspan fill="#f5efd9">From experiments </tspan><tspan fill="url(#gold)">to a stronger final blend</tspan></text>
     <text x="74" y="182" font-size="22" fill="#a9caa8">Careful exploration · reproducible validation · complementary reasoning</text>
 
     <text x="1518" y="75" text-anchor="end" font-size="14" font-weight="700" letter-spacing="3" fill="#d7c58a">DATA · MODELS · PEOPLE</text>

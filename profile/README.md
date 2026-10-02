@@ -1,8 +1,6 @@
 <p align="center">
-  <a href="#_" aria-label="THIS IS STRESS animated research visual"><img src="./assets/hero.gif" width="100%" alt="THIS IS STRESS — global and local reasoning converge into evidence" /></a>
+  <a href="#_" aria-label="THIS IS STRESS animated research visual"><img src="./assets/hero-premium.svg" width="100%" alt="THIS IS STRESS — global and local reasoning converge into evidence" /></a>
 </p>
-
-<h1 align="center">THIS IS STRESS</h1>
 
 <p align="center">
   <strong>스트레스 지수 예측 해커톤 · 2거 스트레스조</strong><br />
@@ -10,7 +8,7 @@
 </p>
 
 <p align="center">
-  <a href="./assets/overview-snapshot.jpg" aria-label="THIS IS STRESS project snapshot"><img src="./assets/overview-snapshot.jpg" width="74%" alt="THIS IS STRESS project snapshot — task, training data, metric, final blend and MAE" /></a>
+  <a href="./assets/overview-snapshot.svg" aria-label="THIS IS STRESS project snapshot"><img src="./assets/overview-snapshot.jpg" width="100%" alt="THIS IS STRESS project snapshot — task, training data, metric, final blend and MAE" /></a>
 </p>
 
 ## Project & Final Result
@@ -27,7 +25,7 @@
 | Blend | **ExtraTrees 76% + Pair-Neighbor 24%** |
 
 <p align="center">
-  <a href="./assets/final-architecture.jpg" aria-label="ExtraTrees and Pair-Neighbor final architecture visual"><img src="./assets/final-architecture.jpg" width="86%" alt="ExtraTrees and Pair-Neighbor final architecture" /></a>
+  <a href="./assets/final-architecture.svg" aria-label="ExtraTrees and Pair-Neighbor final architecture visual"><img src="./assets/final-architecture.jpg" width="100%" alt="ExtraTrees and Pair-Neighbor final architecture" /></a>
 </p>
 
 <details>
