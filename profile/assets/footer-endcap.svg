@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="360" viewBox="0 0 1600 360" role="img" aria-labelledby="title desc">
+  <title id="title">THIS IS STRESS closing visual</title>
+  <desc id="desc">A calm forest-green and gold closing banner connecting data, models, people, and a brighter tomorrow.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#06271f"/>
+      <stop offset=".50" stop-color="#0b3a2d"/>
+      <stop offset="1" stop-color="#07261d"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f4e7b3"/>
+      <stop offset=".50" stop-color="#e7bd58"/>
+      <stop offset="1" stop-color="#b77b20"/>
+    </linearGradient>
+    <linearGradient id="mint" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b9dcad"/>
+      <stop offset="1" stop-color="#6eae85"/>
+    </linearGradient>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="360" rx="28" fill="url(#bg)"/>
+  <circle cx="150" cy="292" r="230" fill="#7bb18b" opacity=".06"/>
+  <circle cx="1455" cy="60" r="220" fill="#dcb04d" opacity=".05"/>
+  <rect x="22" y="22" width="1556" height="316" rx="26" fill="none" stroke="#9bc69f" stroke-opacity=".55" stroke-width="2"/>
+
+  <!-- calm landscape -->
+  <path d="M0 278 C220 238 365 325 560 278 C760 230 940 312 1140 270 C1320 232 1450 245 1600 220 L1600 360 L0 360 Z" fill="#08251d" opacity=".8"/>
+  <path d="M0 296 C250 240 410 340 650 290 C900 238 1090 332 1310 277 C1430 247 1512 253 1600 238" fill="none" stroke="#83b18e" stroke-opacity=".12" stroke-width="64"/>
+
+  <!-- signal flow -->
+  <g fill="none" stroke-linecap="round">
+    <path d="M140 238 C390 196 548 255 768 216 C987 177 1148 214 1406 152" stroke="#65ad88" stroke-opacity=".55" stroke-width="3"/>
+    <path d="M140 252 C362 220 560 286 790 233 C1006 183 1185 231 1406 158" stroke="#d7ae47" stroke-opacity=".65" stroke-width="2.5"/>
+    <path d="M140 224 C364 167 571 239 780 200 C1000 158 1170 195 1406 148" stroke="#a8d0aa" stroke-opacity=".32" stroke-width="1.7"/>
+  </g>
+
+  <!-- nodes -->
+  <g>
+    <g fill="#79bd8f">
+      <circle cx="224" cy="225" r="5"/><circle cx="342" cy="210" r="5"/><circle cx="472" cy="235" r="5"/>
+      <circle cx="658" cy="222" r="5"/><circle cx="880" cy="205" r="5"/><circle cx="1080" cy="207" r="5"/>
+      <circle cx="1264" cy="181" r="5"/>
+    </g>
+    <g fill="#e5b84d">
+      <circle cx="286" cy="238" r="5"/><circle cx="552" cy="247" r="5"/><circle cx="758" cy="218" r="5"/>
+      <circle cx="982" cy="214" r="5"/><circle cx="1174" cy="198" r="5"/><circle cx="1370" cy="158" r="5"/>
+    </g>
+  </g>
+
+  <!-- miniature local neighborhoods -->
+  <g transform="translate(1010 118)" stroke="#8dc79e" stroke-width="2" fill="#79bd8f">
+    <path d="M0 28L30 8L44 42L0 28M76 34L103 12L126 39L76 34"/>
+    <circle cx="0" cy="28" r="5"/><circle cx="30" cy="8" r="5"/><circle cx="44" cy="42" r="5"/>
+    <circle cx="76" cy="34" r="5"/><circle cx="103" cy="12" r="5"/><circle cx="126" cy="39" r="5"/>
+  </g>
+
+  <!-- miniature tree -->
+  <g transform="translate(1240 76)" stroke="#d7b253" stroke-width="3" fill="none" stroke-linecap="round">
+    <path d="M70 94V50M70 56L40 30M70 56L100 30M40 30L22 12M40 30L52 8M100 30L86 8M100 30L118 12"/>
+    <g fill="#e8c25d" stroke="none">
+      <circle cx="70" cy="94" r="6"/><circle cx="40" cy="30" r="5"/><circle cx="100" cy="30" r="5"/>
+      <circle cx="22" cy="12" r="4"/><circle cx="52" cy="8" r="4"/><circle cx="86" cy="8" r="4"/><circle cx="118" cy="12" r="4"/>
+    </g>
+  </g>
+
+  <!-- evidence core -->
+  <g transform="translate(1436 146)" filter="url(#glow)">
+    <circle r="43" fill="#d9a83f" opacity=".10"/>
+    <circle r="27" fill="none" stroke="#dcb04d" stroke-opacity=".65"/>
+    <circle r="12" fill="#e8bb52"/>
+    <circle r="5" fill="#fff0b1"/>
+  </g>
+
+  <!-- left botanical motif -->
+  <g transform="translate(70 82)" stroke="#87b78e" stroke-width="2.5" fill="none" opacity=".86">
+    <path d="M0 114 C40 80 66 45 84 0"/>
+    <ellipse cx="25" cy="83" rx="10" ry="20" transform="rotate(-42 25 83)" fill="#5b966f" fill-opacity=".5"/>
+    <ellipse cx="51" cy="54" rx="10" ry="20" transform="rotate(-28 51 54)" fill="#d2aa48" fill-opacity=".35"/>
+    <ellipse cx="71" cy="24" rx="9" ry="18" transform="rotate(-18 71 24)" fill="#78ae83" fill-opacity=".45"/>
+  </g>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <text x="240" y="96" font-size="17" font-weight="700" letter-spacing="5" fill="#b7d4aa">THIS IS STRESS</text>
+    <text x="240" y="157" font-size="49" font-weight="800" fill="#f4efd9">Understand stress.</text>
+    <text x="626" y="157" font-size="49" font-weight="800" fill="url(#gold)">Brighter days ahead.</text>
+    <text x="242" y="195" font-size="21" fill="#a7c7a3">Data · Models · People · Evidence in context</text>
+
+    <text x="240" y="286" font-size="14" font-weight="700" letter-spacing="3.5" fill="#d2bf7a">REAL DATA · THOUGHTFUL MODELLING · RESPONSIBLE VALIDATION</text>
+    <text x="1515" y="302" text-anchor="end" font-size="14" letter-spacing="3" fill="#9fc49f">A CALMER, BRIGHTER TOMORROW</text>
+  </g>
+</svg>

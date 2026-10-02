@@ -23,6 +23,7 @@ ALLOWED_ASSETS = {
     "./assets/validation-evidence.jpg",
     "./assets/validation-evidence.svg",
     "./assets/footer-endcap.jpg",
+    "./assets/footer-endcap.svg",
 }
 
 REQUIRED_ASSETS = {

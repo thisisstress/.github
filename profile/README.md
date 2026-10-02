@@ -106,3 +106,7 @@ flowchart LR
 조직 프로필의 팀 제작 코드·문서·원본 시각 자료는 All Rights Reserved. 별도 서면 허가 없는 재사용·수정·재배포 불가.
 
 공동 저자와 역할: [AUTHORS.md](https://github.com/thisisstress/.github/blob/main/AUTHORS.md) · 권리 범위: [LICENSE](https://github.com/thisisstress/.github/blob/main/LICENSE) · [LICENSE_SCOPE.md](https://github.com/thisisstress/.github/blob/main/LICENSE_SCOPE.md)
+
+<p align="center">
+  <a href="#_" aria-label="THIS IS STRESS closing visual"><img src="./assets/footer-endcap.svg" width="100%" alt="Understand stress. Brighter days ahead — data, models, people and evidence in context" /></a>
+</p>
