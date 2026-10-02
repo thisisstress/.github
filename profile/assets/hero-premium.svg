@@ -2,19 +2,34 @@
 <title id="title">THIS IS STRESS</title>
 <desc id="desc">Warm forest-green research hero connecting people, global reasoning, local neighborhoods and evidence.</desc>
 <defs>
-  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#06291f"/><stop offset=".55" stop-color="#0b3a2d"/><stop offset="1" stop-color="#071f19"/></linearGradient>
-  <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#f8edc9"/><stop offset=".5" stop-color="#e8bd58"/><stop offset="1" stop-color="#b77b20"/></linearGradient>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#06271f"/><stop offset=".56" stop-color="#0a382b"/><stop offset="1" stop-color="#071f19"/></linearGradient>
+  <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#f6ead0"/><stop offset=".5" stop-color="#e7bd58"/><stop offset="1" stop-color="#bd7c22"/></linearGradient>
   <linearGradient id="mint" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#c5e0b7"/><stop offset="1" stop-color="#6fb68a"/></linearGradient>
   <radialGradient id="halo"><stop stop-color="#e9c45d" stop-opacity=".28"/><stop offset="1" stop-color="#e9c45d" stop-opacity="0"/></radialGradient>
   <filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
   <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#00150f" flood-opacity=".35"/></filter>
+
+    <radialGradient id="ambientEmerald"><stop stop-color="#75c796" stop-opacity=".20"/><stop offset="1" stop-color="#75c796" stop-opacity="0"/></radialGradient>
+    <radialGradient id="ambientGold"><stop stop-color="#e7bd58" stop-opacity=".22"/><stop offset="1" stop-color="#e7bd58" stop-opacity="0"/></radialGradient>
+    <filter id="cardShadow" x="-18%" y="-18%" width="136%" height="150%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#00150f" flood-opacity=".22"/>
+    </filter>
+    <filter id="microGlow" x="-250%" y="-250%" width="600%" height="600%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
 </defs>
-<rect width="1600" height="560" rx="30" fill="url(#bg)"/>
-<rect x="22" y="22" width="1556" height="516" rx="27" fill="none" stroke="#9bc69f" stroke-opacity=".58" stroke-width="2"/>
+<rect width="1600" height="560" rx="28" fill="url(#bg)"/>
+<rect x="24" y="24" width="1552" height="512" rx="24" fill="none" stroke="#79b88d" stroke-opacity=".76" stroke-width="2"/>
+<rect x="36" y="36" width="1528" height="488" rx="20" fill="none" stroke="#83c69a" stroke-opacity=".24"/>
+<ellipse cx="170" cy="90" rx="300" ry="190" fill="url(#ambientEmerald)" opacity=".34"><animate attributeName="opacity" values=".24;.40;.24" dur="14s" repeatCount="indefinite"/></ellipse>
+<ellipse cx="1430" cy="90" rx="310" ry="185" fill="url(#ambientGold)" opacity=".36"><animate attributeName="opacity" values=".24;.44;.24" dur="15s" begin="1.5s" repeatCount="indefinite"/></ellipse>
 <circle cx="250" cy="287" r="220" fill="url(#halo)">
   <animate attributeName="opacity" values=".72;1;.72" dur="7s" repeatCount="indefinite"/>
 </circle>
-<circle cx="1460" cy="112" r="230" fill="#dfb34d" opacity=".05"/>
+<path d="M960 20 L1572 20 L1572 210 C1405 150 1180 132 960 20Z" fill="url(#ambientGold)" opacity=".11">
+    <animate attributeName="opacity" values=".07;.15;.07" dur="12s" repeatCount="indefinite"/>
+  </path>
 <path d="M0 470 C250 405 430 545 690 480 C935 420 1180 505 1600 406 L1600 560 L0 560Z" fill="#08251d"/>
 <path d="M0 492 C220 438 420 554 675 498 C930 440 1160 526 1600 426" fill="none" stroke="#8ab999" stroke-opacity=".1" stroke-width="68"/>
 

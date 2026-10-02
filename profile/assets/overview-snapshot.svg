@@ -7,15 +7,38 @@
   <linearGradient id="card" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#0c3a2d"/><stop offset="1" stop-color="#082b22"/></linearGradient>
   <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#6bb589" stop-opacity="0"/><stop offset=".55" stop-color="#9ed7ae" stop-opacity=".20"/><stop offset="1" stop-color="#e9bd58" stop-opacity="0"/></linearGradient>
   <radialGradient id="halo"><stop stop-color="#e8bd58" stop-opacity=".35"/><stop offset="1" stop-color="#e8bd58" stop-opacity="0"/></radialGradient>
+
+    <radialGradient id="ambientEmerald"><stop stop-color="#75c796" stop-opacity=".20"/><stop offset="1" stop-color="#75c796" stop-opacity="0"/></radialGradient>
+    <radialGradient id="ambientGold"><stop stop-color="#e7bd58" stop-opacity=".22"/><stop offset="1" stop-color="#e7bd58" stop-opacity="0"/></radialGradient>
+    <filter id="cardShadow" x="-18%" y="-18%" width="136%" height="150%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#00150f" flood-opacity=".22"/>
+    </filter>
+    <filter id="microGlow" x="-250%" y="-250%" width="600%" height="600%">
+      <feGaussianBlur stdDeviation="3.5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
 </defs>
 <rect width="1600" height="520" rx="28" fill="url(#bg)"/>
-<rect x="24" y="24" width="1552" height="472" rx="24" fill="none" stroke="#79b88d" stroke-opacity=".72" stroke-width="2"/>
-<rect x="36" y="36" width="1528" height="448" rx="20" fill="none" stroke="#83c69a" stroke-opacity=".20"/>
-<ellipse cx="1420" cy="62" rx="300" ry="160" fill="#d6ae47" opacity=".035"/>
-<path d="M955 12 L1575 12 L1575 182 C1395 124 1172 110 955 12Z" fill="url(#beam)" opacity=".55"/>
-<g font-family="Inter, Arial, sans-serif">
+<rect x="24" y="24" width="1552" height="472" rx="24" fill="none" stroke="#79b88d" stroke-opacity=".76" stroke-width="2"/>
+<rect x="36" y="36" width="1528" height="448" rx="20" fill="none" stroke="#83c69a" stroke-opacity=".24"/>
+<ellipse cx="170" cy="92" rx="300" ry="190" fill="url(#ambientEmerald)" opacity=".38">
+      <animate attributeName="opacity" values=".28;.42;.28" dur="14s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="1430" cy="92" rx="310" ry="185" fill="url(#ambientGold)" opacity=".40">
+      <animate attributeName="opacity" values=".28;.46;.28" dur="15s" begin="1.5s" repeatCount="indefinite"/>
+    </ellipse>
+<path d="M955 12 L1575 12 L1575 182 C1395 124 1172 110 955 12Z" fill="url(#beam)" opacity=".50">
+      <animate attributeName="opacity" values=".34;.58;.34" dur="12s" repeatCount="indefinite"/>
+    </path>
+<g id="ambient-specks" fill="#e7bd58" filter="url(#microGlow)">
+      <circle cx="1188" cy="104" r="2.4" opacity=".38"><animate attributeName="opacity" values=".18;.58;.18" dur="9s" repeatCount="indefinite"/></circle>
+      <circle cx="1374" cy="86" r="2.1" opacity=".32"><animate attributeName="opacity" values=".15;.48;.15" dur="11s" begin="2s" repeatCount="indefinite"/></circle>
+      <circle cx="1494" cy="178" r="1.9" opacity=".30"><animate attributeName="opacity" values=".12;.44;.12" dur="10s" begin="1s" repeatCount="indefinite"/></circle>
+    </g><g font-family="Inter, Arial, sans-serif">
   <text x="72" y="80" font-size="16" font-weight="700" letter-spacing="5" fill="#b5d8ae">PROJECT SNAPSHOT</text>
-  <circle cx="355" cy="74" r="5" fill="#edc65d"/>
+  <circle cx="355" cy="74" r="5" fill="#edc65d" filter="url(#microGlow)">
+      <animate attributeName="opacity" values=".65;1;.65" dur="8s" repeatCount="indefinite"/>
+    </circle>
   <line x1="370" y1="74" x2="620" y2="74" stroke="#d4aa45" stroke-opacity=".55"/>
   <text x="72" y="156" font-size="58" font-weight="850" fill="#f5efdf">Stress score</text>
   <text x="385" y="156" font-size="58" font-weight="850" fill="url(#gold)">regression</text>
@@ -28,14 +51,14 @@
   <path d="M948 160 C1100 108 1242 160 1368 134 C1450 116 1505 116 1540 108" stroke="#a8d2ad" stroke-width="1.5" opacity=".35"/>
 </g>
 <g transform="translate(1240 92)" stroke="#dbb85a" stroke-width="2.6" fill="none"><path d="M64 92V52M64 57L34 30M64 57L95 30M34 30L16 12M34 30L48 8M95 30L80 9M95 30L114 13"/><g fill="#e6bd56" stroke="none"><circle cx="64" cy="92" r="6"/><circle cx="34" cy="30" r="5"/><circle cx="95" cy="30" r="5"/><circle cx="16" cy="12" r="4"/><circle cx="48" cy="8" r="4"/><circle cx="80" cy="9" r="4"/><circle cx="114" cy="13" r="4"/></g></g>
-<g transform="translate(1512 112)"><circle r="42" fill="url(#halo)"/><circle r="28" fill="none" stroke="#dfb44c" stroke-opacity=".55"/><circle r="11" fill="#e8bd56"><animate attributeName="opacity" values=".7;1;.7" dur="8s" repeatCount="indefinite"/></circle><circle r="4" fill="#fff1b6"/></g>
+<g transform="translate(1512 112)" filter="url(#microGlow)"><circle r="42" fill="url(#halo)"/><circle r="28" fill="none" stroke="#dfb44c" stroke-opacity=".55"/><circle r="11" fill="#e8bd56"><animate attributeName="opacity" values=".7;1;.7" dur="8s" repeatCount="indefinite"/></circle><circle r="4" fill="#fff1b6"/></g>
 <g transform="translate(56 252)" font-family="Inter, Arial, sans-serif">
-  <g><rect width="232" height="190" rx="22" fill="url(#card)" stroke="#d3aa49" stroke-width="1.8"/><text x="26" y="42" font-size="14" font-weight="700" letter-spacing="3" fill="#a8d7b1">TASK</text><text x="26" y="92" font-size="26" font-weight="850" fill="#f5efdf">Tabular</text><text x="26" y="124" font-size="26" font-weight="850" fill="#f5efdf">regression</text><rect x="24" y="144" width="184" height="30" rx="12" fill="#0d3c2f" stroke="#5b9e73"/><text x="116" y="165" text-anchor="middle" font-size="15" letter-spacing="1.3" fill="#cde0bc">stress_score</text></g>
-  <g transform="translate(248)"><rect width="232" height="190" rx="22" fill="url(#card)" stroke="#d3aa49" stroke-width="1.8"/><text x="26" y="42" font-size="14" font-weight="700" letter-spacing="3" fill="#a8d7b1">TRAIN</text><text x="26" y="110" font-size="44" font-weight="850" fill="#f0ca69">3,000</text><text x="26" y="148" font-size="17" fill="#dce8d2">rows</text></g>
-  <g transform="translate(496)"><rect width="232" height="190" rx="22" fill="url(#card)" stroke="#d3aa49" stroke-width="1.8"/><text x="26" y="42" font-size="14" font-weight="700" letter-spacing="3" fill="#a8d7b1">METRIC</text><text x="26" y="112" font-size="48" font-weight="850" fill="#f5efdf">MAE</text><text x="26" y="148" font-size="16" fill="#dce8d2">lower is better</text></g>
-  <g transform="translate(744)"><rect width="232" height="190" rx="22" fill="url(#card)" stroke="#d3aa49" stroke-width="1.8"/><text x="26" y="42" font-size="14" font-weight="700" letter-spacing="3" fill="#a8d7b1">FINAL BLEND</text><text x="26" y="96" font-size="35" font-weight="850" fill="#f0ca69">76% + 24%</text><text x="26" y="126" font-size="14" fill="#f2eddc">ExtraTrees + Pair-Neighbor</text><rect x="24" y="146" width="170" height="28" rx="11" fill="#0d3c2f" stroke="#5b9e73"/><text x="109" y="165" text-anchor="middle" font-size="13" fill="#e8c95f">BS 8/6 adopted</text></g>
-  <g transform="translate(992)"><rect width="232" height="190" rx="22" fill="url(#card)" stroke="#d3aa49" stroke-width="1.8"/><text x="26" y="42" font-size="14" font-weight="700" letter-spacing="3" fill="#a8d7b1">PUBLIC MAE</text><text x="26" y="111" font-size="44" font-weight="850" fill="#f5efdf">0.1267</text><text x="26" y="149" font-size="16" fill="#dce8d2">leaderboard</text></g>
-  <g transform="translate(1240)"><rect width="232" height="190" rx="22" fill="url(#card)" stroke="#d3aa49" stroke-width="1.8"/><text x="26" y="42" font-size="14" font-weight="700" letter-spacing="3" fill="#a8d7b1">PRIVATE MAE</text><text x="26" y="111" font-size="44" font-weight="850" fill="#f5efdf">0.1473</text><text x="26" y="149" font-size="16" fill="#dce8d2">final evaluation</text></g>
+  <g><rect width="232" height="190" rx="22" fill="url(#card)" stroke="#d3aa49" stroke-width="1.8" filter="url(#cardShadow)"/><text x="26" y="42" font-size="14" font-weight="700" letter-spacing="3" fill="#a8d7b1">TASK</text><text x="26" y="92" font-size="26" font-weight="850" fill="#f5efdf">Tabular</text><text x="26" y="124" font-size="26" font-weight="850" fill="#f5efdf">regression</text><rect x="24" y="144" width="184" height="30" rx="12" fill="#0d3c2f" stroke="#5b9e73"/><text x="116" y="165" text-anchor="middle" font-size="15" letter-spacing="1.3" fill="#cde0bc">stress_score</text></g>
+  <g transform="translate(248)"><rect width="232" height="190" rx="22" fill="url(#card)" stroke="#d3aa49" stroke-width="1.8" filter="url(#cardShadow)"/><text x="26" y="42" font-size="14" font-weight="700" letter-spacing="3" fill="#a8d7b1">TRAIN</text><text x="26" y="110" font-size="44" font-weight="850" fill="#f0ca69">3,000</text><text x="26" y="148" font-size="17" fill="#dce8d2">rows</text></g>
+  <g transform="translate(496)"><rect width="232" height="190" rx="22" fill="url(#card)" stroke="#d3aa49" stroke-width="1.8" filter="url(#cardShadow)"/><text x="26" y="42" font-size="14" font-weight="700" letter-spacing="3" fill="#a8d7b1">METRIC</text><text x="26" y="112" font-size="48" font-weight="850" fill="#f5efdf">MAE</text><text x="26" y="148" font-size="16" fill="#dce8d2">lower is better</text></g>
+  <g transform="translate(744)"><rect width="232" height="190" rx="22" fill="url(#card)" stroke="#d3aa49" stroke-width="1.8" filter="url(#cardShadow)"/><text x="26" y="42" font-size="14" font-weight="700" letter-spacing="3" fill="#a8d7b1">FINAL BLEND</text><text x="26" y="96" font-size="35" font-weight="850" fill="#f0ca69">76% + 24%</text><text x="26" y="126" font-size="14" fill="#f2eddc">ExtraTrees + Pair-Neighbor</text><rect x="24" y="146" width="170" height="28" rx="11" fill="#0d3c2f" stroke="#5b9e73"/><text x="109" y="165" text-anchor="middle" font-size="13" fill="#e8c95f">BS 8/6 adopted</text></g>
+  <g transform="translate(992)"><rect width="232" height="190" rx="22" fill="url(#card)" stroke="#d3aa49" stroke-width="1.8" filter="url(#cardShadow)"/><text x="26" y="42" font-size="14" font-weight="700" letter-spacing="3" fill="#a8d7b1">PUBLIC MAE</text><text x="26" y="111" font-size="44" font-weight="850" fill="#f5efdf">0.1267</text><text x="26" y="149" font-size="16" fill="#dce8d2">leaderboard</text></g>
+  <g transform="translate(1240)"><rect width="232" height="190" rx="22" fill="url(#card)" stroke="#d3aa49" stroke-width="1.8" filter="url(#cardShadow)"/><text x="26" y="42" font-size="14" font-weight="700" letter-spacing="3" fill="#a8d7b1">PRIVATE MAE</text><text x="26" y="111" font-size="44" font-weight="850" fill="#f5efdf">0.1473</text><text x="26" y="149" font-size="16" fill="#dce8d2">final evaluation</text></g>
 </g>
 <line x1="56" y1="466" x2="1544" y2="466" stroke="#67a77e" stroke-opacity=".5"/>
 <g font-family="Inter,Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="3.5"><text x="72" y="492" fill="#a9d7b1">BETTER MODELS FOR A CALMER TOMORROW</text><text x="1528" y="492" text-anchor="end" fill="#a9d7b1">PEOPLE · DATA · REAL-WORLD IMPACT</text></g>
