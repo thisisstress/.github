@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="#_" aria-label="THIS IS STRESS project snapshot"><img src="./assets/overview-snapshot.jpg" width="100%" alt="THIS IS STRESS project snapshot — task, training data, metric, final blend and MAE" /></a>
+  <a href="./assets/overview-snapshot.jpg" aria-label="THIS IS STRESS project snapshot"><img src="./assets/overview-snapshot.jpg" width="100%" alt="THIS IS STRESS project snapshot — task, training data, metric, final blend and MAE" /></a>
 </p>
 
 ## Project & Final Result
@@ -27,7 +27,7 @@
 | Blend | **ExtraTrees 76% + Pair-Neighbor 24%** |
 
 <p align="center">
-  <a href="#_" aria-label="ExtraTrees and Pair-Neighbor final architecture visual"><img src="./assets/final-architecture.jpg" width="100%" alt="ExtraTrees and Pair-Neighbor final architecture" /></a>
+  <a href="./assets/final-architecture.jpg" aria-label="ExtraTrees and Pair-Neighbor final architecture visual"><img src="./assets/final-architecture.jpg" width="100%" alt="ExtraTrees and Pair-Neighbor final architecture" /></a>
 </p>
 
 **Tree:** 1,200 ExtraTrees · Q54  
@@ -53,7 +53,7 @@
 ## Model Journey
 
 <p align="center">
-  <a href="#_" aria-label="Model journey from data audit to final adopted blend"><img src="./assets/model-journey.svg" width="100%" alt="Model journey — audit, exploration, ExtraTrees champion, Pair-Neighbor complement and final adopted blend" /></a>
+  <a href="./assets/model-journey.svg" aria-label="Model journey from data audit to final adopted blend"><img src="./assets/model-journey.svg" width="100%" alt="Model journey — audit, exploration, ExtraTrees champion, Pair-Neighbor complement and final adopted blend" /></a>
 </p>
 
 <details>
@@ -73,7 +73,7 @@ flowchart LR
 ## Validation & Evidence
 
 <p align="center">
-  <a href="#_" aria-label="Validation principles and evidence"><img src="./assets/validation-evidence.svg" width="100%" alt="Validation and evidence — data size, final MAE, leakage guards and interpretation boundaries" /></a>
+  <a href="./assets/validation-evidence.svg" aria-label="Validation principles and evidence"><img src="./assets/validation-evidence.svg" width="100%" alt="Validation and evidence — data size, final MAE, leakage guards and interpretation boundaries" /></a>
 </p>
 
 ## Repositories
@@ -106,5 +106,5 @@ flowchart LR
 공동 저자와 역할: [AUTHORS.md](https://github.com/thisisstress/.github/blob/main/AUTHORS.md) · 권리 범위: [LICENSE](https://github.com/thisisstress/.github/blob/main/LICENSE) · [LICENSE_SCOPE.md](https://github.com/thisisstress/.github/blob/main/LICENSE_SCOPE.md)
 
 <p align="center">
-  <a href="#_" aria-label="THIS IS STRESS closing visual"><img src="./assets/footer-endcap.svg" width="100%" alt="Understand stress. Brighter days ahead — data, models, people and evidence in context" /></a>
+  <a href="./assets/footer-endcap.svg" aria-label="THIS IS STRESS closing visual"><img src="./assets/footer-endcap.svg" width="100%" alt="Understand stress. Brighter days ahead — data, models, people and evidence in context" /></a>
 </p>
