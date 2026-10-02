@@ -72,6 +72,12 @@ flowchart LR
 
 **SSOT:** [`stress_project_UNIFIED`](https://github.com/thisisstress/stress_project_UNIFIED)
 
+## Validation & Evidence
+
+<p align="center">
+  <a href="#_" aria-label="Validation principles and evidence"><img src="./assets/validation-evidence.svg" width="100%" alt="Validation and evidence — data size, final MAE, leakage guards and interpretation boundaries" /></a>
+</p>
+
 ## Repositories
 
 | Repository | 범위 |

@@ -21,6 +21,7 @@ ALLOWED_ASSETS = {
     "./assets/model-journey.jpg",
     "./assets/model-journey.svg",
     "./assets/validation-evidence.jpg",
+    "./assets/validation-evidence.svg",
     "./assets/footer-endcap.jpg",
 }
 
