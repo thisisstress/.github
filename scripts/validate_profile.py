@@ -97,13 +97,20 @@ def main() -> None:
     if image_count != len(local_sources):
         fail("README image count must match its unique local asset references")
 
-    noop_linked_images = re.findall(
-        r'<a\b[^>]*href="#_"[^>]*>\s*<img\b[^>]*>\s*</a>',
+    linked_images = re.findall(
+        r'<a\\b[^>]*href="([^"]+)"[^>]*>\\s*<img\\b[^>]*src="([^"]+)"[^>]*>\\s*</a>',
         readme,
         flags=re.IGNORECASE | re.DOTALL,
     )
-    if len(noop_linked_images) != image_count:
-        fail("Every profile image must use the no-op #_ link wrapper")
+    if len(linked_images) != image_count:
+        fail("Every profile image must be wrapped by a link")
+
+    for href, source in linked_images:
+        if source == "./assets/hero.gif":
+            if href != "#_":
+                fail("Animated hero must keep the no-op #_ link")
+        elif href not in {"#_", source}:
+            fail(f"Static profile panel must link to itself for expansion: {source} -> {href}")
 
     for source in sorted(local_sources):
         if source.lower().endswith(".svg"):
