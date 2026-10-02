@@ -118,6 +118,42 @@ def main() -> None:
     if "<animate" not in hero_svg:
         fail("Premium hero must retain subtle SVG motion")
 
+    grid_contracts = {
+        "./assets/overview-snapshot.svg": [
+            'transform="translate(56 238)"',
+            'transform="translate(248)"',
+            'transform="translate(496)"',
+            'transform="translate(744)"',
+            'transform="translate(992)"',
+            'transform="translate(1240)"',
+        ],
+        "./assets/final-architecture.svg": [
+            'transform="translate(56 238)"',
+            'transform="translate(300)"',
+            'transform="translate(600)"',
+            'transform="translate(900)"',
+            'transform="translate(1200)"',
+        ],
+        "./assets/model-journey.svg": [
+            'transform="translate(56 238)"',
+            'transform="translate(356 238)"',
+            'transform="translate(656 238)"',
+            'transform="translate(956 238)"',
+            'transform="translate(1256 238)"',
+        ],
+        "./assets/validation-evidence.svg": [
+            'transform="translate(56 238)"',
+            'transform="translate(376)"',
+            'transform="translate(752)"',
+            'transform="translate(1128)"',
+        ],
+    }
+    for source, markers in grid_contracts.items():
+        svg_text = (PROFILE / source).read_text(encoding="utf-8")
+        missing_grid = [item for item in markers if item not in svg_text]
+        if missing_grid:
+            fail(f"Quantized grid contract drift in {source}: {missing_grid}")
+
     content_path = PROFILE / "content.json"
     content_text = content_path.read_text(encoding="utf-8")
     content = json.loads(content_text)
