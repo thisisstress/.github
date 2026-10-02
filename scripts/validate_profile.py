@@ -29,6 +29,10 @@ ALLOWED_ASSETS = {
 REQUIRED_ASSETS = {
     "./assets/hero.gif",
     "./assets/overview-snapshot.jpg",
+    "./assets/final-architecture.jpg",
+    "./assets/model-journey.svg",
+    "./assets/validation-evidence.svg",
+    "./assets/footer-endcap.svg",
 }
 
 EXPECTED_REPOSITORIES = {
@@ -186,7 +190,7 @@ def main() -> None:
         "PASS: organization profile validated; "
         f"{len(local_sources)} active visual assets, "
         f"{len(repository_map)} repository visibility records, "
-        "one animated hero and framed static panels"
+        "one animated hero and five framed static panels"
     )
 
 
