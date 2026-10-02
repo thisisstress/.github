@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="./assets/overview-snapshot.jpg" aria-label="THIS IS STRESS project snapshot"><img src="./assets/overview-snapshot.jpg" width="100%" alt="THIS IS STRESS project snapshot — task, training data, metric, final blend and MAE" /></a>
+  <a href="./assets/overview-snapshot.jpg" aria-label="THIS IS STRESS project snapshot"><img src="./assets/overview-snapshot.jpg" width="74%" alt="THIS IS STRESS project snapshot — task, training data, metric, final blend and MAE" /></a>
 </p>
 
 ## Project & Final Result
@@ -27,7 +27,7 @@
 | Blend | **ExtraTrees 76% + Pair-Neighbor 24%** |
 
 <p align="center">
-  <a href="./assets/final-architecture.jpg" aria-label="ExtraTrees and Pair-Neighbor final architecture visual"><img src="./assets/final-architecture.jpg" width="100%" alt="ExtraTrees and Pair-Neighbor final architecture" /></a>
+  <a href="./assets/final-architecture.jpg" aria-label="ExtraTrees and Pair-Neighbor final architecture visual"><img src="./assets/final-architecture.jpg" width="86%" alt="ExtraTrees and Pair-Neighbor final architecture" /></a>
 </p>
 
 **Tree:** 1,200 ExtraTrees · Q54  
