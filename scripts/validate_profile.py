@@ -98,7 +98,7 @@ def main() -> None:
         fail("README image count must match its unique local asset references")
 
     linked_images = re.findall(
-        r'<a\\b[^>]*href="([^"]+)"[^>]*>\\s*<img\\b[^>]*src="([^"]+)"[^>]*>\\s*</a>',
+        r'<a\b[^>]*href="([^"]+)"[^>]*>\s*<img\b[^>]*src="([^"]+)"[^>]*>\s*</a>',
         readme,
         flags=re.IGNORECASE | re.DOTALL,
     )
