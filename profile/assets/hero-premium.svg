@@ -11,7 +11,9 @@
 </defs>
 <rect width="1600" height="560" rx="30" fill="url(#bg)"/>
 <rect x="22" y="22" width="1556" height="516" rx="27" fill="none" stroke="#9bc69f" stroke-opacity=".58" stroke-width="2"/>
-<circle cx="250" cy="287" r="220" fill="url(#halo)"/>
+<circle cx="250" cy="287" r="220" fill="url(#halo)">
+  <animate attributeName="opacity" values=".72;1;.72" dur="7s" repeatCount="indefinite"/>
+</circle>
 <circle cx="1460" cy="112" r="230" fill="#dfb34d" opacity=".05"/>
 <path d="M0 470 C250 405 430 545 690 480 C935 420 1180 505 1600 406 L1600 560 L0 560Z" fill="#08251d"/>
 <path d="M0 492 C220 438 420 554 675 498 C930 440 1160 526 1600 426" fill="none" stroke="#8ab999" stroke-opacity=".1" stroke-width="68"/>
@@ -47,31 +49,46 @@
 
 <!-- flow -->
 <g fill="none" stroke-linecap="round">
-  <path d="M690 395 C850 330 990 410 1160 345 C1280 298 1370 315 1470 277" stroke="#6ab38a" stroke-width="3.2" opacity=".65"/>
-  <path d="M690 420 C860 365 1010 445 1170 365 C1300 304 1388 334 1470 285" stroke="#e1b54b" stroke-width="2.8" opacity=".72"/>
-  <path d="M690 370 C840 305 1000 372 1150 330 C1270 296 1380 304 1470 270" stroke="#b1d5b1" stroke-width="1.8" opacity=".35"/>
+  <path d="M690 395 C850 330 990 410 1160 345 C1280 298 1370 315 1470 277" stroke="#6ab38a" stroke-width="3.2" stroke-dasharray="8 18" opacity=".65">
+    <animate attributeName="stroke-dashoffset" from="0" to="-104" dur="4.8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values=".45;.78;.45" dur="6s" repeatCount="indefinite"/>
+  </path>
+  <path d="M690 420 C860 365 1010 445 1170 365 C1300 304 1388 334 1470 285" stroke="#e1b54b" stroke-width="2.8" stroke-dasharray="6 16" opacity=".72">
+    <animate attributeName="stroke-dashoffset" from="0" to="-88" dur="4.2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values=".55;.9;.55" dur="6s" begin=".5s" repeatCount="indefinite"/>
+  </path>
+  <path d="M690 370 C840 305 1000 372 1150 330 C1270 296 1380 304 1470 270" stroke="#b1d5b1" stroke-width="1.8" stroke-dasharray="5 20" opacity=".35">
+    <animate attributeName="stroke-dashoffset" from="0" to="-100" dur="5.4s" repeatCount="indefinite"/>
+  </path>
 </g>
 
 <!-- global tree -->
 <g transform="translate(930 300)" stroke="#dbb957" stroke-width="3.2" fill="none" stroke-linecap="round">
   <path d="M170 92V54M170 58L130 28M170 58L210 28M130 28L105 8M130 28L146 0M210 28L192 2M210 28L235 10"/>
-  <g fill="#e4bd56" stroke="none"><circle cx="170" cy="92" r="7"/><circle cx="130" cy="28" r="6"/><circle cx="210" cy="28" r="6"/><circle cx="105" cy="8" r="5"/><circle cx="146" cy="0" r="5"/><circle cx="192" cy="2" r="5"/><circle cx="235" cy="10" r="5"/></g>
+  <g fill="#e4bd56" stroke="none"><circle cx="170" cy="92" r="7"><animate attributeName="opacity" values=".45;1;.72" dur="3.6s" begin=".0s" repeatCount="indefinite"/></circle><circle cx="130" cy="28" r="6"><animate attributeName="opacity" values=".45;1;.72" dur="3.6s" begin=".25s" repeatCount="indefinite"/></circle><circle cx="210" cy="28" r="6"><animate attributeName="opacity" values=".45;1;.72" dur="3.6s" begin=".5s" repeatCount="indefinite"/></circle><circle cx="105" cy="8" r="5"><animate attributeName="opacity" values=".45;1;.72" dur="3.6s" begin=".75s" repeatCount="indefinite"/></circle><circle cx="146" cy="0" r="5"><animate attributeName="opacity" values=".45;1;.72" dur="3.6s" begin="1s" repeatCount="indefinite"/></circle><circle cx="192" cy="2" r="5"><animate attributeName="opacity" values=".45;1;.72" dur="3.6s" begin="1.25s" repeatCount="indefinite"/></circle><circle cx="235" cy="10" r="5"><animate attributeName="opacity" values=".45;1;.72" dur="3.6s" begin="1.5s" repeatCount="indefinite"/></circle></g>
 </g>
 
 <!-- local neighborhoods -->
 <g transform="translate(760 388)" stroke="#8bc8a0" stroke-width="2.3" fill="#77bb8c">
   <path d="M0 22L30 4L45 35L0 22M75 30L103 8L128 34L75 30M158 24L181 6L205 28L158 24"/>
-  <circle cx="0" cy="22" r="5"/><circle cx="30" cy="4" r="5"/><circle cx="45" cy="35" r="5"/>
-  <circle cx="75" cy="30" r="5"/><circle cx="103" cy="8" r="5"/><circle cx="128" cy="34" r="5"/>
-  <circle cx="158" cy="24" r="5"/><circle cx="181" cy="6" r="5"/><circle cx="205" cy="28" r="5"/>
+  <circle cx="0" cy="22" r="5"><animate attributeName="opacity" values=".55;1;.65" dur="3.8s" begin="2.10s" repeatCount="indefinite"/></circle><circle cx="30" cy="4" r="5"><animate attributeName="opacity" values=".55;1;.65" dur="3.8s" begin="2.22s" repeatCount="indefinite"/></circle><circle cx="45" cy="35" r="5"><animate attributeName="opacity" values=".55;1;.65" dur="3.8s" begin="2.34s" repeatCount="indefinite"/></circle>
+  <circle cx="75" cy="30" r="5"><animate attributeName="opacity" values=".55;1;.65" dur="3.8s" begin="2.46s" repeatCount="indefinite"/></circle><circle cx="103" cy="8" r="5"><animate attributeName="opacity" values=".55;1;.65" dur="3.8s" begin="2.58s" repeatCount="indefinite"/></circle><circle cx="128" cy="34" r="5"><animate attributeName="opacity" values=".55;1;.65" dur="3.8s" begin="2.70s" repeatCount="indefinite"/></circle>
+  <circle cx="158" cy="24" r="5"><animate attributeName="opacity" values=".55;1;.65" dur="3.8s" begin="2.82s" repeatCount="indefinite"/></circle><circle cx="181" cy="6" r="5"><animate attributeName="opacity" values=".55;1;.65" dur="3.8s" begin="2.94s" repeatCount="indefinite"/></circle><circle cx="205" cy="28" r="5"><animate attributeName="opacity" values=".55;1;.65" dur="3.8s" begin="3.06s" repeatCount="indefinite"/></circle>
 </g>
 
 <!-- evidence core -->
 <g transform="translate(1470 280)" filter="url(#glow)">
-  <circle r="58" fill="#dcae42" opacity=".10"/>
+  <circle r="58" fill="#dcae42" opacity=".10">
+    <animate attributeName="r" values="54;66;54" dur="4.8s" begin="3.2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values=".05;.18;.05" dur="4.8s" begin="3.2s" repeatCount="indefinite"/>
+  </circle>
   <circle r="38" fill="none" stroke="#dcb24d" stroke-opacity=".62" stroke-width="2"/>
-  <circle r="17" fill="#e8bd56"/>
-  <circle r="7" fill="#fff1b8"/>
+  <circle r="17" fill="#e8bd56">
+    <animate attributeName="r" values="16;19;16" dur="4.8s" begin="3.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle r="7" fill="#fff1b8">
+    <animate attributeName="opacity" values=".75;1;.75" dur="4.8s" begin="3.2s" repeatCount="indefinite"/>
+  </circle>
 </g>
 
 <g font-family="Inter, Arial, sans-serif">
