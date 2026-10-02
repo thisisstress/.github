@@ -114,6 +114,10 @@ def main() -> None:
         if source.lower().endswith(".svg"):
             ET.parse(PROFILE / source)
 
+    hero_svg = (PROFILE / "./assets/hero-premium.svg").read_text(encoding="utf-8")
+    if "<animate" not in hero_svg:
+        fail("Premium hero must retain subtle SVG motion")
+
     content_path = PROFILE / "content.json"
     content_text = content_path.read_text(encoding="utf-8")
     content = json.loads(content_text)
