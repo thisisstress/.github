@@ -19,6 +19,7 @@ ALLOWED_ASSETS = {
     "./assets/final-architecture.svg",
     "./assets/final-architecture.jpg",
     "./assets/model-journey.jpg",
+    "./assets/model-journey.svg",
     "./assets/validation-evidence.jpg",
     "./assets/footer-endcap.jpg",
 }

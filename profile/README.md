@@ -59,6 +59,10 @@
 
 ## Model Lineage
 
+<p align="center">
+  <a href="#_" aria-label="Model journey from data audit to final adopted blend"><img src="./assets/model-journey.svg" width="100%" alt="Model journey — audit, exploration, ExtraTrees champion, Pair-Neighbor complement and final adopted blend" /></a>
+</p>
+
 ```mermaid
 flowchart LR
     V1[Weighted Quantile<br/>ExtraTrees] --> V7[V7<br/>Pair-Neighbor]

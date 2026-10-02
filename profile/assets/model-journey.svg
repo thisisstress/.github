@@ -1,0 +1,183 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="680" viewBox="0 0 1600 680" role="img" aria-labelledby="title desc">
+  <title id="title">THIS IS STRESS model journey</title>
+  <desc id="desc">A warm forest-green and gold model journey from data audit through model exploration, ExtraTrees champion selection, Pair-Neighbor complement, and the final adopted blend.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#06271f"/>
+      <stop offset=".55" stop-color="#0b3a2d"/>
+      <stop offset="1" stop-color="#08291f"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f7e8b2"/>
+      <stop offset=".5" stop-color="#e7bd58"/>
+      <stop offset="1" stop-color="#b67c20"/>
+    </linearGradient>
+    <linearGradient id="mint" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b8e0b0"/>
+      <stop offset="1" stop-color="#65b88b"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#00150f" flood-opacity=".35"/>
+    </filter>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#e7bd58"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="680" rx="30" fill="url(#bg)"/>
+  <circle cx="1430" cy="90" r="220" fill="#d9b44a" opacity=".05"/>
+  <circle cx="165" cy="590" r="240" fill="#6fb58e" opacity=".06"/>
+  <path d="M0 540 C260 470 450 650 720 575 C965 507 1220 600 1600 500" fill="none" stroke="#89c09f" stroke-opacity=".08" stroke-width="75"/>
+
+  <rect x="22" y="22" width="1556" height="636" rx="28" fill="none" stroke="#9bc69f" stroke-opacity=".55" stroke-width="2"/>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <text x="72" y="88" font-size="18" font-weight="700" letter-spacing="5" fill="#b9d8ad">MODEL JOURNEY</text>
+    <line x1="315" y1="82" x2="390" y2="82" stroke="#e7bd58" stroke-width="3"/>
+    <text x="72" y="145" font-size="54" font-weight="800" fill="#f5efd9">From experiments to</text>
+    <text x="570" y="145" font-size="54" font-weight="800" fill="url(#gold)">a stronger final blend</text>
+    <text x="74" y="182" font-size="22" fill="#a9caa8">Careful exploration · reproducible validation · complementary reasoning</text>
+
+    <text x="1518" y="75" text-anchor="end" font-size="14" font-weight="700" letter-spacing="3" fill="#d7c58a">DATA · MODELS · PEOPLE</text>
+    <text x="1518" y="103" text-anchor="end" font-size="15" fill="#a9caa8">Small steps. Better understanding.</text>
+  </g>
+
+  <!-- botanical accent -->
+  <g transform="translate(1340 126)" stroke="#dcb655" stroke-width="2.5" fill="none" opacity=".9">
+    <path d="M0 72 C48 48 87 22 126 -4"/>
+    <path d="M34 55 C32 29 42 13 62 1"/>
+    <path d="M70 31 C83 12 99 4 118 2"/>
+    <ellipse cx="48" cy="25" rx="8" ry="16" transform="rotate(38 48 25)" fill="#7fbd90" fill-opacity=".55"/>
+    <ellipse cx="95" cy="8" rx="7" ry="15" transform="rotate(48 95 8)" fill="#dcb655" fill-opacity=".65"/>
+  </g>
+
+  <!-- connectors -->
+  <g fill="none" stroke="#e7bd58" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow)" opacity=".9">
+    <path d="M320 396 C338 396 344 396 360 396"/>
+    <path d="M625 396 C643 396 649 396 665 396"/>
+    <path d="M930 396 C948 396 954 396 970 396"/>
+    <path d="M1235 396 C1253 396 1259 396 1275 396"/>
+  </g>
+
+  <!-- cards -->
+  <g filter="url(#shadow)" font-family="Inter, Arial, sans-serif">
+    <!-- 01 -->
+    <g transform="translate(55 230)">
+      <rect width="265" height="330" rx="26" fill="#0b3328" fill-opacity=".96" stroke="#80b78f" stroke-width="1.7"/>
+      <circle cx="44" cy="46" r="23" fill="#e9c15e"/>
+      <text x="44" y="53" text-anchor="middle" font-size="20" font-weight="800" fill="#173c2e">01</text>
+      <text x="80" y="45" font-size="24" font-weight="800" fill="#f4efd9">Audit &amp; Group</text>
+      <text x="80" y="73" font-size="15" font-weight="700" fill="#b8d8ad">Reliable foundation</text>
+
+      <g transform="translate(34 108)" fill="none" stroke="#d8b454" stroke-width="2.5">
+        <ellipse cx="26" cy="9" rx="21" ry="8"/>
+        <path d="M5 9v38c0 5 9 9 21 9s21-4 21-9V9M5 28c0 5 9 9 21 9s21-4 21-9"/>
+      </g>
+      <text x="100" y="132" font-size="17" font-weight="700" fill="#e9e3cc">3,000 rows</text>
+      <text x="100" y="158" font-size="15" fill="#a9caa8">Duplicate &amp; near-duplicate audit</text>
+      <text x="100" y="184" font-size="15" fill="#a9caa8">Group-aware split</text>
+
+      <rect x="28" y="226" width="209" height="52" rx="18" fill="#143e31" stroke="#679f79"/>
+      <text x="50" y="258" font-size="15" font-weight="700" fill="#b9d8ad">✓ leakage guard</text>
+      <text x="28" y="307" font-size="14" fill="#d8c88f">Clean data → clearer evidence</text>
+    </g>
+
+    <!-- 02 -->
+    <g transform="translate(360 230)">
+      <rect width="265" height="330" rx="26" fill="#0b3328" fill-opacity=".96" stroke="#80b78f" stroke-width="1.7"/>
+      <circle cx="44" cy="46" r="23" fill="#79bd8f"/>
+      <text x="44" y="53" text-anchor="middle" font-size="20" font-weight="800" fill="#173c2e">02</text>
+      <text x="80" y="45" font-size="24" font-weight="800" fill="#f4efd9">Explore</text>
+      <text x="80" y="73" font-size="15" font-weight="700" fill="#b8d8ad">Many possibilities</text>
+
+      <g transform="translate(34 112)">
+        <rect x="0" y="72" width="26" height="30" rx="5" fill="#80b78f"/>
+        <rect x="40" y="48" width="26" height="54" rx="5" fill="#9ac99b"/>
+        <rect x="80" y="20" width="26" height="82" rx="5" fill="#e4bc58"/>
+        <rect x="120" y="58" width="26" height="44" rx="5" fill="#70b78a"/>
+        <line x1="0" y1="111" x2="190" y2="111" stroke="#567d69" stroke-width="2"/>
+      </g>
+      <text x="34" y="144" font-size="15" fill="#e9e3cc">Linear · RF · ExtraTrees</text>
+      <text x="34" y="170" font-size="15" fill="#e9e3cc">XGBoost · LightGBM · CatBoost</text>
+      <text x="34" y="196" font-size="15" fill="#e9e3cc">NN · feature variants · ablations</text>
+      <text x="34" y="307" font-size="14" fill="#d8c88f">Compare · learn · move forward</text>
+    </g>
+
+    <!-- 03 -->
+    <g transform="translate(665 230)">
+      <rect width="265" height="330" rx="26" fill="#0b3328" fill-opacity=".96" stroke="#d2aa46" stroke-width="2"/>
+      <circle cx="44" cy="46" r="23" fill="#e9c15e"/>
+      <text x="44" y="53" text-anchor="middle" font-size="20" font-weight="800" fill="#173c2e">03</text>
+      <text x="80" y="45" font-size="24" font-weight="800" fill="#f4efd9">Find Champion</text>
+      <text x="80" y="73" font-size="15" font-weight="700" fill="#e2c56c">Strong single model first</text>
+
+      <!-- tree -->
+      <g transform="translate(65 110)" stroke="#d9bc67" stroke-width="3" fill="none" stroke-linecap="round">
+        <path d="M65 95V50M65 59L31 28M65 59L99 28M31 28L13 10M31 28L45 7M99 28L84 8M99 28L118 12"/>
+        <g fill="#78b98b" stroke="#cce3bd" stroke-width="1.5">
+          <circle cx="65" cy="95" r="10"/><circle cx="31" cy="28" r="7"/><circle cx="99" cy="28" r="7"/>
+          <circle cx="13" cy="10" r="5"/><circle cx="45" cy="7" r="5"/><circle cx="84" cy="8" r="5"/><circle cx="118" cy="12" r="5"/>
+        </g>
+      </g>
+      <text x="132" y="235" text-anchor="middle" font-size="20" font-weight="800" fill="#f0c95e">ExtraTrees</text>
+      <text x="34" y="268" font-size="15" fill="#a9caa8">✓ best overall performance</text>
+      <text x="34" y="292" font-size="15" fill="#a9caa8">✓ stable across seeds</text>
+      <text x="34" y="316" font-size="15" fill="#a9caa8">✓ interpretable feature importance</text>
+    </g>
+
+    <!-- 04 -->
+    <g transform="translate(970 230)">
+      <rect width="265" height="330" rx="26" fill="#0b3328" fill-opacity=".96" stroke="#80b78f" stroke-width="1.7"/>
+      <circle cx="44" cy="46" r="23" fill="#79bd8f"/>
+      <text x="44" y="53" text-anchor="middle" font-size="20" font-weight="800" fill="#173c2e">04</text>
+      <text x="80" y="45" font-size="24" font-weight="800" fill="#f4efd9">Complement</text>
+      <text x="80" y="73" font-size="15" font-weight="700" fill="#b8d8ad">Local neighborhoods</text>
+
+      <g transform="translate(38 112)" stroke="#9dceab" stroke-width="2.2">
+        <g fill="#72b98a">
+          <circle cx="20" cy="28" r="6"/><circle cx="52" cy="12" r="6"/><circle cx="67" cy="44" r="6"/>
+          <circle cx="118" cy="17" r="6"/><circle cx="148" cy="38" r="6"/><circle cx="171" cy="11" r="6"/>
+          <circle cx="45" cy="88" r="6"/><circle cx="78" cy="104" r="6"/><circle cx="95" cy="76" r="6"/>
+        </g>
+        <g fill="none">
+          <path d="M20 28L52 12L67 44L20 28M118 17L148 38L171 11M45 88L78 104L95 76L45 88"/>
+        </g>
+      </g>
+      <text x="132" y="250" text-anchor="middle" font-size="20" font-weight="800" fill="#d7e8c9">Pair-Neighbor</text>
+      <text x="34" y="282" font-size="15" fill="#a9caa8">✓ similar samples</text>
+      <text x="34" y="306" font-size="15" fill="#a9caa8">✓ non-linear local patterns</text>
+    </g>
+
+    <!-- 05 -->
+    <g transform="translate(1275 230)">
+      <rect width="270" height="330" rx="26" fill="#0b3328" fill-opacity=".96" stroke="#d2aa46" stroke-width="2"/>
+      <circle cx="44" cy="46" r="23" fill="#e9c15e"/>
+      <text x="44" y="53" text-anchor="middle" font-size="20" font-weight="800" fill="#173c2e">05</text>
+      <text x="80" y="45" font-size="24" font-weight="800" fill="#f4efd9">Final Blend</text>
+      <text x="80" y="73" font-size="15" font-weight="700" fill="#e2c56c">Two strengths, together</text>
+
+      <g transform="translate(35 112)">
+        <circle cx="58" cy="58" r="46" fill="none" stroke="#e3b84e" stroke-width="16" stroke-dasharray="220 70" transform="rotate(-90 58 58)"/>
+        <circle cx="58" cy="58" r="46" fill="none" stroke="#76b98c" stroke-width="16" stroke-dasharray="70 220" stroke-dashoffset="-220" transform="rotate(-90 58 58)"/>
+        <text x="58" y="65" text-anchor="middle" font-size="21" font-weight="800" fill="#f4efd9">76 / 24</text>
+      </g>
+      <circle cx="205" cy="170" r="36" fill="#d7a83e" opacity=".18" filter="url(#glow)"/>
+      <circle cx="205" cy="170" r="17" fill="#e9c15e"/>
+      <circle cx="205" cy="170" r="6" fill="#fff2bc"/>
+      <text x="35" y="252" font-size="16" font-weight="700" fill="#e9e3cc">ExtraTrees 76%</text>
+      <text x="35" y="278" font-size="16" font-weight="700" fill="#b9d8ad">Pair-Neighbor 24%</text>
+      <text x="35" y="309" font-size="14" fill="#d8c88f">Final adopted BS 8/6</text>
+    </g>
+  </g>
+
+  <!-- footer -->
+  <line x1="58" y1="600" x2="1542" y2="600" stroke="#7fb28a" stroke-opacity=".6"/>
+  <g font-family="Inter, Arial, sans-serif">
+    <text x="78" y="633" font-size="14" font-weight="700" letter-spacing="4" fill="#d4c17e">REAL DATA · THOUGHTFUL MODELLING · RESPONSIBLE VALIDATION</text>
+    <text x="1518" y="633" text-anchor="end" font-size="14" letter-spacing="3" fill="#9fc49f">A CALMER, BRIGHTER TOMORROW</text>
+  </g>
+</svg>
