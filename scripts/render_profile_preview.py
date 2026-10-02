@@ -75,3 +75,23 @@ compact_sheet.save(OUT / "profile-contact-sheet-760.png", optimize=True)
 
 print(f"Rendered {len(FILES)} profile panels")
 print(contact)
+
+
+# Chromium-friendly HTML preview using the repository SVGs directly.
+html_parts = [
+    "<!doctype html>",
+    '<html><head><meta charset="utf-8">',
+    "<style>",
+    "html,body{margin:0;background:#0d1117;color:#d8dee4;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;}",
+    ".wrap{width:1200px;margin:0 auto;padding:28px 0 40px;}",
+    ".label{font-size:14px;margin:22px 0 8px;color:#8b949e;}",
+    "img{display:block;width:1200px;height:auto;border:0;}",
+    "</style></head><body><div class='wrap'>",
+]
+for filename in FILES:
+    html_parts.append(f"<div class='label'>{filename}</div>")
+    html_parts.append(
+        f"<img src='../../profile/assets/{filename}' alt='{filename}'>"
+    )
+html_parts.append("</div></body></html>")
+(OUT / "browser-preview.html").write_text("\n".join(html_parts), encoding="utf-8")
