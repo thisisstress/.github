@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="650" viewBox="0 0 1600 650" role="img" aria-labelledby="title desc" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="650" viewBox="0 0 1600 650" role="img" aria-labelledby="title desc" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" overflow="hidden">
 <title id="title">Final model architecture</title>
 <desc id="desc">Aligned final architecture from input features through ExtraTrees and Pair-Neighbor to a 76 to 24 weighted blend and final score.</desc>
 <defs>
@@ -11,7 +11,7 @@
     <radialGradient id="ambientEmerald"><stop stop-color="#75c796" stop-opacity=".20"/><stop offset="1" stop-color="#75c796" stop-opacity="0"/></radialGradient>
     <radialGradient id="ambientGold"><stop stop-color="#e7bd58" stop-opacity=".22"/><stop offset="1" stop-color="#e7bd58" stop-opacity="0"/></radialGradient>
     <filter id="cardShadow" x="-18%" y="-18%" width="136%" height="150%">
-      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#00150f" flood-opacity=".22"/>
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#00150f" flood-opacity=".18"/>
     </filter>
     <filter id="microGlow" x="-250%" y="-250%" width="600%" height="600%">
       <feGaussianBlur stdDeviation="3.5" result="b"/>
@@ -22,10 +22,10 @@
 <rect x="24" y="24" width="1552" height="602" rx="24" fill="none" stroke="#79b88d" stroke-opacity=".76" stroke-width="2"/>
 <rect x="36" y="36" width="1528" height="578" rx="20" fill="none" stroke="#83c69a" stroke-opacity=".24"/>
 <ellipse cx="170" cy="92" rx="300" ry="190" fill="url(#ambientEmerald)" opacity=".38">
-      <animate attributeName="opacity" values=".28;.42;.28" dur="14s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values=".28;.42;.28" dur="15s" repeatCount="indefinite"/>
     </ellipse>
     <ellipse cx="1430" cy="92" rx="310" ry="185" fill="url(#ambientGold)" opacity=".40">
-      <animate attributeName="opacity" values=".28;.46;.28" dur="15s" begin="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values=".28;.46;.28" dur="19s" begin="2.1s" repeatCount="indefinite"/>
     </ellipse>
 <path d="M940 18 L1570 18 L1570 212 C1398 152 1178 132 940 18Z" fill="url(#beam)" opacity=".50">
       <animate attributeName="opacity" values=".34;.58;.34" dur="12s" repeatCount="indefinite"/>
